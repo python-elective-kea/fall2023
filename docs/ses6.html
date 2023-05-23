@@ -160,6 +160,7 @@
 </ul>
 <section id="warm-up-exercises">
 <h3>Warm up exercises<a class="headerlink" href="#warm-up-exercises" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="exercises/solution/08_decorators/solutions.html"><span class="doc">Solution</span></a></p>
 <p>Think about the each of the following functions and determain what are the:</p>
 <ul class="simple">
 <li><p>return value</p></li>
@@ -173,16 +174,21 @@
 </pre></div>
 </div>
 <p><strong>example2</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">add</span><span class="p">():</span>
+<span class="linenos">2</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>example3</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
 <span class="linenos">2</span>     <span class="k">return</span> <span class="n">num</span> <span class="o">+</span> <span class="n">num</span>
 </pre></div>
 </div>
-<p><strong>example3</strong></p>
+<p><strong>example4</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
 <span class="linenos">2</span>     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>example4</strong></p>
+<p><strong>example5</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
 <span class="linenos">2</span>     <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">element</span><span class="p">)</span> <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">args</span><span class="p">):</span>
 <span class="linenos">3</span>             <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>

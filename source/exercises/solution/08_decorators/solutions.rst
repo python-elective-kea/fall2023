@@ -1,7 +1,12 @@
 Solutions decorator exercises 
 =============================
 
+Warm up exercise
+----------------
 
+.. literalinclude:: returntype.py
+   :linenos:
+   :language: pythony
 
 Small Exercises
 ---------------

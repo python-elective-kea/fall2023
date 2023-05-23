@@ -89,6 +89,32 @@
              
   <section id="solutions-decorator-exercises">
 <h1>Solutions decorator exercises<a class="headerlink" href="#solutions-decorator-exercises" title="Permalink to this heading"></a></h1>
+<section id="warm-up-exercise">
+<h2>Warm up exercise<a class="headerlink" href="#warm-up-exercise" title="Permalink to this heading"></a></h2>
+<div class="highlight-pythony notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span># returntype.py
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span># All functions has a return type and value. If no one is specified, the function will return a value of &#39;None&#39; which has the type of &#39;NoneType&#39;.
+<span class="linenos"> 4</span># So a function like this:
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>def add():
+<span class="linenos"> 7</span>    print(&#39;Hello&#39;)
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span># will in reality look like this:
+<span class="linenos">10</span>
+<span class="linenos">11</span>def add():
+<span class="linenos">12</span>    print(&#39;Hello&#39;)
+<span class="linenos">13</span>    return None
+<span class="linenos">14</span>
+<span class="linenos">15</span># so it is important not to think that this function:
+<span class="linenos">16</span>
+<span class="linenos">17</span>def add():
+<span class="linenos">18</span>    print(&#39;Hello&#39;)
+<span class="linenos">19</span>
+<span class="linenos">20</span># has the return value of &#39;Hello&#39;.
+<span class="linenos">21</span># It has a side effect of printing out &#39;Hello&#39;, but a return value of &#39;None&#39;.
+</pre></div>
+</div>
+</section>
 <section id="small-exercises">
 <h2>Small Exercises<a class="headerlink" href="#small-exercises" title="Permalink to this heading"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># add.py</span>

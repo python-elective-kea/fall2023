@@ -64,6 +64,8 @@ Exercises
 Warm up exercises
 -----------------
 
+`Solution <exercises/solution/08_decorators/solutions.rst>`_
+
 Think about the each of the following functions and determain what are the:
 
 * return value
@@ -80,8 +82,15 @@ Think about the each of the following functions and determain what are the:
    def add():
         pass
 
-
 **example2**
+
+.. code:: python
+   :linenos:
+
+   def add():
+        print('Hello')
+
+**example3**
 
 .. code:: python
    :linenos:
@@ -89,9 +98,7 @@ Think about the each of the following functions and determain what are the:
    def add(num):
         return num + num
 
-
-
-**example3**
+**example4**
 
 .. code:: python
    :linenos:
@@ -99,9 +106,7 @@ Think about the each of the following functions and determain what are the:
    def add(*args):
         return sum(args)
 
-
-
-**example4**
+**example5**
 
 .. code:: python
    :linenos:
