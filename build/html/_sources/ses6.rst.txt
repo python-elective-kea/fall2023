@@ -216,8 +216,7 @@ When you got the 'slowdown code' working on this recursive function, try to crea
 Ex4: Decorating Game Characters
 -------------------------------
 
-
-
+`Solution <exercises/solution/08_decorators/solutions.rst>`_
 
 **Background**
 In the world of computer games, every character has a unique skill or ability that makes them special. For example, a character might have the ability to shoot accurately, move stealthily, or hack into computers.
@@ -259,4 +258,25 @@ The output of the code should be:
 1. Create additional decorators for other skills or abilities that might be found in a computer game.
 2. Add multiple skills or abilities to a single character by stacking multiple decorators.
 
+Ex5: Menu register
+------------------
 
+`Solution <exercises/solution/08_decorators/solutions.rst>`_
+
+In this exercise you should create a register. 
+
+When a new function is made you should by decorating it add it to a register (e.g a dictionary, or a list).
+
+This functionality would be something that could be used in web applikation frameworks like Django or Flask. When ever a new function (a route or a page) is created and decorated this register could be used for a meny or many things like this. 
+
+Example:
+
+.. code:: python
+   :linenos:
+
+   @register        
+   def home():
+        return 'I´m the home page'
+
+
+You can get inspiration for this ecxercise in this document: `Primer on Python Decorators <https://realpython.com/primer-on-python-decorators/#registering-plugins>`_

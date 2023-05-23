@@ -65,6 +65,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#ex4-decorating-game-characters">Ex4: Decorating Game Characters</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#ex5-menu-register">Ex5: Menu register</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ses7.html">Session 7 - OOP</a></li>
@@ -254,6 +255,7 @@
 </section>
 <section id="ex4-decorating-game-characters">
 <h3>Ex4: Decorating Game Characters<a class="headerlink" href="#ex4-decorating-game-characters" title="Permalink to this heading"></a></h3>
+<p><a class="reference internal" href="exercises/solution/08_decorators/solutions.html"><span class="doc">Solution</span></a></p>
 <p><strong>Background</strong>
 In the world of computer games, every character has a unique skill or ability that makes them special. For example, a character might have the ability to shoot accurately, move stealthily, or hack into computers.</p>
 <p>We’re going to use Python decorators to add unique skills or abilities to game characters.</p>
@@ -285,6 +287,20 @@ Here’s an example of how the decorator might be used:</p>
 <li><p>Add multiple skills or abilities to a single character by stacking multiple decorators.</p></li>
 </ol>
 </section>
+</section>
+<section id="ex5-menu-register">
+<h2>Ex5: Menu register<a class="headerlink" href="#ex5-menu-register" title="Permalink to this heading"></a></h2>
+<p><a class="reference internal" href="exercises/solution/08_decorators/solutions.html"><span class="doc">Solution</span></a></p>
+<p>In this exercise you should create a register.</p>
+<p>When a new function is made you should by decorating it add it to a register (e.g a dictionary, or a list).</p>
+<p>This functionality would be something that could be used in web applikation frameworks like Django or Flask. When ever a new function (a route or a page) is created and decorated this register could be used for a meny or many things like this.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nd">@register</span>
+<span class="linenos">2</span><span class="k">def</span> <span class="nf">home</span><span class="p">():</span>
+<span class="linenos">3</span>     <span class="k">return</span> <span class="s1">&#39;I´m the home page&#39;</span>
+</pre></div>
+</div>
+<p>You can get inspiration for this ecxercise in this document: <a class="reference external" href="https://realpython.com/primer-on-python-decorators/#registering-plugins">Primer on Python Decorators</a></p>
 </section>
 </section>
 

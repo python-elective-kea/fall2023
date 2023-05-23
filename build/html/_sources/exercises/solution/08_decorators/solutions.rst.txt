@@ -36,3 +36,11 @@ Ex4: Game
 .. literalinclude:: game_char.py 
    :linenos:
    :language: python
+
+
+Ex5: Register 
+-------------
+
+.. literalinclude:: register.py 
+   :linenos:
+   :language: python

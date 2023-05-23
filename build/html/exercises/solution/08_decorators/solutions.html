@@ -221,6 +221,48 @@
 </pre></div>
 </div>
 </section>
+<section id="ex5-register">
+<h2>Ex5: Register<a class="headerlink" href="#ex5-register" title="Permalink to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">REGISTER</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<span class="linenos"> 4</span>    <span class="n">REGISTER</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+<span class="linenos"> 5</span>    <span class="k">return</span> <span class="n">func</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1"># this functions simulate html pages</span>
+<span class="linenos"> 8</span><span class="nd">@register</span>
+<span class="linenos"> 9</span><span class="k">def</span> <span class="nf">home</span><span class="p">():</span>
+<span class="linenos">10</span>    <span class="k">return</span> <span class="s1">&#39;Im the home page&#39;</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="nd">@register</span>
+<span class="linenos">13</span><span class="k">def</span> <span class="nf">about</span><span class="p">():</span>
+<span class="linenos">14</span>    <span class="k">return</span> <span class="s1">&#39;Im the about page&#39;</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="k">def</span> <span class="nf">excluded_for_now</span><span class="p">():</span>
+<span class="linenos">17</span>    <span class="k">return</span> <span class="s1">&#39;excluded&#39;</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="c1"># simple menu demo </span>
+<span class="linenos">21</span><span class="k">def</span> <span class="nf">menu</span><span class="p">():</span>
+<span class="linenos">22</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">REGISTER</span><span class="p">):</span>
+<span class="linenos">23</span>        <span class="nb">print</span><span class="p">(</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1">&#39;</span> <span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="linenos">24</span>    <span class="nb">print</span><span class="p">()</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="n">choise</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span> 
+<span class="linenos">29</span>    <span class="n">menu</span><span class="p">()</span>
+<span class="linenos">30</span>    <span class="k">if</span> <span class="n">choise</span><span class="p">:</span>
+<span class="linenos">31</span>        <span class="n">choise</span> <span class="o">=</span> <span class="n">REGISTER</span><span class="p">[</span><span class="n">choise</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]()</span>
+<span class="linenos">32</span>        <span class="nb">print</span><span class="p">(</span><span class="n">choise</span><span class="p">)</span>
+<span class="linenos">33</span>    <span class="n">choise</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;choose a number: &#39;</span><span class="p">))</span>
+<span class="linenos">34</span>
+<span class="linenos">35</span>
+<span class="linenos">36</span>
+<span class="linenos">37</span>
+</pre></div>
+</div>
+</section>
 </section>
 
 
