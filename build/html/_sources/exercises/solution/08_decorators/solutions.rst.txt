@@ -29,3 +29,10 @@ Ex3: Slow down code
 .. literalinclude:: slow_down_execution.py
    :linenos:
    :language: python
+
+Ex4: Game
+---------
+
+.. literalinclude:: game_char.py 
+   :linenos:
+   :language: python

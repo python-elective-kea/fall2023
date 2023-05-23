@@ -200,6 +200,27 @@
 </pre></div>
 </div>
 </section>
+<section id="ex4-game">
+<h2>Ex4: Game<a class="headerlink" href="#ex4-game" title="Permalink to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">def</span> <span class="nf">sharpshooter</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<span class="linenos"> 2</span>    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="linenos"> 3</span>        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="si">}</span><span class="s1"> the sharpshooter&#39;</span>
+<span class="linenos"> 4</span>    <span class="k">return</span> <span class="n">wrapper</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="k">def</span> <span class="nf">stealthy</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<span class="linenos"> 7</span>    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="linenos"> 8</span>        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="si">}</span><span class="s1"> and the stealthy character&#39;</span>
+<span class="linenos"> 9</span>    <span class="k">return</span> <span class="n">wrapper</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="nd">@stealthy</span>
+<span class="linenos">12</span><span class="nd">@sharpshooter</span>
+<span class="linenos">13</span><span class="k">def</span> <span class="nf">player</span><span class="p">():</span>
+<span class="linenos">14</span>    <span class="k">return</span> <span class="s2">&quot;I&#39;m the player character&quot;</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="nb">print</span><span class="p">(</span><span class="n">player</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
 </section>
 
 
