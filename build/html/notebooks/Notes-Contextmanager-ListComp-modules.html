@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>List Comprehensions &mdash; Introduction to python 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/nbsphinx-code-cells.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Introduction to python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About this elective</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cheatsheet.html">Commandline Cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses1.html">Session 1 - Introduction to python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses2.html">Session 2 - Data Structures: List &amp; Tuples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses3.html">Session 3 - Modules &amp; list comprehensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses4.html">Session 4 - Mandatory assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses5.html">Session 5 - Utilities and Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses6.html">Session 6 - Functions &amp;  Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses7.html">Session 7 - OOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses8.html">Session 8 - Encapsulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses9.html">Session 9 - The python datamodel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses10.html">Session 10 - Generators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses11.html">Session 11 - Context Managers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses12.html">Session 12 - Mandatory Assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses14-15.html">Session 15 - Exam preperation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses14-15.html">Session 15 - Exam preperation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Introduction to python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">List Comprehensions</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/python-elective-kea/fall2023/blob/master/sphinx/source/notebooks/Notes-Contextmanager-ListComp-modules.ipynb" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="List-Comprehensions">
+<h1>List Comprehensions<a class="headerlink" href="#List-Comprehensions" title="Permalink to this heading"></a></h1>
+<div class="line-block">
+<div class="line">List Comprehensions provide an elegant way to create new lists.</div>
+<div class="line">The following shows the basic structure of a list comprehension:</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[x for x in [1, 2, 3, 4]]
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[1, 2, 3, 4]
+</pre></div></div>
+</div>
+<p>Et for loop der skrives som dette:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>l = []
+for i in range(1, 10):
+    l.append(i)
+l
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+</pre></div></div>
+</div>
+<p>Kunne skrives mere elegangt med en list comprehension</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[i for i in range(1, 10)]
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+</pre></div></div>
+</div>
+<section id="STUDENTS-10-MINUTES-TASK">
+<h2>STUDENTS 10 MINUTES TASK<a class="headerlink" href="#STUDENTS-10-MINUTES-TASK" title="Permalink to this heading"></a></h2>
+<p><strong>(Ex 1: Alphabet List Comprehensions)</strong></p>
+<ol class="arabic simple">
+<li><p>Create a list of capital letters in the english alphabet</p></li>
+<li><p>Create a list of capital letter from the english aplhabet, but exclude 4 with the Unicode code point of either 70, 75, 80, 85.</p></li>
+<li><p>Create a list of capital letter from from the english aplhabet, but exclude every second between F &amp; O</p></li>
+</ol>
+</section>
+<section id="if,-else">
+<h2>if, else<a class="headerlink" href="#if,-else" title="Permalink to this heading"></a></h2>
+<p><strong>if</strong></p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[x for x in range(1, 10) if x%2 == 0]
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[2, 4, 6, 8]
+</pre></div></div>
+</div>
+<p><strong>else</strong></p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[x  if x%2 == 0 else &#39;un-even&#39;  for x in range(1, 10)]
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;un-even&#39;, 2, &#39;un-even&#39;, 4, &#39;un-even&#39;, 6, &#39;un-even&#39;, 8, &#39;un-even&#39;]
+</pre></div></div>
+</div>
+</section>
+<section id="Nested-for-loops">
+<h2>Nested for loops<a class="headerlink" href="#Nested-for-loops" title="Permalink to this heading"></a></h2>
+<p>Like you can do a nested for loop</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>l = []
+for i in range(3):
+    for j in range(2):
+        l.append((i, j))
+l
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(0, 0), (0, 1), (1, 0), (1, 1), (2, 0), (2, 1)]
+</pre></div></div>
+</div>
+<p>You can create nested list comprehensions</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[(i,j) for i in range(3) for j in range(2)]
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(0, 0), (0, 1), (1, 0), (1, 1), (2, 0), (2, 1)]
+</pre></div></div>
+</div>
+</section>
+<section id="id1">
+<h2>STUDENTS 10 MINUTES TASK<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p><strong>Ex 2: Clothes List Comprehension</strong></p>
+<ol class="arabic simple">
+<li><p>From 2 lists, using a list comprehension, create a list containing:</p></li>
+</ol>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[(&#39;Black&#39;, &#39;s&#39;), (&#39;Black&#39;, &#39;m&#39;), (&#39;Black&#39;, &#39;l&#39;), (&#39;Black&#39;, &#39;xl&#39;), (&#39;White&#39;, &#39;s&#39;), (&#39;White&#39;, &#39;m&#39;), (&#39;White&#39;, &#39;l&#39;), (&#39;White&#39;, &#39;xl&#39;)]
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(&#39;Black&#39;, &#39;s&#39;),
+ (&#39;Black&#39;, &#39;m&#39;),
+ (&#39;Black&#39;, &#39;l&#39;),
+ (&#39;Black&#39;, &#39;xl&#39;),
+ (&#39;White&#39;, &#39;s&#39;),
+ (&#39;White&#39;, &#39;m&#39;),
+ (&#39;White&#39;, &#39;l&#39;),
+ (&#39;White&#39;, &#39;xl&#39;)]
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>colors = [&#39;Black&#39;, &#39;White&#39;]
+sizes = [&#39;s&#39;, &#39;m&#39;, &#39;l&#39;, &#39;xl&#39;]
+</pre></div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>If the tuple pair is in the following list, it should not be added to the comprehension generated list.</p></li>
+</ol>
+</section>
+</section>
+<section id="Modules">
+<h1>Modules<a class="headerlink" href="#Modules" title="Permalink to this heading"></a></h1>
+<section id="Build-in-Modules">
+<h2>Build in Modules<a class="headerlink" href="#Build-in-Modules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="The-import-statement">
+<h2>The import statement<a class="headerlink" href="#The-import-statement" title="Permalink to this heading"></a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import sys
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import sys
+
+def greeting(x):
+    print(x)
+
+    if len(x) == 2 and x[1] == &#39;-it&#39;:
+        print(&#39;interactive terminal started&#39;)
+    if len(x) == 3 and x[2] == &#39;--rm&#39;:
+        print(&#39;Will be removed at exit&#39;)
+
+greeting(sys.argv)
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h2>STUDENTS 10 MINUTES TASK<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<p><strong>Ex 4: Sys module exercise</strong></p>
+<p>Create a commandline tool that checks if the required aguments are present when you run the program, and if not tells you what is missing to run the program.</p>
+<p>So if you run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">script.py</span></code> the program should print out an error saying <code class="docutils literal notranslate"><span class="pre">Usage:</span> <span class="pre">python</span> <span class="pre">script.py</span> <span class="pre">[-it]{--rm}</span></code> where the <strong>[]</strong> means required and the <strong>{}</strong> means optional.</p>
+</section>
+<section id="OS-Module">
+<h2>OS Module<a class="headerlink" href="#OS-Module" title="Permalink to this heading"></a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import os
+os.listdir()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;02_datastructures&#39;,
+ &#39;01_intro&#39;,
+ &#39;.DS_Store&#39;,
+ &#39;07_decorators&#39;,
+ &#39;05_encapsulation&#39;,
+ &#39;README.md&#39;,
+ &#39;08_generators&#39;,
+ &#39;04_oop&#39;,
+ &#39;09_decorator&#39;,
+ &#39;.git&#39;,
+ &#39;06_datamodel&#39;,
+ &#39;03_modules&#39;]
+</pre></div></div>
+</div>
+<p><strong>Other usefull OS methods</strong></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>os.mkdir(&#39;Test&#39;)
+os.chdir(&#39;Test&#39;)
+os.rmdir(&#39;Test&#39;)
+
+# More: https://realpython.com/working-with-files-in-python/ and https://docs.python.org/3/library/os.html
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h2>STUDENTS 10 MINUTES TASK<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<p><strong>Ex 5: OS Module Exercise</strong></p>
+</section>
+<section id="Do-the-following-task-using-the-os-module">
+<h2>Do the following task using the os module<a class="headerlink" href="#Do-the-following-task-using-the-os-module" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>create a folder and name the folder ‘os_exercises.’</p></li>
+<li><p>In that folder create a file. Name the file ‘exercise.py’</p></li>
+<li><p>get input from the console and write it to the file.</p></li>
+<li><p>repeat step 2 and 3 (and append to the file).</p></li>
+<li><p>read the content of the files and and print it to the console.</p></li>
+</ol>
+</section>
+<section id="Subprocess-module">
+<h2>Subprocess module<a class="headerlink" href="#Subprocess-module" title="Permalink to this heading"></a></h2>
+<p>Run unix commands through python</p>
+<div class="line-block">
+<div class="line">import subprocess</div>
+<div class="line">subprocess.run([‘pwd’])</div>
+<div class="line">subprocess.run([‘touch’, ‘test.py’])</div>
+<div class="line">subprocess.run([‘ls’])</div>
+<div class="line">subprocess.run([‘rm’, ‘test.py’])</div>
+<div class="line">subprocess.run([‘ls’])</div>
+<div class="line">subprocess.run([‘pwd’])</div>
+</div>
+</section>
+<section id="id4">
+<h2>Subprocess module<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<p>Run git commands through python</p>
+<div class="line-block">
+<div class="line">import subprocess</div>
+<div class="line">subprocess.run([‘git’, ‘clone’, ‘<a class="reference external" href="https://github.com/python-elective-kea/fall2020.git">https://github.com/python-elective-kea/fall2020.git</a>’])</div>
+</div>
+<p>subprocess.run([‘ls’])</p>
+</section>
+</section>
+<section id="Requests-module-(3rd-party)">
+<h1>Requests module (3rd party)<a class="headerlink" href="#Requests-module-(3rd-party)" title="Permalink to this heading"></a></h1>
+<section id="Have-to-be-installed-by:">
+<h2>Have to be installed by:<a class="headerlink" href="#Have-to-be-installed-by:" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>pip install requests</p>
+</div></blockquote>
+<p>import requests</p>
+<p>ModuleNotFoundError: No module named ‘requests’</p>
+<p>pip list</p>
+<p>pip install requests</p>
+<p>pip list</p>
+<div class="line-block">
+<div class="line">import requests</div>
+<div class="line">res = requests.get(’<a class="reference external" href="https://api.github.com">https://api.github.com</a>’)</div>
+</div>
+<p>res.text</p>
+</section>
+<section id="Download-Images">
+<h2>Download Images<a class="headerlink" href="#Download-Images" title="Permalink to this heading"></a></h2>
+<p>import requests</p>
+<p>f = requests.get(’<a class="reference external" href="https://kea.dk/images/resources/logo-main-black-single.png">https://kea.dk/images/resources/logo-main-black-single.png</a>’, allow_redirects=True)</p>
+<div class="line-block">
+<div class="line">o = open(‘logo.png’, ‘wb’)</div>
+<div class="line">o.write(f.content)</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Claus Bove.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
