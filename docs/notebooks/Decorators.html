@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Decorators &mdash; Introduction to python 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/nbsphinx-code-cells.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Introduction to python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About this elective</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cheatsheet.html">Commandline Cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses1.html">Session 1 - Introduction to python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses2.html">Session 2 - Data Structures: List &amp; Tuples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses3.html">Session 3 - Modules &amp; list comprehensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses4.html">Session 4 - Mandatory assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses5.html">Session 5 - Utilities and Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses6.html">Session 6 - Functions &amp;  Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses7.html">Session 7 - OOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses8.html">Session 8 - Encapsulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses9.html">Session 9 - The python datamodel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses10.html">Session 10 - Generators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses11.html">Session 11 - Context Managers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses12.html">Session 12 - Mandatory Assignment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses14-15.html">Session 15 - Exam preperation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ses14-15.html">Session 15 - Exam preperation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Introduction to python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Decorators</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/python-elective-kea/fall2023/blob/master/sphinx/source/notebooks/Decorators.ipynb" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="Decorators">
+<h1>Decorators<a class="headerlink" href="#Decorators" title="Permalink to this heading"></a></h1>
+<section id="Function-basics">
+<h2>Function basics<a class="headerlink" href="#Function-basics" title="Permalink to this heading"></a></h2>
+<p>A function in Python is a named block of reusable code that performs a specific task. It consists of two main parts: the function <strong>definition</strong> and the function <strong>call</strong>.</p>
+<section id="Definition">
+<h3>Definition<a class="headerlink" href="#Definition" title="Permalink to this heading"></a></h3>
+<p>The function <strong>definition</strong> is where you define the <strong>name</strong>* of the function, specify any input <strong>parameters</strong> it requires, and write the <strong>instructions or code</strong> that will be executed when the function is called. It serves as a blueprint for the function’s behavior.</p>
+<p>Example of a function <strong>defnition</strong>:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def add(x,y):
+    sum = x + y
+    return sum
+</pre></div>
+</div>
+</div>
+<p><em>note: functions in python are defined by using the keyword</em><strong>def</strong></p>
+<p>The <strong>name</strong> of the function is actually, if you want to be totally correct, a variable, of the name <strong>add</strong>, that points at a function stored in memory.</p>
+<p>So if we print out <strong>add</strong> like we would do with any other variable, we get its value:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>add
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;function __main__.add(x, y)&gt;
+</pre></div></div>
+</div>
+</section>
+<section id="Call">
+<h3>Call<a class="headerlink" href="#Call" title="Permalink to this heading"></a></h3>
+<p>The function <strong>call</strong>, on the other hand, is when you actually invoke or execute the function. You use the function’s <strong>name</strong> followed by <strong>parentheses</strong>, and you can pass any <strong>required input values</strong> or <strong>arguments</strong> inside the parentheses. When a function is called, the <strong>code within its definition</strong> is executed.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>add(2,3)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+5
+</pre></div></div>
+</div>
+</section>
+<section id="Return">
+<h3>Return<a class="headerlink" href="#Return" title="Permalink to this heading"></a></h3>
+<p>Functions in python are always returning something. Either what you specifically write what it should return or it returns the value of <strong>None</strong>.</p>
+<p>Example:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def add(x,y):
+    sum = a + b
+    return sum    # this is what is return when calling the function
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def add(x,y):
+    print(a + b)
+                    # in this case there is an invisible &#39;return None&#39;
+</pre></div>
+</div>
+</div>
+<p>So the function above is actually looking like this.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def add(x,y):
+    print(a + b)
+    return None
+</pre></div>
+</div>
+</div>
+<section id="Return-value">
+<h4>Return value<a class="headerlink" href="#Return-value" title="Permalink to this heading"></a></h4>
+<p>the return value can be stored in a variable</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sum = add(4, 5)
+</pre></div>
+</div>
+</div>
+<p>It is legal, and sometimes usefull as you will se later, to store the return value in a variable of any name, including <strong>add</strong></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>add = add(4, 5)
+</pre></div>
+</div>
+</div>
+<p>After this line of code is executed <strong>add</strong> is no longer a variable holding a function, it is a variable containing a number</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>add
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+9
+</pre></div></div>
+</div>
+</section>
+</section>
+</section>
+<section id="First-class-functions">
+<h2>First class functions<a class="headerlink" href="#First-class-functions" title="Permalink to this heading"></a></h2>
+<p>In python functions are first class functions, meanning that they can take <strong>other functions as parameters</strong> and they can <strong>return functions</strong>.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def my_function(x):
+    # execute
+    x()
+
+    # or return
+    return x
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def greet():
+    return &#39;Hello&#39;
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = my_function(greet)
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;Hello&#39;
+</pre></div></div>
+</div>
+</section>
+<section id="Inner-functions">
+<h2>Inner functions<a class="headerlink" href="#Inner-functions" title="Permalink to this heading"></a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def foo():
+
+    # define
+    def inner():
+        return &#39;Inner msg&#39;
+
+    # execute
+    print(inner())
+
+foo()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Inner msg
+</pre></div></div>
+</div>
+<p>I do not have access to the inner function from outside</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># inner()
+# foo.inner()
+# foo().inner()
+# foo(inner())
+</pre></div>
+</div>
+</div>
+<p>But i can return the inner function and use it out side</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def foo():
+    def inner():
+        return &#39;Hello inner xxx&#39;
+
+    return inner
+
+i = foo()
+i()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;Hello inner xxx&#39;
+</pre></div></div>
+</div>
+</section>
+<section id="Simple-Decorators">
+<h2>Simple Decorators<a class="headerlink" href="#Simple-Decorators" title="Permalink to this heading"></a></h2>
+<section id="Version-1">
+<h3>Version 1<a class="headerlink" href="#Version-1" title="Permalink to this heading"></a></h3>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def deco(func):
+    def inner():
+        print(&#39;Hello from inner function&#39;)
+    return inner
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def greet():
+    print(&#39;Hello from greet function&#39;)
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>greet = deco(greet)
+greet()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Hello from inner function
+</pre></div></div>
+</div>
+</section>
+<section id="Version-2">
+<h3>Version 2<a class="headerlink" href="#Version-2" title="Permalink to this heading"></a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def my_decorator(func):
+    def wrapper():
+        print(&quot;Something is happening before the function is called.&quot;)
+        func()  # print(Hello)
+        print(&quot;Something is happening after the function is called.&quot;)
+    return wrapper
+
+def greet():
+    print(&#39;Hello&#39;)
+
+
+greet = my_decorator(greet)
+greet()
+
+
+## The 2 last lines of code could also have been written like this:
+# wrapper = my_decorator(greet)
+# wrapper()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Something is happening before the function is called.
+Hello
+Something is happening after the function is called.
+</pre></div></div>
+</div>
+</section>
+<section id="Syntactic-Sugar!">
+<h3>Syntactic Sugar!<a class="headerlink" href="#Syntactic-Sugar!" title="Permalink to this heading"></a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>@my_decorator
+def greet():
+    print(&quot;Hello&quot;)
+
+greet()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Something is happening before the function is called.
+Hello
+Something is happening after the function is called.
+</pre></div></div>
+</div>
+</section>
+</section>
+<section id="Decorating-Functions-With-Arguments">
+<h2>Decorating Functions With Arguments<a class="headerlink" href="#Decorating-Functions-With-Arguments" title="Permalink to this heading"></a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>@my_decorator
+def greet(name):
+    print(f&#39;Hello {name}&#39;)
+greet(&#39;Clais&#39;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Something is happening before the function is called.
+Hello Clais
+Something is happening after the function is called.
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def my_decorator(func):
+    def wrapper(*args):
+        print(&quot;Something is happening before the function is called.&quot;)
+        func(*args)  # print(Hello)
+        print(&quot;Something is happening after the function is called.&quot;)
+    return wrapper
+
+@my_decorator
+def greet(name):
+    print(f&#39;Hello {name}&#39;)
+greet(&#39;Fin&#39;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Something is happening before the function is called.
+Hello Fin
+Something is happening after the function is called.
+</pre></div></div>
+</div>
+</section>
+<section id="Returning-Values-From-Decorated-Functions">
+<h2>Returning Values From Decorated Functions<a class="headerlink" href="#Returning-Values-From-Decorated-Functions" title="Permalink to this heading"></a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def my_decorator(func):
+    def wrapper(*args):
+        x = &#39;From wrapper before: &#39;
+        x += func(*args)  # return Hello name
+        x += &#39; : after from wrapper&#39;
+        return x
+    return wrapper
+
+@my_decorator
+def greet(name):
+    return f&#39;Hello {name}&#39;
+
+greet(&#39;Clais kjshhgfgkjshsfdkj&#39;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;From wrapper before: Hello Clais kjshhgfgkjshsfdkj : after from wrapper&#39;
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Claus Bove.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
