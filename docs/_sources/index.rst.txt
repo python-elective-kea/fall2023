@@ -6,6 +6,12 @@
 
 Introduction to python fall 2023
 =================================
+Elective website for the “Introduction to python spring 2023” at KEA, Copenhagen School of Design and Technology.
+
+These pages contains everything you need for this elective. A few resources, like literature with copyright can be found on Fronter, but will be linked to from these pages.
+
+Underneath is a short description of each sessions learning goals.
+
 
 Session 1 - Introduction to python
 ----------------------------------
