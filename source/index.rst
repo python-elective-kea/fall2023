@@ -7,6 +7,25 @@
 Introduction to python fall 2023
 =================================
 
+Session 1 - Introduction to python
+----------------------------------
+This first week of this elective will be used for introducing this elective and making sure that you all have the software needed to follow along.
+
+You will after this session have an:
+* overview of how this elective is structured, and what you can expeted to learn during this semester.
+* basic understanding of a python development enviroment, and know how to use it.
+* Be able to control your computer through its command line.
+* Be able to work with python strings, conditions and functions.
+
+Session 2 - Data Structures: List & Tuples
+------------------------------------------
+
+
+
+
+
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
