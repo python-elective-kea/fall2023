@@ -152,6 +152,26 @@
 </tr>
 </tbody>
 </table>
+<section id="example">
+<h2>Example:<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
+<p>So when you use the len() build in function, you are calling the __len__(self) method of the object.</p>
+<dl>
+<dt>..code:: python</dt><dd><dl class="field-list simple">
+<dt class="field-odd">linenos<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<dl class="simple">
+<dt>class Foo:</dt><dd><dl class="simple">
+<dt>def __len__(self):</dt><dd><p>return 0</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>f = Foo()
+len(f)    # this is calling/executing the __len__(self) method from the class</p>
+</dd>
+</dl>
+</section>
 </section>
 
 
