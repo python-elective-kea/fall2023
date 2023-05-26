@@ -3,6 +3,16 @@
 ## this is an overview of how the build in functions are connected to its datamodel method. 
 The build in function is caling the datamodel method. just like in othe languages.
 
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+
+
+
+
+
 
 | Indbygget funktion | Dundermetode    |
 | ----------------- | --------------- |
