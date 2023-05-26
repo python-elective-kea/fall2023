@@ -10,7 +10,7 @@ Build in functions and their data model methods
 
 
 .. list-table:: Build-in functions &  Datamodel methods
-   :widths: 250 250
+   :widths: 50 50
    :header-rows: 1
 
    * - Build in function 
@@ -127,15 +127,18 @@ Top level syntax and their corosonding datamodel methods
 Example:
 --------
 
-So when you use the len() build in function, you are calling the __len__() method of the object.
+So when you use the + sign, you are calling the __add__() method of the object.
 
 
 .. code:: python
    :linenos:
 
    class Foo:
-        def __len__(self):
-                return 0
+        def __init__(self):
+                self.height = 10
+        def __add__(self, other):
+                return self.height + other.height
 
-   f = Foo()
-   len(f)    # this is calling/executing the __len__() method from the class
+   f1 = Foo()
+   f2 = Foo()
+   f1 + f2    # the + sign is calling/executing the __add__() method from the class
