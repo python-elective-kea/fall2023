@@ -16,37 +16,37 @@ Build in functions and their data model methods
    * - Build in function 
      - Datamodel method
    * - len()
-     - __len__()
+     - `__len__()`
    * - str()
-     - __str__()
+     - `__str__()`
    * - repr()
-     - __repr__()
+     - `__repr__()`
    * - abs()
-     - __abs__()
+     - `__abs__()`
    * - bool()
-     - __bool__()
+     - `__bool__()`
    * - int()
-     - __int__()
+     - `__int__()`
    * - float()
-     - __float__()
+     - `__float__()`
    * - round()
-     - __round__()
+     - `__round__()`
    * - iter()
-     - __iter__()
+     - `__iter__()`
    * - next()
-     - __next__()
+     - `__next__()`
    * - getitem()
-     - __getitem__()
+     - `__getitem__()`
    * - setitem()
-     - __setitem__()
+     - `__setitem__()`
    * - delitem()
-     - __delitem__()
+     - `__delitem__()`
    * - contains()
-     - __contains__()
+     - `__contains__()`
    * - enter()
-     - __enter__()
+     - `__enter__()`
    * - exit()
-     - __exit__()
+     - `__exit__()`
 
 
 Example:
