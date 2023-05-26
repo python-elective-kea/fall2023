@@ -10,13 +10,13 @@ Build in functions and their data model methods
 
 
 
-.. list-table:: Title
+.. list-table:: Build in functions and their data model methods
    :widths: 25 25
    :header-rows: 1
    :class: full-width
 
-   * - Indbygget funktion
-     - Dundermetode
+   * - Build in function
+     - Data model method
    * - len()
      - `__len__(self)`
    * - str()
