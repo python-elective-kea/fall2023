@@ -5,7 +5,7 @@ and their corosponding data model methods.
 
 
 .. list-table:: Build-in functions &  Datamodel methods
-   :widths: 100 100
+   :widths: 250 250
    :header-rows: 1
 
    * - Build in function 
