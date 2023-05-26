@@ -92,11 +92,6 @@
 <section id="this-is-an-overview-of-how-the-build-in-functions-are-connected-to-its-datamodel-method">
 <h2>this is an overview of how the build in functions are connected to its datamodel method.<a class="headerlink" href="#this-is-an-overview-of-how-the-build-in-functions-are-connected-to-its-datamodel-method" title="Permalink to this heading"></a></h2>
 <p>The build in function is caling the datamodel method. just like in othe languages.</p>
-<p>| Tables   |      Are      |  Cool |
-|———-|:————-:|——:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |</p>
 <table>
   <thead>
     <tr>
@@ -194,49 +189,7 @@
       <td><code>__enter__(self)</code> and <code>__exit__(self, exc_type, exc_val, exc_tb)</code></td>
     </tr>
   </tbody>
-</table><p>| Indbygget funktion | Dundermetode    |
-| —————– | ————— |
-| len()             | <code class="docutils literal notranslate"><span class="pre">__len__()</span></code>     |
-| str()             | <code class="docutils literal notranslate"><span class="pre">__str__()</span></code>     |
-| repr()            | <code class="docutils literal notranslate"><span class="pre">__repr__()</span></code>    |
-| abs()             | <code class="docutils literal notranslate"><span class="pre">__abs__()</span></code>     |
-| bool()            | <code class="docutils literal notranslate"><span class="pre">__bool__()</span></code>    |
-| int()             | <code class="docutils literal notranslate"><span class="pre">__int__()</span></code>     |
-| float()           | <code class="docutils literal notranslate"><span class="pre">__float__()</span></code>   |
-| round()           | <code class="docutils literal notranslate"><span class="pre">__round__()</span></code>   |
-| iter()            | <code class="docutils literal notranslate"><span class="pre">__iter__()</span></code>    |
-| next()            | <code class="docutils literal notranslate"><span class="pre">__next__()</span></code>    |
-| getitem()         | <code class="docutils literal notranslate"><span class="pre">__getitem__()</span></code> |
-| setitem()         | <code class="docutils literal notranslate"><span class="pre">__setitem__()</span></code> |
-| delitem()         | <code class="docutils literal notranslate"><span class="pre">__delitem__()</span></code> |
-| contains()        | <code class="docutils literal notranslate"><span class="pre">__contains__()</span></code>|
-| enter()           | <code class="docutils literal notranslate"><span class="pre">__enter__()</span></code>   |
-| exit()            | <code class="docutils literal notranslate"><span class="pre">__exit__()</span></code>    |</p>
-<p>| Top-level syntaks      | Dundermetode            |
-|————————|————————|
-| x + y                  | <code class="docutils literal notranslate"><span class="pre">__add__(self,</span> <span class="pre">other)</span></code> |
-| x - y                  | <code class="docutils literal notranslate"><span class="pre">__sub__(self,</span> <span class="pre">other)</span></code> |
-| x * y                  | <code class="docutils literal notranslate"><span class="pre">__mul__(self,</span> <span class="pre">other)</span></code> |
-| x / y                  | <code class="docutils literal notranslate"><span class="pre">__truediv__(self,</span> <span class="pre">other)</span></code> |
-| x // y                 | <code class="docutils literal notranslate"><span class="pre">__floordiv__(self,</span> <span class="pre">other)</span></code> |
-| x % y                  | <code class="docutils literal notranslate"><span class="pre">__mod__(self,</span> <span class="pre">other)</span></code> |
-| x ** y                 | <code class="docutils literal notranslate"><span class="pre">__pow__(self,</span> <span class="pre">other)</span></code> |
-| x == y                 | <code class="docutils literal notranslate"><span class="pre">__eq__(self,</span> <span class="pre">other)</span></code> |
-| x != y                 | <code class="docutils literal notranslate"><span class="pre">__ne__(self,</span> <span class="pre">other)</span></code> |
-| x &gt; y                  | <code class="docutils literal notranslate"><span class="pre">__gt__(self,</span> <span class="pre">other)</span></code> |
-| x &lt; y                  | <code class="docutils literal notranslate"><span class="pre">__lt__(self,</span> <span class="pre">other)</span></code> |
-| x &gt;= y                 | <code class="docutils literal notranslate"><span class="pre">__ge__(self,</span> <span class="pre">other)</span></code> |
-| x &lt;= y                 | <code class="docutils literal notranslate"><span class="pre">__le__(self,</span> <span class="pre">other)</span></code> |
-| x(x1, x2, …, xn)     | <code class="docutils literal notranslate"><span class="pre">__call__(self,</span> <span class="pre">*args,</span> <span class="pre">**kwargs)</span></code> |
-| len(x)                 | <code class="docutils literal notranslate"><span class="pre">__len__(self)</span></code> |
-| str(x)                 | <code class="docutils literal notranslate"><span class="pre">__str__(self)</span></code> |
-| repr(x)                | <code class="docutils literal notranslate"><span class="pre">__repr__(self)</span></code> |
-| x[index]               | <code class="docutils literal notranslate"><span class="pre">__getitem__(self,</span> <span class="pre">index)</span></code> |
-| x[index] = value       | <code class="docutils literal notranslate"><span class="pre">__setitem__(self,</span> <span class="pre">index,</span> <span class="pre">value)</span></code> |
-| del x[index]           | <code class="docutils literal notranslate"><span class="pre">__delitem__(self,</span> <span class="pre">index)</span></code> |
-| x in y                 | <code class="docutils literal notranslate"><span class="pre">__contains__(self,</span> <span class="pre">item)</span></code> |
-| with x as y:           | <code class="docutils literal notranslate"><span class="pre">__enter__(self)</span></code> and <code class="docutils literal notranslate"><span class="pre">__exit__(self,</span> <span class="pre">exc_type,</span> <span class="pre">exc_val,</span> <span class="pre">exc_tb)</span></code> |</p>
-</section>
+</table></section>
 </section>
 
 
