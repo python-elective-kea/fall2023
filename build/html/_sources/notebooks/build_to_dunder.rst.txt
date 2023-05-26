@@ -9,45 +9,46 @@ Build in functions and their data model methods
 -----------------------------------------------
 
 
-.. list-table:: Build-in functions &  Datamodel methods
-   :widths: 50 50
+
+.. list-table:: Title
+   :widths: 25 25
    :header-rows: 1
+   :class: full-width
 
-   * - Build in function 
-     - Datamodel method
+   * - Indbygget funktion
+     - Dundermetode
    * - len()
-     - `__len__()`
+     - `__len__(self)`
    * - str()
-     - `__str__()`
+     - `__str__(self)`
    * - repr()
-     - `__repr__()`
+     - `__repr__(self)`
    * - abs()
-     - `__abs__()`
+     - `__abs__(self)`
    * - bool()
-     - `__bool__()`
+     - `__bool__(self)`
    * - int()
-     - `__int__()`
+     - `__int__(self)`
    * - float()
-     - `__float__()`
+     - `__float__(self)`
    * - round()
-     - `__round__()`
+     - `__round__(self)`
    * - iter()
-     - `__iter__()`
+     - `__iter__(self)`
    * - next()
-     - `__next__()`
+     - `__next__(self)`
    * - getitem()
-     - `__getitem__()`
+     - `__getitem__(self, index)`
    * - setitem()
-     - `__setitem__()`
+     - `__setitem__(self, index, value)`
    * - delitem()
-     - `__delitem__()`
+     - `__delitem__(self, index)`
    * - contains()
-     - `__contains__()`
+     - `__contains__(self, item)`
    * - enter()
-     - `__enter__()`
+     - `__enter__(self)`
    * - exit()
-     - `__exit__()`
-
+     - `__exit__(self, exc_type, exc_val, exc_tb)`
 
 Example:
 --------
@@ -72,6 +73,7 @@ Top level syntax and their corosonding datamodel methods
 .. list-table:: Top-level syntaks og Dundermetoder
    :widths: 50 50
    :header-rows: 1
+   :class: full-width
 
    * - Top-level syntaks
      - Dundermetode
@@ -101,14 +103,8 @@ Top level syntax and their corosonding datamodel methods
      - `__ge__(self, other)`
    * - x <= y
      - `__le__(self, other)`
-   * - x(x1, x2, ..., xn)
+   * - x(x1, x2)
      - `__call__(self, *args, **kwargs)`
-   * - len(x)
-     - `__len__(self)`
-   * - str(x)
-     - `__str__(self)`
-   * - repr(x)
-     - `__repr__(self)`
    * - x[index]
      - `__getitem__(self, index)`
    * - x[index] = value
