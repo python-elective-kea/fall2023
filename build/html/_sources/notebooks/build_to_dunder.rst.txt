@@ -1,15 +1,15 @@
-Build in functions & Top level syntax
+Build in functions & top level syntax
 =====================================
 
-... and their corosponding build in functions.
+and their corosponding data model methods.
 
 
-.. list-table:: Indbyggede funktioner og Dundermetoder
-   :widths: 50 50
+.. list-table:: Build-in functions &  Datamodel methods
+   :widths: 100 100
    :header-rows: 1
 
-   * - Indbygget funktion
-     - Dundermetode
+   * - Build in function 
+     - Datamodel method
    * - len()
      - __len__()
    * - str()
