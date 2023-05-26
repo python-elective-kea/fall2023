@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Build in functions, top level syntax, datamodel methods &mdash; Introduction to python 1.0.0 documentation</title>
+  <title>Build in functions &amp; Top level syntax &mdash; Introduction to python 1.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -77,9 +77,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Build in functions, top level syntax, datamodel methods</li>
+      <li class="breadcrumb-item active">Build in functions &amp; Top level syntax</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/python-elective-kea/fall2023/blob/master/sphinx/source/notebooks/buildin_to_dunder.md" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/python-elective-kea/fall2023/blob/master/sphinx/source/notebooks/buildin_to_dunder.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -87,109 +87,71 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="build-in-functions-top-level-syntax-datamodel-methods">
-<h1>Build in functions, top level syntax, datamodel methods<a class="headerlink" href="#build-in-functions-top-level-syntax-datamodel-methods" title="Permalink to this heading"></a></h1>
-<section id="this-is-an-overview-of-how-the-build-in-functions-are-connected-to-its-datamodel-method">
-<h2>this is an overview of how the build in functions are connected to its datamodel method.<a class="headerlink" href="#this-is-an-overview-of-how-the-build-in-functions-are-connected-to-its-datamodel-method" title="Permalink to this heading"></a></h2>
-<p>The build in function is caling the datamodel method. just like in othe languages.</p>
-<table>
-  <thead>
-    <tr>
-      <th>Top-level syntaks</th>
-      <th>Dundermetode</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>x + y</td>
-      <td><code>__add__(self, other)</code></td>
-    </tr>
-    <tr>
-      <td>x - y</td>
-      <td><code>__sub__(self, other)</code></td>
-    </tr>
-    <tr>
-      <td>x * y</td>
-      <td><code>__mul__(self, other)</code></td>
-    </tr>
-    <tr>
-      <td>x / y</td>
-      <td><code>__truediv__(self, other)</code></td>
-    </tr>
-    <tr>
-      <td>x // y</td>
-      <td><code>__floordiv__(self, other)</code></td>
-    </tr>
-    <tr>
-      <td>x % y</td>
-      <td><code>__mod__(self, other)</code></td>
-    </tr>
-    <tr>
-      <td>x ** y</td>
-      <td><code>__pow__(self, other)</code></td>
-    </tr>
-    <tr>
-      <td>x == y</td>
-      <td><code>__eq__(self, other)</code></td>
-    </tr>
-    <tr>
-      <td>x != y</td>
-      <td><code>__ne__(self, other)</code></td>
-    </tr>
-    <tr>
-      <td>x &gt; y</td>
-      <td><code>__gt__(self, other)</code></td>
-    </tr>
-    <tr>
-      <td>x &lt; y</td>
-      <td><code>__lt__(self, other)</code></td>
-    </tr>
-    <tr>
-      <td>x &gt;= y</td>
-      <td><code>__ge__(self, other)</code></td>
-    </tr>
-    <tr>
-      <td>x &lt;= y</td>
-      <td><code>__le__(self, other)</code></td>
-    </tr>
-    <tr>
-      <td>x(x1, x2, ..., xn)</td>
-      <td><code>__call__(self, *args, **kwargs)</code></td>
-    </tr>
-    <tr>
-      <td>len(x)</td>
-      <td><code>__len__(self)</code></td>
-    </tr>
-    <tr>
-      <td>str(x)</td>
-      <td><code>__str__(self)</code></td>
-    </tr>
-    <tr>
-      <td>repr(x)</td>
-      <td><code>__repr__(self)</code></td>
-    </tr>
-    <tr>
-      <td>x[index]</td>
-      <td><code>__getitem__(self, index)</code></td>
-    </tr>
-    <tr>
-      <td>x[index] = value</td>
-      <td><code>__setitem__(self, index, value)</code></td>
-    </tr>
-    <tr>
-      <td>del x[index]</td>
-      <td><code>__delitem__(self, index)</code></td>
-    </tr>
-    <tr>
-      <td>x in y</td>
-      <td><code>__contains__(self, item)</code></td>
-    </tr>
-    <tr>
-      <td>with x as y:</td>
-      <td><code>__enter__(self)</code> and <code>__exit__(self, exc_type, exc_val, exc_tb)</code></td>
-    </tr>
-  </tbody>
-</table></section>
+  <section id="build-in-functions-top-level-syntax">
+<h1>Build in functions &amp; Top level syntax<a class="headerlink" href="#build-in-functions-top-level-syntax" title="Permalink to this heading"></a></h1>
+<p>… and their corosponding build in functions.</p>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Indbyggede funktioner og Dundermetoder</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Indbygget funktion</p></th>
+<th class="head"><p>Dundermetode</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>len()</p></td>
+<td><p>__len__()</p></td>
+</tr>
+<tr class="row-odd"><td><p>str()</p></td>
+<td><p>__str__()</p></td>
+</tr>
+<tr class="row-even"><td><p>repr()</p></td>
+<td><p>__repr__()</p></td>
+</tr>
+<tr class="row-odd"><td><p>abs()</p></td>
+<td><p>__abs__()</p></td>
+</tr>
+<tr class="row-even"><td><p>bool()</p></td>
+<td><p>__bool__()</p></td>
+</tr>
+<tr class="row-odd"><td><p>int()</p></td>
+<td><p>__int__()</p></td>
+</tr>
+<tr class="row-even"><td><p>float()</p></td>
+<td><p>__float__()</p></td>
+</tr>
+<tr class="row-odd"><td><p>round()</p></td>
+<td><p>__round__()</p></td>
+</tr>
+<tr class="row-even"><td><p>iter()</p></td>
+<td><p>__iter__()</p></td>
+</tr>
+<tr class="row-odd"><td><p>next()</p></td>
+<td><p>__next__()</p></td>
+</tr>
+<tr class="row-even"><td><p>getitem()</p></td>
+<td><p>__getitem__()</p></td>
+</tr>
+<tr class="row-odd"><td><p>setitem()</p></td>
+<td><p>__setitem__()</p></td>
+</tr>
+<tr class="row-even"><td><p>delitem()</p></td>
+<td><p>__delitem__()</p></td>
+</tr>
+<tr class="row-odd"><td><p>contains()</p></td>
+<td><p>__contains__()</p></td>
+</tr>
+<tr class="row-even"><td><p>enter()</p></td>
+<td><p>__enter__()</p></td>
+</tr>
+<tr class="row-odd"><td><p>exit()</p></td>
+<td><p>__exit__()</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 
 
