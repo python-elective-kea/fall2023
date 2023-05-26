@@ -110,6 +110,30 @@
 | contains()        | <code class="docutils literal notranslate"><span class="pre">__contains__()</span></code>|
 | enter()           | <code class="docutils literal notranslate"><span class="pre">__enter__()</span></code>   |
 | exit()            | <code class="docutils literal notranslate"><span class="pre">__exit__()</span></code>    |</p>
+<p>| Top-level syntaks      | Dundermetode            |
+|————————|————————|
+| x + y                  | <code class="docutils literal notranslate"><span class="pre">__add__(self,</span> <span class="pre">other)</span></code> |
+| x - y                  | <code class="docutils literal notranslate"><span class="pre">__sub__(self,</span> <span class="pre">other)</span></code> |
+| x * y                  | <code class="docutils literal notranslate"><span class="pre">__mul__(self,</span> <span class="pre">other)</span></code> |
+| x / y                  | <code class="docutils literal notranslate"><span class="pre">__truediv__(self,</span> <span class="pre">other)</span></code> |
+| x // y                 | <code class="docutils literal notranslate"><span class="pre">__floordiv__(self,</span> <span class="pre">other)</span></code> |
+| x % y                  | <code class="docutils literal notranslate"><span class="pre">__mod__(self,</span> <span class="pre">other)</span></code> |
+| x ** y                 | <code class="docutils literal notranslate"><span class="pre">__pow__(self,</span> <span class="pre">other)</span></code> |
+| x == y                 | <code class="docutils literal notranslate"><span class="pre">__eq__(self,</span> <span class="pre">other)</span></code> |
+| x != y                 | <code class="docutils literal notranslate"><span class="pre">__ne__(self,</span> <span class="pre">other)</span></code> |
+| x &gt; y                  | <code class="docutils literal notranslate"><span class="pre">__gt__(self,</span> <span class="pre">other)</span></code> |
+| x &lt; y                  | <code class="docutils literal notranslate"><span class="pre">__lt__(self,</span> <span class="pre">other)</span></code> |
+| x &gt;= y                 | <code class="docutils literal notranslate"><span class="pre">__ge__(self,</span> <span class="pre">other)</span></code> |
+| x &lt;= y                 | <code class="docutils literal notranslate"><span class="pre">__le__(self,</span> <span class="pre">other)</span></code> |
+| x(x1, x2, …, xn)     | <code class="docutils literal notranslate"><span class="pre">__call__(self,</span> <span class="pre">*args,</span> <span class="pre">**kwargs)</span></code> |
+| len(x)                 | <code class="docutils literal notranslate"><span class="pre">__len__(self)</span></code> |
+| str(x)                 | <code class="docutils literal notranslate"><span class="pre">__str__(self)</span></code> |
+| repr(x)                | <code class="docutils literal notranslate"><span class="pre">__repr__(self)</span></code> |
+| x[index]               | <code class="docutils literal notranslate"><span class="pre">__getitem__(self,</span> <span class="pre">index)</span></code> |
+| x[index] = value       | <code class="docutils literal notranslate"><span class="pre">__setitem__(self,</span> <span class="pre">index,</span> <span class="pre">value)</span></code> |
+| del x[index]           | <code class="docutils literal notranslate"><span class="pre">__delitem__(self,</span> <span class="pre">index)</span></code> |
+| x in y                 | <code class="docutils literal notranslate"><span class="pre">__contains__(self,</span> <span class="pre">item)</span></code> |
+| with x as y:           | <code class="docutils literal notranslate"><span class="pre">__enter__(self)</span></code> and <code class="docutils literal notranslate"><span class="pre">__exit__(self,</span> <span class="pre">exc_type,</span> <span class="pre">exc_val,</span> <span class="pre">exc_tb)</span></code> |</p>
 </section>
 </section>
 
