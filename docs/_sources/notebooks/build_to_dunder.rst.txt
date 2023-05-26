@@ -50,13 +50,13 @@ Example:
 So when you use the len() build in function, you are calling the __len__(self) method of the object.
 
 
-..code:: python
-  :linenos:
+.. code:: python
+   :linenos:
 
-  class Foo:
+   class Foo:
         def __len__(self):
                 return 0
 
-  f = Foo()
-  len(f)    # this is calling/executing the __len__(self) method from the class
+   f = Foo()
+   len(f)    # this is calling/executing the __len__(self) method from the class
 
