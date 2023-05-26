@@ -59,12 +59,16 @@ So when you use the len() build in function, you are calling the __len__() metho
 .. code:: python
    :linenos:
 
-   class Foo:
-        def __len__(self):
-                return 0
+   class Person:
+     def __init__(self, name, height):
+        self.name = name
+        self.heaight = height 
 
-   f = Foo()
-   len(f)    # this is calling/executing the __len__() method from the class
+     def __len__(self):
+        return self.height
+
+   x = Person()
+   len(x)    # this is calling/executing the __len__() method from the class
 
 
 Top level syntax and their corosonding datamodel methods
@@ -129,12 +133,12 @@ So when you use the + sign, you are calling the __add__() method of the object.
 .. code:: python
    :linenos:
 
-   class Foo:
-        def __init__(self):
-                self.height = 10
+   class Person:
+        def __init__(self, height):
+          self.height = height
         def __add__(self, other):
-                return self.height + other.height
+          return Person(self.height + other.height)
 
-   f1 = Foo()
-   f2 = Foo()
-   f1 + f2    # the + sign is calling/executing the __add__() method from the class
+   x = Person()
+   y = Person()
+   x + y    # the + sign is calling/executing the __add__() method from the class
