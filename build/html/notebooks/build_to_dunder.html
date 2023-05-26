@@ -92,8 +92,8 @@
 <p>and their corosponding data model methods.</p>
 <section id="build-in-functions-and-their-data-model-methods">
 <h2>Build in functions and their data model methods<a class="headerlink" href="#build-in-functions-and-their-data-model-methods" title="Permalink to this heading"></a></h2>
-<table class="docutils align-default" id="id1">
-<caption><span class="caption-text">Build-in functions &amp;  Datamodel methods</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Build-in functions &amp;  Datamodel methods</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -157,20 +157,20 @@
 </section>
 <section id="example">
 <h2>Example:<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
-<p>So when you use the len() build in function, you are calling the __len__(self) method of the object.</p>
+<p>So when you use the len() build in function, you are calling the __len__() method of the object.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
 <span class="linenos">2</span>     <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">3</span>             <span class="k">return</span> <span class="mi">0</span>
 <span class="linenos">4</span>
 <span class="linenos">5</span><span class="n">f</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">()</span>
-<span class="linenos">6</span><span class="nb">len</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>    <span class="c1"># this is calling/executing the __len__(self) method from the class</span>
+<span class="linenos">6</span><span class="nb">len</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>    <span class="c1"># this is calling/executing the __len__() method from the class</span>
 </pre></div>
 </div>
 </section>
 <section id="top-level-syntax-and-their-corosonding-datamodel-methods">
 <h2>Top level syntax and their corosonding datamodel methods<a class="headerlink" href="#top-level-syntax-and-their-corosonding-datamodel-methods" title="Permalink to this heading"></a></h2>
-<table class="docutils align-default" id="id2">
-<caption><span class="caption-text">Top-level syntaks og Dundermetoder</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">Top-level syntaks og Dundermetoder</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -249,6 +249,18 @@
 </tr>
 </tbody>
 </table>
+</section>
+<section id="id1">
+<h2>Example:<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p>So when you use the len() build in function, you are calling the __len__() method of the object.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">class</span> <span class="nc">Foo</span><span class="p">:</span>
+<span class="linenos">2</span>     <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">3</span>             <span class="k">return</span> <span class="mi">0</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="n">f</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">()</span>
+<span class="linenos">6</span><span class="nb">len</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>    <span class="c1"># this is calling/executing the __len__() method from the class</span>
+</pre></div>
+</div>
 </section>
 </section>
 

@@ -52,7 +52,7 @@ Build in functions and their data model methods
 Example:
 --------
 
-So when you use the len() build in function, you are calling the __len__(self) method of the object.
+So when you use the len() build in function, you are calling the __len__() method of the object.
 
 
 .. code:: python
@@ -63,7 +63,7 @@ So when you use the len() build in function, you are calling the __len__(self) m
                 return 0
 
    f = Foo()
-   len(f)    # this is calling/executing the __len__(self) method from the class
+   len(f)    # this is calling/executing the __len__() method from the class
 
 
 Top level syntax and their corosonding datamodel methods
@@ -119,3 +119,23 @@ Top level syntax and their corosonding datamodel methods
      - `__contains__(self, item)`
    * - with x as y:
      - `__enter__(self)` and `__exit__(self, exc_type, exc_val, exc_tb)`
+ 
+
+
+
+
+Example:
+--------
+
+So when you use the len() build in function, you are calling the __len__() method of the object.
+
+
+.. code:: python
+   :linenos:
+
+   class Foo:
+        def __len__(self):
+                return 0
+
+   f = Foo()
+   len(f)    # this is calling/executing the __len__() method from the class
