@@ -90,6 +90,8 @@
   <section id="build-in-functions-top-level-syntax">
 <h1>Build in functions &amp; top level syntax<a class="headerlink" href="#build-in-functions-top-level-syntax" title="Permalink to this heading"></a></h1>
 <p>and their corosponding data model methods.</p>
+<section id="build-in-functions-and-their-data-model-methods">
+<h2>Build in functions and their data model methods<a class="headerlink" href="#build-in-functions-and-their-data-model-methods" title="Permalink to this heading"></a></h2>
 <table class="docutils align-default" id="id1">
 <caption><span class="caption-text">Build-in functions &amp;  Datamodel methods</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
 <colgroup>
@@ -152,6 +154,7 @@
 </tr>
 </tbody>
 </table>
+</section>
 <section id="example">
 <h2>Example:<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
 <p>So when you use the len() build in function, you are calling the __len__(self) method of the object.</p>
@@ -163,6 +166,89 @@
 <span class="linenos">6</span><span class="nb">len</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>    <span class="c1"># this is calling/executing the __len__(self) method from the class</span>
 </pre></div>
 </div>
+</section>
+<section id="top-level-syntax-and-their-corosonding-datamodel-methods">
+<h2>Top level syntax and their corosonding datamodel methods<a class="headerlink" href="#top-level-syntax-and-their-corosonding-datamodel-methods" title="Permalink to this heading"></a></h2>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Top-level syntaks og Dundermetoder</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Top-level syntaks</p></th>
+<th class="head"><p>Dundermetode</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>x + y</p></td>
+<td><p><cite>__add__(self, other)</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>x - y</p></td>
+<td><p><cite>__sub__(self, other)</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>x * y</p></td>
+<td><p><cite>__mul__(self, other)</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>x / y</p></td>
+<td><p><cite>__truediv__(self, other)</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>x // y</p></td>
+<td><p><cite>__floordiv__(self, other)</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>x % y</p></td>
+<td><p><cite>__mod__(self, other)</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>x ** y</p></td>
+<td><p><cite>__pow__(self, other)</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>x == y</p></td>
+<td><p><cite>__eq__(self, other)</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>x != y</p></td>
+<td><p><cite>__ne__(self, other)</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>x &gt; y</p></td>
+<td><p><cite>__gt__(self, other)</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>x &lt; y</p></td>
+<td><p><cite>__lt__(self, other)</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>x &gt;= y</p></td>
+<td><p><cite>__ge__(self, other)</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>x &lt;= y</p></td>
+<td><p><cite>__le__(self, other)</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>x(x1, x2, …, xn)</p></td>
+<td><p><cite>__call__(self, *args, **kwargs)</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>len(x)</p></td>
+<td><p><cite>__len__(self)</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>str(x)</p></td>
+<td><p><cite>__str__(self)</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>repr(x)</p></td>
+<td><p><cite>__repr__(self)</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>x[index]</p></td>
+<td><p><cite>__getitem__(self, index)</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>x[index] = value</p></td>
+<td><p><cite>__setitem__(self, index, value)</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>del x[index]</p></td>
+<td><p><cite>__delitem__(self, index)</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>x in y</p></td>
+<td><p><cite>__contains__(self, item)</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>with x as y:</p></td>
+<td><p><cite>__enter__(self)</cite> and <cite>__exit__(self, exc_type, exc_val, exc_tb)</cite></p></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 

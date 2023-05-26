@@ -4,6 +4,11 @@ Build in functions & top level syntax
 and their corosponding data model methods.
 
 
+
+Build in functions and their data model methods
+-----------------------------------------------
+
+
 .. list-table:: Build-in functions &  Datamodel methods
    :widths: 250 250
    :header-rows: 1
@@ -60,3 +65,57 @@ So when you use the len() build in function, you are calling the __len__(self) m
    f = Foo()
    len(f)    # this is calling/executing the __len__(self) method from the class
 
+
+Top level syntax and their corosonding datamodel methods
+--------------------------------------------------------
+
+.. list-table:: Top-level syntaks og Dundermetoder
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Top-level syntaks
+     - Dundermetode
+   * - x + y
+     - `__add__(self, other)`
+   * - x - y
+     - `__sub__(self, other)`
+   * - x * y
+     - `__mul__(self, other)`
+   * - x / y
+     - `__truediv__(self, other)`
+   * - x // y
+     - `__floordiv__(self, other)`
+   * - x % y
+     - `__mod__(self, other)`
+   * - x ** y
+     - `__pow__(self, other)`
+   * - x == y
+     - `__eq__(self, other)`
+   * - x != y
+     - `__ne__(self, other)`
+   * - x > y
+     - `__gt__(self, other)`
+   * - x < y
+     - `__lt__(self, other)`
+   * - x >= y
+     - `__ge__(self, other)`
+   * - x <= y
+     - `__le__(self, other)`
+   * - x(x1, x2, ..., xn)
+     - `__call__(self, *args, **kwargs)`
+   * - len(x)
+     - `__len__(self)`
+   * - str(x)
+     - `__str__(self)`
+   * - repr(x)
+     - `__repr__(self)`
+   * - x[index]
+     - `__getitem__(self, index)`
+   * - x[index] = value
+     - `__setitem__(self, index, value)`
+   * - del x[index]
+     - `__delitem__(self, index)`
+   * - x in y
+     - `__contains__(self, item)`
+   * - with x as y:
+     - `__enter__(self)` and `__exit__(self, exc_type, exc_val, exc_tb)`
