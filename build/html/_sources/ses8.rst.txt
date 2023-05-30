@@ -9,10 +9,6 @@ A property is a build in decorator function and is using the syntax :code:`@prop
 
 This approach is considered best practice or 'Pythonic' and this is what we will look at in todays session.
 
-        *from wikipedia: 
-        A property, in some object-oriented programming languages, is a special sort of class member, intermediate in functionality between a field (or data member) and a method. The syntax for reading and writing of properties is like for fields, but property reads and writes are (usually) translated to 'getter' and 'setter' method calls. The field-like syntax is easier to read and write than many method calls, yet the interposition of method calls "under the hood" allows for data validation, active updating, or implementation of what may be called "read-only fields".*
-
-
 Learning goals
 --------------
 After this week you will be able to:
@@ -127,3 +123,30 @@ Your code should include:
 * width and height attributes with property decorators
 * A get_area method that calculates the area of the rectangle
 * Appropriate error handling for non-positive width and height values
+
+
+#Ex 5: Color converter
+**********************
+
+`Solution <exercises/solution/05_encapsulation/solutions.rst>`_
+
+Try creating a property :code:`hex` for the :code:`class` Color that is shown below. The property :code:`hex` should return a string that starts with # and that contains the hexadecimal value of the color.
+
+.. code:: python
+   :linenos:
+
+   class Color:
+       def __init__(self, r, g, b):
+               self.r = r
+               self.g = g
+               self.b = b
+
+If you get it right, you should be able to use the class Colour like so:
+
+.. code:: python
+
+   >>> c = Colour(146, 255, 0)
+   >>> c.hex
+   '#92ff00'
+
+
