@@ -152,13 +152,18 @@ ex3: Range Mimic
 
 `Solution <exercises/solution/09_generators/solutions.rst>`_
 
-1. Create a "clone" of the build in range() function, by doing an iterator class. Besides implementing the protocol for beeing iterable, this class should also be callable in order for it to be used like this.  
+1. Create a "clone" of the build in range() function, by doing an iterator class. 
 
-First try this in your interpreter to get inspired:
+In the documentation you can read the following about the range function.
+
+.. code:: python
+
+   class range(start, stop, step=1)
+   Rather than being a function, range is actually an immutable sequence type, as documented in Ranges and Sequence Types — list, tuple, range.
+
+So the range function is actually not a function, it is a class that implements the iterator protocol.
 
 >>> r = range(1, 10, 2)
->>> next(r)
-TypeError: 'range' object is not an iterator
 >>> i = iter(r)
 >>> next(i)
 1

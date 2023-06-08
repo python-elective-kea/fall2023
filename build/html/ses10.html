@@ -228,12 +228,15 @@ in the list.</p>
 <h3>ex3: Range Mimic<a class="headerlink" href="#ex3-range-mimic" title="Permalink to this heading"></a></h3>
 <p><a class="reference internal" href="exercises/solution/09_generators/solutions.html"><span class="doc">Solution</span></a></p>
 <ol class="arabic simple">
-<li><p>Create a “clone” of the build in range() function, by doing an iterator class. Besides implementing the protocol for beeing iterable, this class should also be callable in order for it to be used like this.</p></li>
+<li><p>Create a “clone” of the build in range() function, by doing an iterator class.</p></li>
 </ol>
-<p>First try this in your interpreter to get inspired:</p>
+<p>In the documentation you can read the following about the range function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>class range(start, stop, step=1)
+Rather than being a function, range is actually an immutable sequence type, as documented in Ranges and Sequence Types — list, tuple, range.
+</pre></div>
+</div>
+<p>So the range function is actually not a function, it is a class that implements the iterator protocol.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
-<span class="go">TypeError: &#39;range&#39; object is not an iterator</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 <span class="go">1</span>
