@@ -2,9 +2,9 @@
 
 # 1. Create a "clone" of the build in range() function.
 
-class MyRange:
+class range:
 
-    def __call__(self, *args):
+    def __init__(self, *args):
         if len(args) == 1:
             self.start = 0
             self.end = args[0]
@@ -17,7 +17,6 @@ class MyRange:
             self.start = args[0]
             self.end = args[1]
             self.step = args[2]
-        return iter(self)
 
     def __iter__(self):
         self.i = self.start
@@ -35,17 +34,35 @@ class MyRange:
             raise TypeError('range method is not itterable')
 
 
-my_range = MyRange()
-x = my_range(2, 12, 2)
+x = range(2, 12, 2)
 for i in x:
     print(i)
 
+# or just:
+for i in range(2, 12, 2):
+    print(i)
 
 # 2. Now do the same, but use a generator function instead.
-def my_range_gen(start, stop, step):
-    r = MyRange()
-    for i in r(start, stop, step):
-        yield i
+def range(*args):
+    
+    if len(args) == 1:
+        start = 0
+        end = args[0]
+        step = 1
+    elif len(args) == 2:
+        start = args[0]
+        end = args[1]
+        step = 1
+    elif len(args) == 3:
+        start = args[0]
+        end = args[1]
+        step = args[2]
+    
+    count = start 
+    while count < end:
+        yield count
+        count += step
+
 
 
 
