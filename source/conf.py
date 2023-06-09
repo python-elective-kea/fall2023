@@ -37,6 +37,9 @@ html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']
 html_show_sourcelink = False
 
+html_css_files = [
+    'css/custom.css',
+]
 
 html_context = {
     "display_github": True,
@@ -48,6 +51,6 @@ html_context = {
     #https://github.com/runawayhorse001/SphinxGithub/blob/master/doc/index.rst
     'github_user': 'python-elective-kea',
     'github_repo': 'fall2023',
-    'github_version': 'master/sphinx/source/' ,
+    'github_version': 'master/source/' ,
 
 }
