@@ -30,7 +30,7 @@ Session 2 - Data Structures: List & Tuples
 
 
 
-
+<!--
 
 .. toctree::
    :maxdepth: 2
@@ -54,4 +54,4 @@ Session 2 - Data Structures: List & Tuples
    ses12
    ses14-15
    ses14-15
-
+-->
