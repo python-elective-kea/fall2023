@@ -26,12 +26,6 @@ You will after this session have an:
 Session 2 - Data Structures: List & Tuples
 ------------------------------------------
 
-
-
-
-
-<!--
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -54,4 +48,3 @@ Session 2 - Data Structures: List & Tuples
    ses12
    ses14-15
    ses14-15
--->
