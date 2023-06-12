@@ -33,7 +33,6 @@ Session 2 - Data Structures: List & Tuples
 
    about
    exam
-   cheatsheet
    ses1
    ses2
    ses3
