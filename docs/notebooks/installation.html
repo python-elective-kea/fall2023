@@ -107,29 +107,48 @@ If not, python is not installed, or maybe something else went wrong (ask Claus).
 </section>
 <section id="setup-the-development-environment">
 <h2>Setup the development environment<a class="headerlink" href="#setup-the-development-environment" title="Permalink to this heading"></a></h2>
-<ol class="simple">
+<ol>
 <li><p>Open VS Code.</p></li>
+<li><p>Click on the “Extensions” icon in the left sidebar.</p></li>
+<li><p>Search for “python” and install the Python extension from Microsoft.</p></li>
 <li><p>Click on the “Source Control” icon in the left sidebar (the icon looks like a square with a branch).</p></li>
 <li><p>In the “Source Control” panel that appears at the left side of the window, click on the “Clone Repository” button.</p></li>
-<li><p>A textbox will appear asking for the repository URL. Enter <code class="docutils literal notranslate"><span class="pre">https://github.com/python-elective-kea/fall2023-code-examples-from-teachings.git</span></code> and press Enter.</p></li>
+<li><p>A textbox will appear asking for the repository URL.</p>
+<p>Enter</p>
+</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="n">elective</span><span class="o">-</span><span class="n">kea</span><span class="o">/</span><span class="n">fall2023</span><span class="o">-</span><span class="n">code</span><span class="o">-</span><span class="n">examples</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">teachings</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>and press Enter.</p>
+<ol class="simple">
 <li><p>Choose a local folder on your computer where you want to clone the repository and click “Clone”.</p></li>
 <li><p>Once the repository is cloned, click on the “Explorer” icon in the left sidebar (the icon looks like a square with a folder).</p></li>
 <li><p>In the “Explorer” panel, navigate to the folder where you cloned the repository (e.g., <code class="docutils literal notranslate"><span class="pre">fall2023-code-examples-from-teachings</span></code>).</p></li>
-<li><p>Find the <code class="docutils literal notranslate"><span class="pre">exercise.ipynb</span></code> file in the folder and double-click on it to open it in the VS Code editor.</p></li>
-<li><p>Now, let’s set up the environment based on the <code class="docutils literal notranslate"><span class="pre">.venv</span></code> folder:</p>
-<ul class="simple">
-<li><p>Click on the “Extensions” icon in the left sidebar (the icon looks like four squares connected by lines).</p></li>
-<li><p>In the search bar at the top of the “Extensions” panel, type “Python” and press Enter.</p></li>
-<li><p>Look for the “Python” extension by Microsoft in the search results and click on the “Install” button.</p></li>
-<li><p>After the installation, click on the “Reload” button to activate the extension.</p></li>
-</ul>
-</li>
-<li><p>With the <code class="docutils literal notranslate"><span class="pre">exercise.ipynb</span></code> file open, click on the “Run and Debug” icon in the left sidebar (the icon looks like a play button inside a bug).</p></li>
-<li><p>At the top of the window, you’ll see a dropdown menu labeled “Python” with options to select the Python interpreter. Click on it.</p></li>
-<li><p>In the dropdown menu, select the option that corresponds to the <code class="docutils literal notranslate"><span class="pre">.venv</span></code> folder in the cloned repository. It may be named something like “Python [project-name]: .venv”.</p></li>
-<li><p>Once you select the Python interpreter, click on the green play button next to the dropdown menu to start the notebook kernel using the selected interpreter.</p></li>
-<li><p>Now, you should be able to run and interact with the <code class="docutils literal notranslate"><span class="pre">exercise.ipynb</span></code> file in the VS Code notebook environment.</p></li>
+<li><p>In the bottom-left corner of the VS Code window, you should see the Git status bar. If it’s not visible, you can enable it by clicking on the “Source Control” icon in the left sidebar.</p></li>
+<li><p>Click on the branch name currently displayed in the Git status bar (usually the default branch name, such as “main” or “master”).</p></li>
+<li><p>In the branch dropdown, type “playground” and press Enter to create a new branch named “playground”. Alternatively, you can click on the “+” icon to create a new branch and enter “playground” as the branch name.</p></li>
+<li><p>Once the branch is created, the Git status bar should now display “playground” as the active branch.</p></li>
+<li><p>Find the playground.ipynb file in the project folder within the “Explorer” panel.</p></li>
+<li><p>Find the <code class="docutils literal notranslate"><span class="pre">playground.ipynb</span></code> file in the folder and double-click on it to open it in the VS Code editor.</p></li>
+<li><p>In the top right corner click on:</p></li>
 </ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="o">*</span> <span class="n">Select</span> <span class="n">Kernel</span> <span class="o">-&gt;</span> 
+   <span class="o">*</span> <span class="n">Python</span> <span class="n">environmets</span> <span class="o">-&gt;</span> 
+   <span class="o">*</span> <span class="n">Create</span> <span class="n">Python</span> <span class="n">Environment</span> <span class="o">-&gt;</span> 
+   <span class="o">*</span> <span class="n">Venv</span> <span class="n">Create</span> <span class="n">a</span> <span class="s1">&#39;.venv&#39;</span> <span class="n">virtual</span> <span class="n">envitonment</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">current</span> <span class="n">workspace</span> <span class="o">-&gt;</span> 
+   <span class="o">*</span> <span class="n">Python</span> <span class="mf">3.11.3</span> <span class="p">(</span><span class="ow">or</span> <span class="n">another</span> <span class="n">version</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>This will create a ‘.venv’ in your folder, which is a virtual python installation with the dependencies needed for running the projekt.</p></li>
+</ol>
+<section id="the-code-and-exercises-files-the-rest-of-this-semester">
+<h3>The code and exercises files the rest of this semester<a class="headerlink" href="#the-code-and-exercises-files-the-rest-of-this-semester" title="Permalink to this heading"></a></h3>
+<p>In the future, this is how you should work on the files and exercises given to you in teachings.
+You should <code class="docutils literal notranslate"><span class="pre">pull</span></code> the master branch when new files are added to the respoitory, and then create a new branch where you can play around with the files or do the exercises. And you should never merge your branches into the master branch.</p>
+<p>!! IMPORTANT. Do not edit any files directly in the master branch, it should be keept clean. Othervise you will end up with a lot of merge errors.</p>
+</section>
 </section>
 </section>
 
