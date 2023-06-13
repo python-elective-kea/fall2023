@@ -15,10 +15,14 @@ If not, python is not installed, or maybe something else went wrong (ask Claus).
 Go to [code.visualstudio.com](https://code.visualstudio.com/) and find the download button for your operating system. Download and install VS Code. 
 
 ## Setup the development environment
+
+### Add the python extension
 1. Open VS Code.
 1. Click on the "Extensions" icon in the left sidebar.
 1. Search for "python" and install the Python extension from Microsoft.
-2. Click on the "Source Control" icon in the left sidebar (the icon looks like a square with a branch).
+
+### Clone the class repository and set up VS code to run the code
+1. Click on the "Source Control" icon in the left sidebar (the icon looks like a square with a branch).
 3. In the "Source Control" panel that appears at the left side of the window, click on the "Clone Repository" button.
 4. A textbox will appear asking for the repository URL. 
 
