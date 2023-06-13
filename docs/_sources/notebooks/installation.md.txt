@@ -4,6 +4,8 @@ This document will describe what you should install in order to follow this elec
 
 The IDE we will use in this elective is called **Jupyter Notebook**. Its a browser based IDE and i our case we will install it by creating a Docker image and container from a Dockerfile.
 
+![](../_static/jupyter_2.png)
+
 Since Jupyter Notebook is a browser based IDE you will also be able to find it on all the big cloud providors pages, and you are also welcome to do that in a few weeks.
 
 ## 1. Docker Desktop
