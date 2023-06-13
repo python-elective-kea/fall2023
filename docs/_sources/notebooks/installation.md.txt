@@ -1,118 +1,36 @@
 # Installations
 
-This document will describe what you should install in order to follow this elective.   
-
-The IDE we will use in this elective is called **Jupyter Notebook**. Its a browser based IDE and i our case we will install it by creating a Docker image and container from a Dockerfile.
-
-![](../_static/jupyter_2.png)
-
-Since Jupyter Notebook is a browser based IDE you will also be able to find it on all the big cloud providors pages, and you are also welcome to do that in a few weeks.
-
-## 1. Docker Desktop
-### Download and install Docker Desktop
-In order to have a Docker container running on your computer you will need to have Docker desktop installed (unless you are using a Linux OS).
-
-Navigate to the Docker website and download and install Docker Desktop for your operating system.  
-
-[Docker Desktop download](https://www.docker.com/products/docker-desktop)    
-
-### Windows
-On Windows you might get some errors concerning WSL2. But error message will decribe what to do. Follow that description, or ask in class.
-
-#### Windows Home 10 users
-On Windows Home 10 you could run into some trouble while installing Docker.     
-Follow these steps to solve these problems.     
-[Install Docker Desktop on Windows Home](https://docs.docker.com/docker-for-windows/install-windows-home/)
-
-### Check if everything is installed
-In your terminal or powershell you should type ``` docker --version ``` and get the following result.
-
-````
-	$ docker --version 
-	Docker version 20.10.17, build 100c701
-````
-
-If you do not see this, get an error or like, then you still do not have docker installed on your system. 
-
-## 2. Build an image and run the Container
-1. First clone this repository and cd into it:
+## Install python
+Go to [www.python.org](https://www.python.org) and find the download button, and install python.
+When done open you Terminal (mac) og Powershell (win) and type
 
 ```
-    git clone https://github.com/python-elective-kea/fall2023-code-examples-from-teachings.git
-```
-You can rename the folder if you want, or just leave it as it is.
+	$ python3 --version
+	Python 3.10.9
+``` 
+you should see something like this. 
+If not, python is not installed, or maybe something else went wrong (ask Claus). 
 
-```
-    mv fall2023-code-examples-from-teachings python
-```
+## Install VS Code
+Go to [code.visualstudio.com](https://code.visualstudio.com/) and find the download button for your operating system. Download and install VS Code. 
 
-After this CD into the folder
+## Setup the development environment
+1. Open VS Code.
+2. Click on the "Source Control" icon in the left sidebar (the icon looks like a square with a branch).
+3. In the "Source Control" panel that appears at the left side of the window, click on the "Clone Repository" button.
+4. A textbox will appear asking for the repository URL. Enter `https://github.com/python-elective-kea/fall2023-code-examples-from-teachings.git` and press Enter.
+5. Choose a local folder on your computer where you want to clone the repository and click "Clone".
+6. Once the repository is cloned, click on the "Explorer" icon in the left sidebar (the icon looks like a square with a folder).
+7. In the "Explorer" panel, navigate to the folder where you cloned the repository (e.g., `fall2023-code-examples-from-teachings`).
+8. Find the `exercise.ipynb` file in the folder and double-click on it to open it in the VS Code editor.
+9. Now, let's set up the environment based on the `.venv` folder:
+   - Click on the "Extensions" icon in the left sidebar (the icon looks like four squares connected by lines).
+   - In the search bar at the top of the "Extensions" panel, type "Python" and press Enter.
+   - Look for the "Python" extension by Microsoft in the search results and click on the "Install" button.
+   - After the installation, click on the "Reload" button to activate the extension.
+10. With the `exercise.ipynb` file open, click on the "Run and Debug" icon in the left sidebar (the icon looks like a play button inside a bug).
+11. At the top of the window, you'll see a dropdown menu labeled "Python" with options to select the Python interpreter. Click on it.
+12. In the dropdown menu, select the option that corresponds to the `.venv` folder in the cloned repository. It may be named something like "Python [project-name]: .venv".
+13. Once you select the Python interpreter, click on the green play button next to the dropdown menu to start the notebook kernel using the selected interpreter.
+14. Now, you should be able to run and interact with the `exercise.ipynb` file in the VS Code notebook environment.
 
-```
-    cd fall2023-code-examples-from-teachings
-```
-
-Run the following docker command
-
-```
-    docker build --tag jupyter_minimal:2023-06-12 .
-```
-This will create the image.
-
-Run this command:
-
-```
-    docker run -it -name jupyter-minimal -p 8888:8888 -v "${PWD}":/home/jovyan/work jupyter_minimal:2023-06-12
-
-```
-This will crerate and start a container.
-
-A the buttom in your terminal you will see this:
-
-```
-    To access the server, open this file in a browser:                                                 
-        file:///home/jovyan/.local/share/jupyter/runtime/jpserver-7-open.html                          
-    Or copy and paste one of these URLs:                                                               
-        http://d8942060c30d:8888/lab?token=c2ebc25800d7031c675fb592ea38ed1020725ce75d8d7e1c            
-        http://127.0.0.1:8888/lab?token=c2ebc25800d7031c675fb592ea38ed1020725ce75d8d7e1c 
-```
-
-You should copy the **token** which in the case above is this:
-
-```
-    c2ebc25800d7031c675fb592ea38ed1020725ce75d8d7e1c
-```
-
-Open your browser and type in this url:
-
-```
-    http://127.0.0.1:8888
-```
-A little down on this page you will find two input fields a **token** and a **password** field.
-
-Paste in your token in the token field and create a password (an easy password is sufficient).
-
-Thats it, you can now close your browser and stop the terminal from serving the notebook. (ctrl+c)
-
-## Start and stopping the Jupyter Notebook
-
-Find the Docker Desktop application (GUI) and open it.
-
-Here you can start and stop the container and open it in the browser.
-
-![](../_static/docker.png)
-
-## Reinstall and files 
-If you need to or wish you can at any time delete the container and do the **run** command again to start a fresh copy of the container.
-
-```
-    docker run -it -name jupyter-minimal -p 8888:8888 -v "${PWD}":/home/jovyan/work jupyter_minimal:2023-06-12
-
-```
-Your files will be in the repository you cloned
-
-```
-    fall2023-code-examples-from-teachings
-```
-And they will not be deleted when you delete the container.
-You will also be able to access these files in other editors if you wish.
