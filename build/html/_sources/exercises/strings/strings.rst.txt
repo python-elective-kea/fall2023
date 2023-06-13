@@ -1,7 +1,11 @@
 String exercises
 ================
 
-Copy/Paste the code below into 2 files and call it string1.py & string2.py
+You can find the exercises in a Jupyter Notebook file string1.ipynb and string2.ipynb 
+in the code_from_today directory that you have cloned from github.
+
+If you can not find those files, you can also find the exercises below.
+Copy/Paste the code below into 2 files and call it string1.ipynb & string2.ipynb
 
 Do the exercises and run it. When the tests all pass, you have solved the exercise.
 
