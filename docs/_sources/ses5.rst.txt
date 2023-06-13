@@ -21,7 +21,7 @@ Materials
 * `Best pratice - working in teams with docker, github <notebooks/best_practice_docker_github.ipynb>`_
 * `Beautiful Soup Documentation <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_
 * `Html to markdown <notebooks/html_markdown.rst>`_
-* `Code examples from today <https://github.com/python-elective-kea/spring2023-code-examples-from-teachings/tree/master/ses5>`_
+* `Code examples from today <https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses5>`_
 
 Exercises
 ---------

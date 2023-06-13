@@ -55,7 +55,7 @@ Learning goals
 Materials
 ---------
 * `Introduction to Python Generators <https://realpython.com/introduction-to-python-generators/>`_ (excl. Using Advanced Generator Methods & Creating Data Pipelines With Generators)
-* `Code examples from teachings <https://github.com/python-elective-kea/spring2023-code-examples-from-teachings/tree/master/ses10>`_
+* `Code examples from teachings <https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses10>`_
 
 Exercises
 ---------
