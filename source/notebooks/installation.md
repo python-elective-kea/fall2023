@@ -20,6 +20,7 @@ Go to [code.visualstudio.com](https://code.visualstudio.com/) and find the downl
 1. Open VS Code.
 1. Click on the "Extensions" icon in the left sidebar.
 1. Search for "python" and install the Python extension from Microsoft.
+1. Search for "jupyter" and install the Jupyter extension pack (4) from Microsoft.
 
 ### Clone the class repository and set up VS code to run the code
 1. Click on the "Source Control" icon in the left sidebar (the icon looks like a square with a branch).
