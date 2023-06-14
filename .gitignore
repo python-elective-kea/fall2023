@@ -2,6 +2,7 @@
 .gitconfig
 Dockerfile
 .venv
+.vscode
 
 
 # exercise solutions
