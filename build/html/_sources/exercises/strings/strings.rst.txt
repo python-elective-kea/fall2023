@@ -2,10 +2,11 @@ String exercises
 ================
 
 You can find the exercises in a Jupyter Notebook file string1.ipynb and string2.ipynb 
-in the code_from_today directory that you have cloned from github.
+in the ```code_from_today``` repository that you have cloned from github.
 
 If you can not find those files, you can also find the exercises below.
-Copy/Paste the code below into 2 files and call it string1.ipynb & string2.ipynb
+Create a string1.py and copy/Paste the code below into a cell in that file. 
+Then do the same for string2.py. 
 
 Do the exercises and run it. When the tests all pass, you have solved the exercise.
 
