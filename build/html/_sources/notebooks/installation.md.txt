@@ -46,7 +46,7 @@ Go to [code.visualstudio.com](https://code.visualstudio.com/) and find the downl
    * Venv Create a '.venv' virtual envitonment in the current workspace -> 
    * Python 3.11.3 (or another version)
 ```
-10. This will create a '.venv' in your folder, which is a virtual python installation with the dependencies needed for running the projekt.
+10. This will create a '.venv' in your folder, which is a virtual python installation with the dependencies needed for running the playground.ipynb file (Jupyter Notebook files).
 11. In the future, if needed, choose this .venv environment as your environment when running your code in this repsitory.
 
 ### The code and exercises files the rest of this semester
