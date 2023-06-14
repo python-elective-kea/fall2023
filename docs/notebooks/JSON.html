@@ -96,7 +96,7 @@
 <section id="Reading-JSON">
 <h2>Reading JSON<a class="headerlink" href="#Reading-JSON" title="Permalink to this heading"></a></h2>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import json
@@ -107,7 +107,7 @@
 <h3>json.load<a class="headerlink" href="#json.load" title="Permalink to this heading"></a></h3>
 <p>Reads from a file path / object</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>with open(&#39;testfiles/animals.json&#39;, &#39;r&#39;) as f:
@@ -126,7 +126,7 @@ print(json_list)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[i[&#39;animal&#39;][&#39;relatives&#39;] for i in json_list]
@@ -134,7 +134,7 @@ print(json_list)
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -149,7 +149,7 @@ print(json_list)
 <h3>json.loads<a class="headerlink" href="#json.loads" title="Permalink to this heading"></a></h3>
 <p>Reads the content of the file</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>with open(&#39;testfiles/animals.json&#39;, &#39;r&#39;) as f:
@@ -169,7 +169,7 @@ print(js)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[i[&#39;animal&#39;][&#39;relatives&#39;] for i in js]
@@ -177,7 +177,7 @@ print(js)
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -195,7 +195,7 @@ print(js)
 <h3>json.dumps<a class="headerlink" href="#json.dumps" title="Permalink to this heading"></a></h3>
 <p>Serialize obj to a JSON formatted str</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dict = {&#39;name&#39; : &#39;Claus&#39;, &#39;age&#39; : 120, &#39;cpr&#39; : 1234}
@@ -206,7 +206,7 @@ with open(&#39;testfiles/students.json&#39;, &#39;w&#39;) as f:
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>with open(&#39;testfiles/students.json&#39;, &#39;r&#39;) as f:
@@ -228,7 +228,7 @@ print(js)
 <h3>json.dump<a class="headerlink" href="#json.dump" title="Permalink to this heading"></a></h3>
 <p>Serialize obj as a JSON formatted stream to fp (a .write()-supporting file-like object)</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from io import StringIO
@@ -241,7 +241,7 @@ with open(&#39;testfiles/teachers.json&#39;, &#39;w&#39;) as f:
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>with open(&#39;testfiles/teachers.json&#39;, &#39;r&#39;) as f:

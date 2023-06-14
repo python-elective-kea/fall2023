@@ -95,7 +95,7 @@
 <h1>Coroutines (generators)<a class="headerlink" href="#Coroutines-(generators)" title="Permalink to this heading"></a></h1>
 <p>This is a commond way to create software:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Api:
@@ -105,10 +105,10 @@
         pass
     def do_this_third(self):
         pass
-    def run():
-        do_this_first()
-        do_this_second()
-        do_this_third()
+    def run(self):
+        self.do_this_first()
+        self.do_this_second()
+        self.do_this_third()
 </pre></div>
 </div>
 </div>

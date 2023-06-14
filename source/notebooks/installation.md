@@ -24,15 +24,10 @@ Go to [code.visualstudio.com](https://code.visualstudio.com/) and find the downl
 ### Clone the class repository and set up VS code to run the code
 1. Click on the "Source Control" icon in the left sidebar (the icon looks like a square with a branch).
 3. In the "Source Control" panel that appears at the left side of the window, click on the "Clone Repository" button.
-4. A textbox will appear asking for the repository URL. 
-
-   Enter 
+4. A textbox will appear asking for the repository URL. Copy/paste in the below url and press enter 
 ```
    https://github.com/python-elective-kea/fall2023-code-examples-from-teachings.git
 ``` 
-   
-and press Enter.
-
 5. Choose a local folder on your computer where you want to clone the repository and click "Clone".
 6. Once the repository is cloned, click on the "Explorer" icon in the left sidebar (the icon looks like a square with a folder).
 1. In the "Explorer" panel, navigate to the folder where you cloned the repository (e.g., `fall2023-code-examples-from-teachings`). 
@@ -52,6 +47,7 @@ and press Enter.
    * Python 3.11.3 (or another version)
 ```
 10. This will create a '.venv' in your folder, which is a virtual python installation with the dependencies needed for running the projekt.
+11. In the future, if needed, choose this .venv environment as your environment when running your code in this repsitory.
 
 ### The code and exercises files the rest of this semester
 In the future, this is how you should work on the files and exercises given to you in teachings. 
