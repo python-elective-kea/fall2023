@@ -22,7 +22,7 @@ Materials
 <!-- * `Tuples in Python <https://www.datacamp.com/community/tutorials/python-tuples>`_ -->
 * `Python "for" Loops <https://realpython.com/python-for-loop/>`_
 * `Python "while" Loops <https://realpython.com/python-while-loop/>`_
-* `How to Use sorted() and not .sort() in Python <https://realpython.com/python-sort/>`_
+* `How to Use sorted() and .sort() in Python <https://realpython.com/python-sort/>`_
 * `Notebook (teachings notes from today) <notebooks/noterlists_tuples.ipynb>`_
 * `Code examples from teachings <https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses2>`_
 * `How to Learn Python in Five Minutes <https://www.youtube.com/watch?v=ohr6O78jGzs>`_
