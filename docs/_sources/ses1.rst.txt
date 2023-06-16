@@ -31,7 +31,7 @@ Materials
 Exercises
 ---------
 * `Sign up for realpythons newsletter <https://realpython.com/newsletter/>`_
-* `Follow along this tutorial: Jupyter Notebooks in VS Code Walkthrough <notebooks/notebook_vs_walkthrough.ipynb>`_
+* `Follow along this tutorial: Jupyter Notebooks in VS Code Walkthrough <notebooks/notebook_vs_walktrough.ipynb>`_
 * `Exercise 1: Strings1 & Strings2 <exercises/strings/strings.rst>`_  (`Solution <exercises/solution/01_strings/strings.rst>`_ (is online Monday)) 
 ------
 Quizes
