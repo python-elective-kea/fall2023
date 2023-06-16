@@ -1,4 +1,7 @@
 # Installations
+There are several IDE´s you can use when programming in python.
+In this elective we will use a combination of VS Code and a [Jupyter Notebook](https://jupyter.org/). 
+Beneath you can find guides to the installation of the software needed for the course.
 
 ## Install python
 Go to [www.python.org](https://www.python.org) and find the download button, and install python.
