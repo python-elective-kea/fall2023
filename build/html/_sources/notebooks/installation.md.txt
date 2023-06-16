@@ -19,7 +19,7 @@ Go to [code.visualstudio.com](https://code.visualstudio.com/) and find the downl
 
 ## Setup the development environment
 
-### Add the python extension
+### Add the python and jupyter extension in VS Code
 1. Open VS Code.
 1. Click on the "Extensions" icon in the left sidebar.
 1. Search for "python" and install the Python extension from Microsoft.
