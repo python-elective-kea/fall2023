@@ -7,15 +7,11 @@
 
 
 
-## Terminal introduction
-
-* Talk about 
-	* bash, zsh
-	* cmd, powershell
+## Notebook introduction
+* walkthrough
+  * !bash commands in a cell
 
 
-* unix_commands.md
-		
 ## Language Introduction
 
 * Python is an Old Language, created in 1990, Guido van Russum, Works at Google, later developed as a open source project.
