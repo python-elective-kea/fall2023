@@ -19,7 +19,7 @@ After this week you will:
 Materials
 ---------
 * `Installations <notebooks/installation.md>`_
-* `Jupyter Notebooks in VS Code Walkthrough <notebooks/notebook_vs_walkthrough.ipynb>`_
+* `Jupyter Notebooks in VS Code Walkthrough <notebooks/notebook_vs_walktrough.ipynb>`_
 * `Strings and Character Data in Python <https://realpython.com/python-strings/>`_
 * `8 World-Class Software Companies That Use Python <https://realpython.com/world-class-companies-using-python/>`_
 * `Is Python interpreted or compiled? Yes. <https://nedbatchelder.com/blog/201803/is_python_interpreted_or_compiled_yes.html>`_
