@@ -19,7 +19,6 @@ After this week you will:
 Materials
 ---------
 * `Installations <notebooks/installation.md>`_
-* `Jupyter Notebooks in VS Code Walkthrough <https://code.visualstudio.com/docs/python/jupyter-support-py>`_
 * `Jupyter Notebooks in VS Code Walkthrough <https://www.youtube.com/watch?v=DA6ZAHBPF1U>`_
 * `Strings and Character Data in Python <https://realpython.com/python-strings/>`_
 * `8 World-Class Software Companies That Use Python <https://realpython.com/world-class-companies-using-python/>`_
