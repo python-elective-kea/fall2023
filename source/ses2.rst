@@ -19,7 +19,7 @@ Materials
 ---------
 
 * `Lists and Tuples in Python <https://realpython.com/python-lists-tuples/>`_
-<!-- * `Tuples in Python <https://www.datacamp.com/community/tutorials/python-tuples>`_ -->
+.. * `Tuples in Python <https://www.datacamp.com/community/tutorials/python-tuples>`_ 
 * `Python "for" Loops <https://realpython.com/python-for-loop/>`_
 * `Python "while" Loops <https://realpython.com/python-while-loop/>`_
 * `How to Use sorted() and .sort() in Python <https://realpython.com/python-sort/>`_
