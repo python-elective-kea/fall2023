@@ -158,6 +158,26 @@ In the code example below we can se that the connect() function is a context man
 </div>
 <p>The “CREATE TABLE” and the “DROP TABLE” has also some __enter__ / __exit__ logic behind it.
 Put this logic into its own contextmanager and use it. This should be done by using the contextmanager decorator from the contextlib library.</p>
+<p><strong>4. Context mananager for timing execution</strong>
+In the session 6 about decorators we made a decorator that could time the execution of a function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>     <span class="kn">import</span> <span class="nn">time</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span>     <span class="k">def</span> <span class="nf">timeit</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<span class="linenos"> 4</span>         <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="linenos"> 5</span>             <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="linenos"> 6</span>             <span class="n">value</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="linenos"> 7</span>             <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="linenos"> 8</span>             <span class="k">return</span> <span class="n">value</span>
+<span class="linenos"> 9</span>         <span class="k">return</span> <span class="n">wrapper</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>     <span class="nd">@timeit</span>
+<span class="linenos">12</span>     <span class="k">def</span> <span class="nf">gen_large_list</span><span class="p">():</span>
+<span class="linenos">13</span>         <span class="k">return</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000000</span><span class="p">)]</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>     <span class="n">gen_large_list</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Now we want to make a context manager that can do the same. The context manager should be able to time the execution of a code block.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="notebooks/JSON.html#10-minutes-exercise">JSON 10 minutes exer</a></p></li>
 <li><p><a class="reference external" href="notebooks/Sqlite.html#10-minutes-exercise">SQlite 10 minutes exer</a></p></li>

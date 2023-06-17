@@ -69,6 +69,29 @@ In the code example below we can se that the connect() function is a context man
 The "CREATE TABLE" and the "DROP TABLE" has also some \_\_enter\_\_ / \_\_exit\_\_ logic behind it.    
 Put this logic into its own contextmanager and use it. This should be done by using the contextmanager decorator from the contextlib library.     
 
+**4. Context mananager for timing execution**
+In the session 6 about decorators we made a decorator that could time the execution of a function.
+
+.. code:: python
+   :linenos:
+
+        import time
+
+        def timeit(func):
+            def wrapper(*args, **kwargs):
+                start = time.time()
+                value = func(*args, **kwargs)
+                end = time.time()
+                return value
+            return wrapper
+
+        @timeit
+        def gen_large_list():
+            return [x for x in range(10000000)]
+
+        gen_large_list() 
+
+Now we want to make a context manager that can do the same. The context manager should be able to time the execution of a code block.
 
 
 * `JSON 10 minutes exer <notebooks/JSON.html#10-minutes-exercise>`_

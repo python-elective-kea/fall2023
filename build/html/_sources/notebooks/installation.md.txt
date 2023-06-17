@@ -59,3 +59,9 @@ You should `pull` the master branch when new files are added to the respoitory, 
 
 !! IMPORTANT. Do not edit any files directly in the master branch, it should be keept clean. Othervise you will end up with a lot of merge errors.
 
+## Copilot+
+If you want to try out the new Copilot+ extension for VS Code, you can follow the instructions here: https://copilot.github.com/
+
+and have a look at this video: https://www.youtube.com/watch?v=gDJzr9DBKTI
+
+
