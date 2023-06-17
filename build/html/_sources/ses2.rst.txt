@@ -64,8 +64,8 @@ Ex 1: Build-in functions on lists
 
 | Create a list like this: :code:`names = ['George', 'Bejamin', 'Thomas', 'John']`    
 | Look at this list of pythons `build in functions <https://docs.python.org/3/library/functions.html>`_.
-| Try all of these in the interpretor (on a list you create). e.g  :code:`len(names)`   
-| Not all will work on lists, but try it out and see what works. 
+| Try all of these (on a list you create). e.g  :code:`len(names)`   
+| Not all will work on lists, but try it out, read the documentation, and see what works. 
 
 
 --------------------------------
@@ -107,7 +107,7 @@ Ex 3: Sort a list
 3. Sort the list in reversed order. 
 4. Sort the list on the lenght of the name.
 5. Sort the list based on the last letter in the name.
-6. Sort the list with the names where the letter 'a' is in the name first.
+6. Sort the list in a way that the names that has an 'a' in it should be sorted first (still alphabetically).
 
 -----------------------------------
 Ex 4: Text editor plugin simulation 

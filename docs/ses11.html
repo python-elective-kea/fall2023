@@ -158,8 +158,11 @@ In the code example below we can se that the connect() function is a context man
 </div>
 <p>The “CREATE TABLE” and the “DROP TABLE” has also some __enter__ / __exit__ logic behind it.
 Put this logic into its own contextmanager and use it. This should be done by using the contextmanager decorator from the contextlib library.</p>
-<p><strong>4. Context mananager for timing execution</strong>
-In the session 6 about decorators we made a decorator that could time the execution of a function.</p>
+<p><strong>4. Context mananager for timing execution</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="exercises/solution/10_context_managers/solutions.html"><span class="doc">Solutions</span></a></p></li>
+</ul>
+<p>In the session 6 about decorators we made a decorator that could time the execution of a function.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>     <span class="kn">import</span> <span class="nn">time</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span>     <span class="k">def</span> <span class="nf">timeit</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
@@ -179,7 +182,6 @@ In the session 6 about decorators we made a decorator that could time the execut
 </div>
 <p>Now we want to make a context manager that can do the same. The context manager should be able to time the execution of a code block.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="notebooks/JSON.html#10-minutes-exercise">JSON 10 minutes exer</a></p></li>
 <li><p><a class="reference external" href="notebooks/Sqlite.html#10-minutes-exercise">SQlite 10 minutes exer</a></p></li>
 <li><p><a class="reference internal" href="notebooks/ConvertCSVtoJSON.html"><span class="doc">ConvertCSVtoJSON</span></a> ( <a class="reference internal" href="exercises/solution/10_context_managers/SolutionConvertCSVtoJSON.html"><span class="doc">Solution</span></a>)</p></li>
 <li><p><a class="reference internal" href="notebooks/Assignment_Decorator_Context_Manager.html"><span class="doc">Decorator / Context Manager</span></a>  (<a class="reference internal" href="exercises/solution/10_context_managers/Assignment_Decorator_Context_Manager.html"><span class="doc">Solution</span></a>)</p></li>

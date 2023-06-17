@@ -246,13 +246,35 @@ with connect(&#39;school.db&#39;) as conn:
 (3, &#39;Hannah&#39;, &#39;222222-2222&#39;)
 </pre></div></div>
 </div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</section>
+<section id="4.-Context-mananager-for-timing-execution">
+<h2>4. Context mananager for timing execution<a class="headerlink" href="#4.-Context-mananager-for-timing-execution" title="Permalink to this heading"></a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import time
+
+class Timer:
+    def __enter__(self):
+        self.start = time.time()
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        end = time.time()
+        print(f&quot;Elapsed time: {end - self.start:.6f} seconds&quot;)
+
+with Timer():
+    my_list = [x for x in range(100000000)]
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Elapsed time: 1.530401 seconds
+</pre></div></div>
 </div>
 </section>
 </section>

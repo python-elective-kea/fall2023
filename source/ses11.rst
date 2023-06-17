@@ -70,6 +70,9 @@ The "CREATE TABLE" and the "DROP TABLE" has also some \_\_enter\_\_ / \_\_exit\_
 Put this logic into its own contextmanager and use it. This should be done by using the contextmanager decorator from the contextlib library.     
 
 **4. Context mananager for timing execution**
+
+* `Solutions <exercises/solution/10_context_managers/solutions.ipynb>`_
+
 In the session 6 about decorators we made a decorator that could time the execution of a function.
 
 .. code:: python
@@ -94,7 +97,6 @@ In the session 6 about decorators we made a decorator that could time the execut
 Now we want to make a context manager that can do the same. The context manager should be able to time the execution of a code block.
 
 
-* `JSON 10 minutes exer <notebooks/JSON.html#10-minutes-exercise>`_
 * `SQlite 10 minutes exer <notebooks/Sqlite.html#10-minutes-exercise>`_
 * `ConvertCSVtoJSON <notebooks/ConvertCSVtoJSON.ipynb>`_ ( `Solution <exercises/solution/10_context_managers/SolutionConvertCSVtoJSON.ipynb>`_)
 * `Decorator / Context Manager <notebooks/Assignment_Decorator_Context_Manager.ipynb>`_  (`Solution <exercises/solution/10_context_managers/Assignment_Decorator_Context_Manager.ipynb>`_) 
