@@ -74,7 +74,7 @@ Ex 1.1: Is it a tuple or a list?
 
 `Solution <exercises/solution/02_lists/sorted_exercises.rst>`_
 
-| The following data should be presented as either a list or a tuple.    
+| The following data should be presented as either a list or a tuple, or as a combination of both.    
 | Your job is to choose the right one. 
 | Hint: A list is a collection of the same type of data, a tuple is a record (e.g. in a database a **record** is called a **row**)
 
