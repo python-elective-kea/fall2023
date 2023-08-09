@@ -6,15 +6,7 @@ This assignment is online and can be done from home.
 
 **There will be no in-person instruction, and no introduction to this assignment.**
 
-**Solutions**
-`Check your solutions against the provided materials <exercises/solution/03_mandatory_set_dicts/Solutions_mandatory_sets_dicts.ipynb>`_
-
-.. note::
-        | `Link to Assignment for the A class (morning) on fronter  <https://kea-fronter.itslearning.com/ContentArea/ContentArea.aspx?LocationID=5798&LocationType=1&ElementID=1080170>`_
-        | `Link to Assignment for the B class (afternoon) on fronter  <https://kea-fronter.itslearning.com/ContentArea/ContentArea.aspx?LocationID=5798&LocationType=1&ElementID=1080170>`_
-        | Start time: Thursday 08:30
-        | Hand in latest: **Thursday 23/2 15:45**
-        | Peer Review: Hand in latest **Monday 27/2 12:00**
+**Assignment will come later**
 
 
 The final evaluation of your assignment will be conducted by Claus and will result in a pass or fail evaluation.
