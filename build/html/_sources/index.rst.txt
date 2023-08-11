@@ -26,6 +26,17 @@ You will after this session have an:
 Session 2 - Data Structures: List & Tuples
 ------------------------------------------
 
+Session 7 - OOP
+---------------
+
+Session focuses on the basics of Object-Oriented Programming (OOP) in Python.   
+By the end, participants will understand classes, objects, inheritance, and Pythonic OOP in relation to other languages like Java.   
+Essential materials include the OOP in Python 3 text, a notebook on classes, and examples from teachings.   
+Exercises involve creating classes for a Bank system, evaluating Python skills using ChatGPT, and building a terminal-based "Angry Bird" game using OOP.   
+Participants are encouraged to explore, iterate upon, and improve given exercises for a deeper understanding.   
+
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
