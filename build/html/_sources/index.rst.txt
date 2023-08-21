@@ -43,8 +43,7 @@ This session delves deeper into Python modules, spotlighting the BeautifulSoup m
 Session 6 - Functions & Decorators
 ----------------------------------
 
-This session dives into Python decorators, tools that augment existing code functionality. Drawing inspiration from frameworks like Spring, decorators modularize and enhance Python code. Participants learn through practical examples, understanding the core concepts and syntax. Exercises include timing code, creating game character decorators, and building a menu register.
-
+Session 6 delves into Python decorators, enhancing existing code functionality. Drawing parallels with the Spring Framework, decorators in Python modularize and maintain code by adding new features. The session introduces the boilerplate syntax of decorators and offers practical examples. Participants engage in exercises like timing code execution, slowing down code, and decorating game characters. The goal is to provide a comprehensive understanding of decorators and their applications.
 
 Session 7 - OOP
 ---------------
@@ -55,6 +54,27 @@ Essential materials include the OOP in Python 3 text, a notebook on classes, and
 Exercises involve creating classes for a Bank system, evaluating Python skills using ChatGPT, and building a terminal-based "Angry Bird" game using OOP.   
 Participants are encouraged to explore, iterate upon, and improve given exercises for a deeper understanding.   
 
+Session 8 - Encapsulation
+-------------------------
+Session 8 focuses on the concept of encapsulation in Python, emphasizing the Pythonic approach compared to languages like Java. While Python typically promotes public attributes, the session explores the use of properties for data encapsulation, using the built-in decorator function @property. Participants will learn the significance of properties, their advantages over private attributes in Java, and engage in exercises like creating a car object, bank operations, and a color converter. The session aims to provide a deep understanding of encapsulation and its practical applications in Python.
+
+Session 9 - The Python Data Model
+---------------------------------
+
+Session 9 delves into the Python data model, emphasizing Python's protocol-oriented approach. Participants learn to implement specific methods in their classes, enabling interaction with Python's built-in functions and top-level syntax. For instance, implementing the __len__ method allows the use of the len() function on objects. The session covers methods like __eq__, __contains__, and more, ensuring objects behave like standard Python objects. Practical exercises include enhancing a deck of cards example with various methods.
+
+Session 10 - Generators
+-----------------------
+
+Session 10 introduces participants to the concept of making classes iterable using Python generators. The session emphasizes creating generator functions and expressions, allowing for more readable code. Participants will understand how functions in Python are objects and how to make their objects callable. Practical examples include creating an iterator class, mimicking the built-in range function, and generating student data. The goal is to equip learners with the skills to create memory and time-efficient code using iterators and generators.
+
+Session 11 - Context Managers
+-----------------------------
+Session 11 introduces participants to Context Managers in Python, tools that manage resources such as file handling. Context Managers ensure efficient resource management, like automatically closing files after use. Participants will create their own context managers and explore built-in ones. The session covers practical applications with JSON, Pickles, CSV files, and SQLite databases. The goal is to equip learners with skills to manage resources effectively and write cleaner, more efficient code.
+
+Session 12 - Mandatory Assignment 2
+-----------------------------------
+Information will come later
 
 
 .. toctree::
