@@ -20,10 +20,7 @@ This course is 10 ECTS points which translates to 13 hours pr. week, including c
 
 Software Needed for the Course
 ------------------------------
-* A CLI (Terminal, Powershell, Gitbash e.g)
-* Git
-* Docker 
-* A text editor or IDE of your own choise.
+* VS Code (or something like it)
 
 Course materials
 ----------------
