@@ -25,6 +25,26 @@ You will after this session have an:
 
 Session 2 - Data Structures: List & Tuples
 ------------------------------------------
+Today's session is centered around working with data structures in Python, specifically Lists and Tuples. By the conclusion of these sessions, participants will be proficient in using Lists and Tuples, reading and writing to files, and utilizing both the "for" and "while" loops. 
+
+Session 3 - Modules & List Comprehensions
+-----------------------------------------
+This session delves into Python modules, teaching participants to create and utilize both built-in and 3rd party modules. It also introduces list comprehensions as a concise method for list generation. Practical exercises involve working with specific modules like Os, Subprocesses, Zipfile, and Requests. The goal is to empower participants to fetch website data, manage files, and integrate external code seamlessly.
+
+Session 4 - Mandatory assignment
+--------------------------------
+Description will come later
+
+Session 5 - Utilities and Modules 
+---------------------------------
+
+This session delves deeper into Python modules, spotlighting the BeautifulSoup module for web scraping. Participants learn to persistently save modules in Docker containers. The curriculum includes hands-on exercises with Docker and web scraping tasks. Collaboration tools and practices, especially using Docker and GitHub, are also emphasized.
+
+Session 6 - Functions & Decorators
+----------------------------------
+
+This session dives into Python decorators, tools that augment existing code functionality. Drawing inspiration from frameworks like Spring, decorators modularize and enhance Python code. Participants learn through practical examples, understanding the core concepts and syntax. Exercises include timing code, creating game character decorators, and building a menu register.
+
 
 Session 7 - OOP
 ---------------

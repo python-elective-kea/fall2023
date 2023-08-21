@@ -1,7 +1,7 @@
 Session 6 - Functions &  Decorators  
 ===================================
 
-In Python, decorators are frequently used to enhance the functionality of existing code. If you've previously worked with the Spring Framework, you may be familiar with this concept. In Spring, you can add additional code to your existing code by annotating it with @Controller or @Autowired. Similarly, in Python, decorators allow you to add new functionality to your code by decorating functions or classes with additional code. This can make your code more modular and easier to maintain, as you can separate different concerns into separate decorators.
+In Python, decorators are frequently used to enhance the functionality of existing code. In Python, decorators allow you to add new functionality to your code by decorating functions or classes with additional code. This can make your code more modular and easier to maintain, as you can separate different concerns into separate decorators.
 
 The boilerplate syntax of a decorator is like this:
 
