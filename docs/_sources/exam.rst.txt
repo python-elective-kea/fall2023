@@ -12,23 +12,25 @@ The exam
 
 The exam consist of 2 elements: 
 
-* a hand in of a synopsis, and an 
-* oral exam.
+* Hand in of an "outline", or "exam synopsis", and an 
+* Oral exam.
 
 Hand-in a synopsis:
 *******************
 
-Some weeks before the oral examination you should hand in a synopsis on wiseflow. If you fail to do so, you will not be able to attend the oral exam. The synopsis should follow these requirements:
+Some weeks before the oral examination you should hand in a exam synopsis on wiseflow. If you fail to do so, you will not be able to attend the oral exam. The synopsis should follow these requirements:
 
 * One A4 page (all topics should be on one page!)
 * Give a short overview of what you will present at your exam.
 
+Remember, a good synopsis or "abstract" clearly and concisely presents your topic, the purpose of your presentation, and the main points you will cover. It makes it easier for those assessing you to follow your presentation and judge you fairly.
+
 Oral exam:
 **********
 
-* Prior to the exam you should have prepared a 10 minutes presentation for the 3 topics. At the beginnig of the examination you then randomly pick a topic to focus on for your examination.
+* Prior to the exam you should have prepared a 10 minutes presentation for each of the 3 topics. At the beginnig of the examination you then randomly pick a topic to focus on for your examination.
 * Do a 10 minutes presentation with code examples for the picked topic.
-* After your presentation 15 minutes examination within this topic and other related topics.
+* After your presentation 12 minutes examination within this topic and other related topics.
 
 -----------
 Exam Topics
@@ -37,9 +39,9 @@ Exam Topics
 At your exam you should demonstrate to wich extend you fullfill the learning goals of this elective. 
 This you should do through demonstrating your knowlege, skills and competencies within these topics. 
 
-        * Data Structures & functions
-        * Pythonic OOP
-        * Generators, Decorators & Context Managers
+        * Pythonic OOP and encapsulation
+        * Build in functions as an API
+        * Decorators and properties
 
 You can get inspiration about what to talk about within each topic in your presentation `here <notebooks/exam_synopsis_template.md>`_.
 
@@ -49,16 +51,15 @@ Exam advice
 
 The flow of the exam flow be as:
 
-Some weeks before the oral exam you will have to hand in a synopsis describing what you will present in connection with the different exam topics. The abstract should be maximum one page long and should follow the `Exam Synopsis Template <notebooks/exam_synopsis_template.md>`_
+Some weeks before the oral exam you will have to hand in a synopsis describing what you will present in connection with the different exam topics. The synopsis should be maximum one page long and should follow the `Exam Synopsis Template <notebooks/exam_synopsis_template.md>`_
 
 Oral exam
 *********
 
-
-You draw a topic from the topic cards.
+You draw a random topic from one of three topic cards.
 For 10 minutes you will present what you have prepared for this specific topic. 
-After that for 15 minutes, I (Claus) will ask you questions mainly within the same topic. 
-In the end of the exam, if the censor needs clarifications on your answers, he might ask you to elaborate on an already asked question. 
+After that for 12 minutes, I (Claus) will ask you questions mainly within the same topic. 
+In the end of the exam, if the censor needs clarifications on your answers, she might ask you to elaborate on an already asked question. 
 
 Good advice:
 ************
