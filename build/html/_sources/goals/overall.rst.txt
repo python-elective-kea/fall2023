@@ -32,7 +32,6 @@ After completing this elective, you will be able to:
 * Use a variety of language specific development tools. 
 * Develop using python related development methods.
 * Solve abstract problems using python and a pythonic programming style. 
-* Control your computer through a bash terminal.
 * Refactor code to become "pythonic". 
 * Refactoring code to make the code more efficient. 
 * Analyzes error messages and find solutions to the problem. 
