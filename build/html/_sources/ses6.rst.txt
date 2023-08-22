@@ -126,7 +126,7 @@ Small Exercises
 
 `Solution <exercises/solution/08_decorators/solutions.rst>`_
 
-With this function as a starting point 
+With this function as a starting point:
 
 .. code:: python
    :linenos:
