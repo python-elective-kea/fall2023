@@ -93,9 +93,10 @@
              
   <section id="Value-Class-&amp;-Graph-with-nodes-and-edges-exaple">
 <h1>Value Class &amp; Graph with nodes and edges exaple<a class="headerlink" href="#Value-Class-&-Graph-with-nodes-and-edges-exaple" title="Permalink to this heading"></a></h1>
+<p><strong>Problem to be solved:</strong> We need a datastructure that can be used for creating a graph like the one below. An int holds the number value, but we need to know the variable name connected to the object, the parrent objects used to create the new object, and the operands also used to create the object. So all this historical data can not be stored in an <strong>int</strong>. Therefore we need to create a new more complex object.</p>
 <div class="line-block">
 <div class="line">The following is a OOP example of how to create a class and an object using the pythonic approch of doing so.</div>
-<div class="line">The Value class is basically an <strong>int class</strong>, but since we in this case need more attributes, we need to create our own class with the aditional attributes. Still this object should be able to perform the same actions. in this case we fokus on: +,*,-,/</div>
+<div class="line">The Value class is basically an <strong>int</strong> or a <strong>float class</strong>, but since we in this case need more attributes, we need to create our own class with the aditional attributes. Still this object should be able to perform the same actions. in this case we fokus on: +,*,-,/</div>
 </div>
 <ul class="simple">
 <li><p><strong>data</strong> holds the number. (This is like in an <em>int</em> class)</p></li>
@@ -107,7 +108,7 @@
 <li><p><strong>label</strong> is the variable name given when creating the object.</p></li>
 </ul>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Install graphviz on you computer: https://graphviz.org/download/
@@ -132,16 +133,16 @@ Note: you may need to restart the kernel to use updated packages.
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Value:
 
     def __init__(self, data, _parents=(), _operator=&#39;&#39;, label=&#39;&#39;):
-        self.data = data
-        self._prev = set(_parents)
-        self._op = _operator
-        self.label = label
+        self.data = data                # the actual value
+        self._prev = set(_parents)      # the 2 or more object used to create the object
+        self._op = _operator            # the operator used when creating the object (+,-,*,/)
+        self.label = label              # The variable name connected to the object
 
     def __repr__(self):
         return f&quot;Value(data={self.data})&quot;
@@ -163,19 +164,27 @@ Note: you may need to restart the kernel to use updated packages.
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def trace(root):
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># These 2 functions are not super important for you to look at right now. The fokus should be on the Value class.
+# But basicly what the 2 functions do are to produce the graph below with its nodes and edges.
+# If you later look through the code step by step, you should by now be able to understand what it does.
+# If not it is a good exercise to do so.
+
+def trace(root):
     # builds a set of all nodes and edges in a graph
     nodes, edges = set(), set()
+
     def build(v):
         if v not in nodes:
             nodes.add(v)
             for child in v._prev:
                 edges.add((child, v))
                 build(child)
+
     build(root)
+
     return nodes, edges
 
 def draw_dot(root):
@@ -221,6 +230,23 @@ draw_dot(f)
 </div>
 <div class="output_area docutils container">
 <img alt="../_images/notebooks_oop_lecture_value_graphviz_4_0.svg" src="../_images/notebooks_oop_lecture_value_graphviz_4_0.svg" /></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>c._prev
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{Value(data=-3), Value(data=2)}
+</pre></div></div>
 </div>
 <section id="This-show-the-methods-in-an-int-class">
 <h2>This show the methods in an int class<a class="headerlink" href="#This-show-the-methods-in-an-int-class" title="Permalink to this heading"></a></h2>
@@ -505,14 +531,6 @@ class int(object)
  |      the real part of a complex number
 
 </pre></div></div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </div>
 </section>
 </section>
