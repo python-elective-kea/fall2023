@@ -1,5 +1,5 @@
-Session 7 - OOP
-===============
+Session 7 - Pythonic OOP
+========================
 
 
 
