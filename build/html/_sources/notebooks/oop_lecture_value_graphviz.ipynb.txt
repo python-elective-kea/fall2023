@@ -79,7 +79,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 13,
+   "execution_count": 14,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -307,26 +307,6 @@
     "f = d / e; f.label = 'f'\n",
     "\n",
     "draw_dot(f)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 11,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "{Value(data=-3), Value(data=2)}"
-      ]
-     },
-     "execution_count": 11,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "c._prev"
    ]
   },
   {
