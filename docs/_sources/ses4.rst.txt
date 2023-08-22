@@ -1,4 +1,4 @@
-Session 4 - Mandatory assignment
+Session 3 - Mandatory assignment
 ================================
 Today's lectures will be used for your first mandatory assignment. The assignment is individual, but you are welcome to work together in solving it. However, everyone should hand it in individually.
 

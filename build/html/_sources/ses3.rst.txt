@@ -1,4 +1,4 @@
-Session 3 - Modules & list comprehensions
+Session 4 - Modules & list comprehensions
 =========================================
 Today we will examine modules in Python. You will create your own modules and learn how to use Python's built-in modules. In two weeks, we will continue with 3rd party modules (code created by others) and you will learn how to incorporate these into your own code and ensure that others using your code have access to the same 3rd party modules and the correct versions.
 

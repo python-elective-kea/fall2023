@@ -86,8 +86,8 @@ Information will come later
    exam
    ses1
    ses2
-   ses3
    ses4
+   ses3
    ses5
    ses6
    ses7
