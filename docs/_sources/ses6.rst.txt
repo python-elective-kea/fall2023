@@ -50,7 +50,7 @@ Materials
 * `Primer on Python Decorators <https://realpython.com/primer-on-python-decorators/>`_
 * `Python Inner Functions—What Are They Good For? <https://realpython.com/inner-functions-what-are-they-good-for/>`_
 * `Notebook on Decorators <notebooks/Decorators.ipynb>`_
-* `Notebook demo Value class in teachings <notebooks/oop_lecture_value_graphviz.ipynb>`
+* `Notebook demo Value class in teachings <notebooks/oop_lecture_value_graphviz.ipynb>`_
 * `Code examples from teachings <https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses6>`_
 
 
