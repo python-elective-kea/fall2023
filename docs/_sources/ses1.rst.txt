@@ -24,7 +24,7 @@ Materials
 * `Is Python interpreted or compiled? Yes. <https://nedbatchelder.com/blog/201803/is_python_interpreted_or_compiled_yes.html>`_
 * `Built-in Functions <https://docs.python.org/3/library/functions.html>`_
 * `if Statements <https://docs.python.org/3/tutorial/controlflow.html#if-statements>`_
-* `Notes from teachings <notebooks/notes_01.md>`_
+* `Notes from teachings <notebooks/notes_01.ipynb>`_
 * `Code examples from teachings <https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses1>`_
 
 Exercises
