@@ -4,18 +4,30 @@ In this elective we will use a combination of VS Code and a [Jupyter Notebook](h
 Beneath you can find guides to the installation of the software needed for the course.
 
 ## Install python
-Go to [www.python.org](https://www.python.org) and find the download button, and install python.
+Go to [www.python.org](https://www.python.org) and find the download button, and install python.   
+
+On Mac its recomended to install python (and other software) through brew. 
+
+```
+   $ brew install python
+```
 When done open you Terminal (mac) og Powershell (win) and type
 
 ```
 	$ python3 --version
-	Python 3.10.9
+	Python 3.11.4
 ``` 
 you should see something like this. 
 If not, python is not installed, or maybe something else went wrong (ask Claus). 
 
 ## Install VS Code
 Go to [code.visualstudio.com](https://code.visualstudio.com/) and find the download button for your operating system. Download and install VS Code. 
+
+Mac
+
+```
+   $ brew install --cask visual-studio-code
+```
 
 ## Setup the development environment
 
@@ -25,39 +37,58 @@ Go to [code.visualstudio.com](https://code.visualstudio.com/) and find the downl
 1. Search for "python" and install the Python extension from Microsoft.
 1. Search for "jupyter" and install the Jupyter extension pack (4) from Microsoft.
 
-### Clone the class repository and set up VS code to run the code
-1. Click on the "Source Control" icon in the left sidebar (the icon looks like a square with a branch).
-3. In the "Source Control" panel that appears at the left side of the window, click on the "Clone Repository" button.
-4. A textbox will appear asking for the repository URL. Copy/paste in the below url and press enter 
-```
-   https://github.com/python-elective-kea/fall2023-code-examples-from-teachings.git
-``` 
-5. Choose a local folder on your computer where you want to clone the repository and click "Clone".
-6. Once the repository is cloned, click on the "Explorer" icon in the left sidebar (the icon looks like a square with a folder).
-1. In the "Explorer" panel, navigate to the folder where you cloned the repository (e.g., `fall2023-code-examples-from-teachings`). 
-1. In the bottom-left corner of the VS Code window, you should see the Git status bar. If it's not visible, you can enable it by clicking on the "Source Control" icon in the left sidebar.
-1. Click on the branch name currently displayed in the Git status bar (usually the default branch name, such as "main" or "master").
-1. In the branch dropdown, type "playground" and press Enter to create a new branch named "playground". Alternatively, you can click on the "+" icon to create a new branch and enter "playground" as the branch name.
-1. Once the branch is created, the Git status bar should now display "playground" as the active branch.
-1. Find the playground.ipynb file in the project folder within the "Explorer" panel.
-1. Find the `playground.ipynb` file in the folder and double-click on it to open it in the VS Code editor.
-9. In the top right corner click on:
-   
-```
-   * Select Kernel -> 
-   * Python environmets -> 
-   * Create Python Environment -> 
-   * Venv Create a '.venv' virtual envitonment in the current workspace -> 
-   * Python 3.11.3 (or another version)
-```
-10. This will create a '.venv' in your folder, which is a virtual python installation with the dependencies needed for running the playground.ipynb file (Jupyter Notebook files).
-11. In the future, if needed, choose this .venv environment as your environment when running your code in this repsitory.
+### Setting Up the Class Repository in VS Code:
 
-### The code and exercises files the rest of this semester
-In the future, this is how you should work on the files and exercises given to you in teachings. 
-You should `pull` the master branch when new files are added to the respoitory, and then create a new branch where you can play around with the files or do the exercises. And you should never merge your branches into the master branch. 
+#### 1. Clone the Repository:
 
-!! IMPORTANT. Do not edit any files directly in the master branch, it should be keept clean. Othervise you will end up with a lot of merge errors.
+* Open VS Code.
+* Click the “Source Control” icon on the left (square with a branch).
+* Click “Clone Repository”.
+* Enter the URL: https://github.com/python-elective-kea/fall2023-code-examples-from-teachings.git
+* Choose a local folder to clone to and click “Clone”.
+
+#### 2 .Navigate to the Cloned Repository:
+
+* Click the “Explorer” icon on the left.
+* Go to the cloned folder (e.g., fall2023-code-examples-from-teachings).
+
+#### 3. Set Up Git:
+
+* If the Git status bar isn't visible at the bottom-left, click the “Source Control” icon.
+* Click the displayed branch name (e.g., “main” or “master”).
+* Type “playground” to create a new branch or click “+” and name it “playground”.
+* The status bar should now show “playground” as the active branch.
+
+#### 4. Open the File:
+
+* Locate playground.ipynb in the “Explorer” panel.
+* Double-click to open it.
+
+#### 5. Set Up Python Environment:
+
+* On the top right corner.
+* Select Kernel.
+* Choose Python environments.
+* Click on Create Python Environment.
+* Opt for Venv Create a '.venv' in the current workspace.
+* Select your Python version (e.g., 3.11.3).
+* This process establishes a ‘.venv’ virtual environment for the playground.ipynb file.
+
+#### 6. Note: 
+* Always choose the .venv environment when running code in this repository in the future.
+
+### Working with Code and Exercises for the Semester:
+
+* Always pull the master branch for new files added to the repository.
+* Create a new branch for:
+   * Playing with files.
+   * Completing exercises.
+* Never merge your branches into the master branch.
+
+#### Important Note:
+
+* Do not edit files directly in the master branch.
+* Keep the master branch clean to avoid merge errors.
 
 ## Copilot+
 If you want to try out the new Copilot+ extension for VS Code, you can follow the instructions here: https://copilot.github.com/

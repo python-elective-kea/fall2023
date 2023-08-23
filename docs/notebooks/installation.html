@@ -95,10 +95,14 @@ In this elective we will use a combination of VS Code and a <a class="reference 
 Beneath you can find guides to the installation of the software needed for the course.</p>
 <section id="install-python">
 <h2>Install python<a class="headerlink" href="#install-python" title="Permalink to this heading"></a></h2>
-<p>Go to <a class="reference external" href="https://www.python.org">www.python.org</a> and find the download button, and install python.
-When done open you Terminal (mac) og Powershell (win) and type</p>
+<p>Go to <a class="reference external" href="https://www.python.org">www.python.org</a> and find the download button, and install python.</p>
+<p>On Mac its recomended to install python (and other software) through brew.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   $ brew install python
+</pre></div>
+</div>
+<p>When done open you Terminal (mac) og Powershell (win) and type</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>	$ python3 --version
-	Python 3.10.9
+	Python 3.11.4
 </pre></div>
 </div>
 <p>you should see something like this.
@@ -107,6 +111,10 @@ If not, python is not installed, or maybe something else went wrong (ask Claus).
 <section id="install-vs-code">
 <h2>Install VS Code<a class="headerlink" href="#install-vs-code" title="Permalink to this heading"></a></h2>
 <p>Go to <a class="reference external" href="https://code.visualstudio.com/">code.visualstudio.com</a> and find the download button for your operating system. Download and install VS Code.</p>
+<p>Mac</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   $ brew install --cask visual-studio-code
+</pre></div>
+</div>
 </section>
 <section id="setup-the-development-environment">
 <h2>Setup the development environment<a class="headerlink" href="#setup-the-development-environment" title="Permalink to this heading"></a></h2>
@@ -119,45 +127,79 @@ If not, python is not installed, or maybe something else went wrong (ask Claus).
 <li><p>Search for “jupyter” and install the Jupyter extension pack (4) from Microsoft.</p></li>
 </ol>
 </section>
-<section id="clone-the-class-repository-and-set-up-vs-code-to-run-the-code">
-<h3>Clone the class repository and set up VS code to run the code<a class="headerlink" href="#clone-the-class-repository-and-set-up-vs-code-to-run-the-code" title="Permalink to this heading"></a></h3>
-<ol class="simple">
-<li><p>Click on the “Source Control” icon in the left sidebar (the icon looks like a square with a branch).</p></li>
-<li><p>In the “Source Control” panel that appears at the left side of the window, click on the “Clone Repository” button.</p></li>
-<li><p>A textbox will appear asking for the repository URL. Copy/paste in the below url and press enter</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="n">elective</span><span class="o">-</span><span class="n">kea</span><span class="o">/</span><span class="n">fall2023</span><span class="o">-</span><span class="n">code</span><span class="o">-</span><span class="n">examples</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">teachings</span><span class="o">.</span><span class="n">git</span>
-</pre></div>
-</div>
-<ol class="simple">
-<li><p>Choose a local folder on your computer where you want to clone the repository and click “Clone”.</p></li>
-<li><p>Once the repository is cloned, click on the “Explorer” icon in the left sidebar (the icon looks like a square with a folder).</p></li>
-<li><p>In the “Explorer” panel, navigate to the folder where you cloned the repository (e.g., <code class="docutils literal notranslate"><span class="pre">fall2023-code-examples-from-teachings</span></code>).</p></li>
-<li><p>In the bottom-left corner of the VS Code window, you should see the Git status bar. If it’s not visible, you can enable it by clicking on the “Source Control” icon in the left sidebar.</p></li>
-<li><p>Click on the branch name currently displayed in the Git status bar (usually the default branch name, such as “main” or “master”).</p></li>
-<li><p>In the branch dropdown, type “playground” and press Enter to create a new branch named “playground”. Alternatively, you can click on the “+” icon to create a new branch and enter “playground” as the branch name.</p></li>
-<li><p>Once the branch is created, the Git status bar should now display “playground” as the active branch.</p></li>
-<li><p>Find the playground.ipynb file in the project folder within the “Explorer” panel.</p></li>
-<li><p>Find the <code class="docutils literal notranslate"><span class="pre">playground.ipynb</span></code> file in the folder and double-click on it to open it in the VS Code editor.</p></li>
-<li><p>In the top right corner click on:</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="o">*</span> <span class="n">Select</span> <span class="n">Kernel</span> <span class="o">-&gt;</span> 
-   <span class="o">*</span> <span class="n">Python</span> <span class="n">environmets</span> <span class="o">-&gt;</span> 
-   <span class="o">*</span> <span class="n">Create</span> <span class="n">Python</span> <span class="n">Environment</span> <span class="o">-&gt;</span> 
-   <span class="o">*</span> <span class="n">Venv</span> <span class="n">Create</span> <span class="n">a</span> <span class="s1">&#39;.venv&#39;</span> <span class="n">virtual</span> <span class="n">envitonment</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">current</span> <span class="n">workspace</span> <span class="o">-&gt;</span> 
-   <span class="o">*</span> <span class="n">Python</span> <span class="mf">3.11.3</span> <span class="p">(</span><span class="ow">or</span> <span class="n">another</span> <span class="n">version</span><span class="p">)</span>
-</pre></div>
-</div>
-<ol class="simple">
-<li><p>This will create a ‘.venv’ in your folder, which is a virtual python installation with the dependencies needed for running the playground.ipynb file (Jupyter Notebook files).</p></li>
-<li><p>In the future, if needed, choose this .venv environment as your environment when running your code in this repsitory.</p></li>
-</ol>
+<section id="setting-up-the-class-repository-in-vs-code">
+<h3>Setting Up the Class Repository in VS Code:<a class="headerlink" href="#setting-up-the-class-repository-in-vs-code" title="Permalink to this heading"></a></h3>
+<section id="clone-the-repository">
+<h4>1. Clone the Repository:<a class="headerlink" href="#clone-the-repository" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Open VS Code.</p></li>
+<li><p>Click the “Source Control” icon on the left (square with a branch).</p></li>
+<li><p>Click “Clone Repository”.</p></li>
+<li><p>Enter the URL: https://github.com/python-elective-kea/fall2023-code-examples-from-teachings.git</p></li>
+<li><p>Choose a local folder to clone to and click “Clone”.</p></li>
+</ul>
 </section>
-<section id="the-code-and-exercises-files-the-rest-of-this-semester">
-<h3>The code and exercises files the rest of this semester<a class="headerlink" href="#the-code-and-exercises-files-the-rest-of-this-semester" title="Permalink to this heading"></a></h3>
-<p>In the future, this is how you should work on the files and exercises given to you in teachings.
-You should <code class="docutils literal notranslate"><span class="pre">pull</span></code> the master branch when new files are added to the respoitory, and then create a new branch where you can play around with the files or do the exercises. And you should never merge your branches into the master branch.</p>
-<p>!! IMPORTANT. Do not edit any files directly in the master branch, it should be keept clean. Othervise you will end up with a lot of merge errors.</p>
+<section id="navigate-to-the-cloned-repository">
+<h4>2 .Navigate to the Cloned Repository:<a class="headerlink" href="#navigate-to-the-cloned-repository" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Click the “Explorer” icon on the left.</p></li>
+<li><p>Go to the cloned folder (e.g., fall2023-code-examples-from-teachings).</p></li>
+</ul>
+</section>
+<section id="set-up-git">
+<h4>3. Set Up Git:<a class="headerlink" href="#set-up-git" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>If the Git status bar isn’t visible at the bottom-left, click the “Source Control” icon.</p></li>
+<li><p>Click the displayed branch name (e.g., “main” or “master”).</p></li>
+<li><p>Type “playground” to create a new branch or click “+” and name it “playground”.</p></li>
+<li><p>The status bar should now show “playground” as the active branch.</p></li>
+</ul>
+</section>
+<section id="open-the-file">
+<h4>4. Open the File:<a class="headerlink" href="#open-the-file" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Locate playground.ipynb in the “Explorer” panel.</p></li>
+<li><p>Double-click to open it.</p></li>
+</ul>
+</section>
+<section id="set-up-python-environment">
+<h4>5. Set Up Python Environment:<a class="headerlink" href="#set-up-python-environment" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>On the top right corner.</p></li>
+<li><p>Select Kernel.</p></li>
+<li><p>Choose Python environments.</p></li>
+<li><p>Click on Create Python Environment.</p></li>
+<li><p>Opt for Venv Create a ‘.venv’ in the current workspace.</p></li>
+<li><p>Select your Python version (e.g., 3.11.3).</p></li>
+<li><p>This process establishes a ‘.venv’ virtual environment for the playground.ipynb file.</p></li>
+</ul>
+</section>
+<section id="note">
+<h4>6. Note:<a class="headerlink" href="#note" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Always choose the .venv environment when running code in this repository in the future.</p></li>
+</ul>
+</section>
+</section>
+<section id="working-with-code-and-exercises-for-the-semester">
+<h3>Working with Code and Exercises for the Semester:<a class="headerlink" href="#working-with-code-and-exercises-for-the-semester" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Always pull the master branch for new files added to the repository.</p></li>
+<li><p>Create a new branch for:</p>
+<ul>
+<li><p>Playing with files.</p></li>
+<li><p>Completing exercises.</p></li>
+</ul>
+</li>
+<li><p>Never merge your branches into the master branch.</p></li>
+</ul>
+<section id="important-note">
+<h4>Important Note:<a class="headerlink" href="#important-note" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Do not edit files directly in the master branch.</p></li>
+<li><p>Keep the master branch clean to avoid merge errors.</p></li>
+</ul>
+</section>
 </section>
 </section>
 <section id="copilot">
