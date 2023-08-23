@@ -30,7 +30,8 @@ Materials
 Exercises
 ---------
 * `Sign up for realpythons newsletter <https://realpython.com/newsletter/>`_
-* `Exercise 1: Strings1 & Strings2 <exercises/strings/strings.rst>`_  (`Solution <exercises/solution/01_strings/strings.rst>`_ (is online Monday)) 
+* `Exercise 1: Strings1 & Strings2 <https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses1/exercises>`_  (`Solution <exercises/solution/01_strings/strings.rst>`_ (is online Monday)) 
+
 ------
 Quizes
 ------
