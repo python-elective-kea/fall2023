@@ -26,6 +26,7 @@ Materials
 * `if Statements <https://docs.python.org/3/tutorial/controlflow.html#if-statements>`_
 * `Notes from teachings <notebooks/notes01.ipynb>`_
 * `Code examples from teachings <https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses1>`_
+* `What Does It Take To Be An Expert At Python? <https://www.youtube.com/watch?v=7lmCu8wz8ro&t=4962s>`_ 
 
 Exercises
 ---------
