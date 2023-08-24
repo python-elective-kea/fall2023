@@ -31,7 +31,8 @@ Exercises
 ---------
 * `Sign up for realpythons newsletter <https://realpython.com/newsletter/>`_
 * `Exercise 1: Strings1 & Strings2 <https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses1/exercises>`_  (`Solution <exercises/solution/01_strings/strings.rst>`_ (is online Monday)) 
-* `What Does It Take To Be An Expert At Python? <https://www.youtube.com/watch?v=7lmCu8wz8ro&t=4962s>`_ 
+* `What Does It Take To Be An Expert At Python? <https://www.youtube.com/watch?v=7lmCu8wz8ro&t=4962s>`_ (this you can do in the end of this semester)
+
 ------
 Quizes
 ------
