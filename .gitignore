@@ -8,8 +8,8 @@ Dockerfile
 # exercise solutions
 
 #01
-/sphinx/build/html/exercises/solution/01_strings/*
-/docs/exercises/solution/01_strings/*
+#/sphinx/build/html/exercises/solution/01_strings/*
+#/docs/exercises/solution/01_strings/*
 
 #02
 /sphinx/build/html/exercises/solution/02_lists/*
