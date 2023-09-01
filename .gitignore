@@ -12,8 +12,8 @@ Dockerfile
 #/docs/exercises/solution/01_strings/*
 
 #02
-/sphinx/build/html/exercises/solution/02_lists/*
-/docs/exercises/solution/02_lists/*
+#/sphinx/build/html/exercises/solution/02_lists/*
+#/docs/exercises/solution/02_lists/*
 
 #03
 /sphinx/build/html/exercises/solution/03_set_dict/*
