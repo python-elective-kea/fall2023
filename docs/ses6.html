@@ -105,12 +105,12 @@
              
   <section id="session-6-functions-decorators">
 <h1>Session 6 - Functions &amp;  Decorators<a class="headerlink" href="#session-6-functions-decorators" title="Permalink to this heading"></a></h1>
-<p>In Python, decorators are frequently used to enhance the functionality of existing code. In Python, decorators allow you to add new functionality to your code by decorating functions or classes with additional code. This can make your code more modular and easier to maintain, as you can separate different concerns into separate decorators.</p>
+<p>In Python, decorators allow you to add new functionality to your code by decorating functions or classes with additional code. This can make your code more modular and easier to maintain, as you can separate different concerns into separate decorators.</p>
 <p>The boilerplate syntax of a decorator is like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
 <span class="linenos">2</span>    <span class="k">def</span> <span class="nf">wrapper_decorator</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="linenos">3</span>            <span class="c1"># Do something before</span>
-<span class="linenos">4</span>            <span class="n">value</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">//</span> <span class="n">execute</span> <span class="n">function</span>
+<span class="linenos">4</span>            <span class="n">value</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 <span class="linenos">5</span>            <span class="c1"># Do something after</span>
 <span class="linenos">6</span>            <span class="k">return</span> <span class="n">value</span>
 <span class="linenos">7</span>
@@ -123,7 +123,6 @@
 <span class="linenos">3</span>     <span class="k">return</span> <span class="s1">&#39;Hello &#39;</span> <span class="o">+</span> <span class="n">name</span>
 </pre></div>
 </div>
-<p>We will start out by using a new editor, Jupyter Notebook.</p>
 <section id="learning-goals">
 <h2>Learning goals<a class="headerlink" href="#learning-goals" title="Permalink to this heading"></a></h2>
 <p>By reading the texts in the materials section, doing the 3 exercises, and follow the teachings, you will be able to explain what a decorator is, when to use it, and how the inner parts of a decorator function is made up, and you will be able to create your own, and use others already made decorators.</p>

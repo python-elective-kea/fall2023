@@ -1,7 +1,7 @@
 Session 6 - Functions &  Decorators  
 ===================================
 
-In Python, decorators are frequently used to enhance the functionality of existing code. In Python, decorators allow you to add new functionality to your code by decorating functions or classes with additional code. This can make your code more modular and easier to maintain, as you can separate different concerns into separate decorators.
+In Python, decorators allow you to add new functionality to your code by decorating functions or classes with additional code. This can make your code more modular and easier to maintain, as you can separate different concerns into separate decorators.
 
 The boilerplate syntax of a decorator is like this:
 
@@ -11,7 +11,7 @@ The boilerplate syntax of a decorator is like this:
    def decorator(func):
        def wrapper_decorator(*args, **kwargs):
                # Do something before
-               value = func(*args, **kwargs) // execute function
+               value = func(*args, **kwargs) 
                # Do something after
                return value
        
@@ -26,7 +26,6 @@ And if you want to use it you will do like so:
    def greet(name):
         return 'Hello ' + name
 
-We will start out by using a new editor, Jupyter Notebook.
 
 Learning goals
 --------------
