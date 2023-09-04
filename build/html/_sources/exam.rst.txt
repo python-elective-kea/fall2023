@@ -40,8 +40,8 @@ At your exam you should demonstrate to wich extend you fullfill the learning goa
 This you should do through demonstrating your knowlege, skills and competencies within these topics. 
 
         * Pythonic OOP and encapsulation
-        * Build in functions
-        * Decorators
+        * Build in functions in python
+        * Functions & Decorators
 
 You can get inspiration about what to talk about within each topic in your presentation `here <notebooks/exam_synopsis_template.md>`_.
 
