@@ -20,6 +20,7 @@ A list of Python's built-in functions can be found here: Python Built-in Functio
 In my presentation, I will demonstrate how to utilize a selection of these functions, emphasizing their ease of use and how they enhance user interaction with the language. Furthermore, I will demonstrate how to integrate these uniform interfaces with one's own objects using data model methods. 
 
 ### Version 2
+A list of Python’s built-in functions can be found here: Python Built-in Functions. In my presentation, I will demonstrate how to utilize a selection of these functions, emphasizing their ease of use and how they enhance user interaction with the language. 
 
 ## 3. Functions & Decorators
 
@@ -27,7 +28,7 @@ In my presentation, I will demonstrate how to utilize a selection of these funct
 In my presentation, I will demonstrate step-by-step how a decorator operates. Additionally, I will show how the built-in range() function is actually an object created from a class, and I will illustrate how a similar approach can be implemented within one's own objects.
 
 ### Version 2
-
+In my presentation, I will focus on the use of decorators in Python. I will demonstrate how we can easily add extra functionality to existing code. Furthermore, I will explain the concept that functions in Python are first-class citizens. I will demonstrate how to create inner functions, and how to access and utilize them effectively.
 
 
 
