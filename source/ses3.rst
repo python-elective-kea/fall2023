@@ -133,7 +133,7 @@ Ex 5: OS Module exercise
         Zip all .py files in a given directory and put the zip file in the specified folder.
 
 ----------------------------------
-Ex 7: Simple scraber with requests
+Ex 6: Simple scraber with requests
 ----------------------------------
 
 `Solution <exercises/solution/03_os_sub_req/solutions.rst#ex-7-simple-scraber-with-requests>`_
