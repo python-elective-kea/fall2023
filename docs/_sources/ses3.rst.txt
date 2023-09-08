@@ -139,11 +139,11 @@ Ex 6: Simple scraber with requests
 `Solution <exercises/solution/03_os_sub_req/solutions.rst#ex-7-simple-scraber-with-requests>`_
 
 | 1. Create an application that asks for an url. 
-| 2. Then Download that html page, and its images, icons etc. and change it so it will work locally on your computer. Locally means that you should be able to cut your internet connection and still have a functionig html page. 
+| 2. Then Download that html page, and its images, icons etc. and change it so it will work locally on your computer. (Locally means that you should be able to cut your internet connection and still have a functionig html page). 
 | 3. When done push all files to your github account. (all should be done programattically) Hint: api.github.com/user/repos can be used to create a repository from you program on Github)
 
-| You will have to use the requests module, the OS module and the subprocesses module for this taks.
-| An easy website to scrape is this: 
+| You will have to use the **requests** module, the **OS** module and the **subprocesses** module for this taks.
+| An easy website to scrape is this: [url](https://clbokea.github.io/exam/assignment_2.html)
 
 ------
 quizes
