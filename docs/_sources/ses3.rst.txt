@@ -15,11 +15,11 @@ Learning goals
 --------------
 After this week you will be able to:
        
+        - Use listcomprehensions.
         - Create your own modules.
         - Use Python's built-in modules.
         - Find and use 3rd party modules.
         - Use the requests module to fetch website data.
-        - search a document for patterns.   
 
 Materials
 ---------
@@ -27,7 +27,6 @@ Materials
 * `Python Modules and Packages <https://realpython.com/python-modules-packages/>`_
 * `Working With Files in Python <https://realpython.com/working-with-files-in-python/#making-directories>`_
 * `Subprocess management <https://docs.python.org/3.7/library/subprocess.html#module-subprocess>`_
-* `How to Build Command Line Interfaces in Python With argparse <https://realpython.com/command-line-interfaces-python-argparse/>`_
 * `Python’s Requests Library <https://realpython.com/python-requests/>`_
 * `Downloading Files from URLs in Python <https://www.codementor.io/aviaryan/downloading-files-from-urls-in-python-77q3bs0un>`_ 
 * `Notebook <notebooks/Notes-Contextmanager-ListComp-modules.ipynb>`_
@@ -111,28 +110,27 @@ Ex 5: OS Module exercise
 .. literalinclude:: exercises/util_modules/os_exercise.py
         :linenos:
 
+..       -----------------------
+        Ex 6: Extract .py files
+        -----------------------
+        `Solution <exercises/solution/03_os_sub_req/solutions.rst#ex-6-extract-py-files>`_
 
------------------------
-Ex 6: Extract .py files
------------------------
-`Solution <exercises/solution/03_os_sub_req/solutions.rst#ex-6-extract-py-files>`_
+        Create a program (a function) that when run takes 1-3 arguments where:
 
-Create a program (a function) that when run takes 1-3 arguments where:
+        | * the first is the name of a directory in play
+        | * the second (optional) is a --flag (--todir <dirname>) that specifies where the files in that directory should be copied to.
+        | * the third (optional) is a --flag (--zip <filename>) that specifies if the files should be zipped and what the zip file should be called.
 
-| * the first is the name of a directory in play
-| * the second (optional) is a --flag (--todir <dirname>) that specifies where the files in that directory should be copied to.
-| * the third (optional) is a --flag (--zip <filename>) that specifies if the files should be zipped and what the zip file should be called.
-
-So if you run the program like this :code:`python extract.py . --todir /tmp/ --zip archive.zip` you should copy all files in the current directory (.) to a new tmp directory and the .py files should be put in a zip folder names archive.zip.
+        So if you run the program like this :code:`python extract.py . --todir /tmp/ --zip archive.zip` you should copy all files in the current directory (.) to a new tmp directory and the .py files should be put in a zip folder names archive.zip.
 
 
-Task A:
-*******
-Copy all .py files in a given directory to a new folder.
+        Task A:
+        *******
+        Copy all .py files in a given directory to a new folder.
 
-Task B:
-*******
-Zip all .py files in a given directory and put the zip file in the specified folder.
+        Task B:
+        *******
+        Zip all .py files in a given directory and put the zip file in the specified folder.
 
 ----------------------------------
 Ex 7: Simple scraber with requests
