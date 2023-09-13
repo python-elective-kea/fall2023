@@ -24,8 +24,8 @@ Dockerfile
 /docs/exercises/solution/03_os_sub_req/*
 
 #03 (mandatory)
-/sphinx/build/html/exercises/solution/03_mandatory_set_dicts/*
-/docs/exercises/solution/03_mandatory_set_dicts/*
+#/sphinx/build/html/exercises/solution/03_mandatory_set_dicts/*
+#/docs/exercises/solution/03_mandatory_set_dicts/*
 
 #04 Modules
 /sphinx/build/html/exercises/solution/04_modules/*
