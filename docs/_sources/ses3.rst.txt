@@ -8,7 +8,6 @@ Today on the practical level, you will work with four modules in addition to com
 
 * Os module
 * Subprocesses module
-* zipfile module
 * Requests module
 
 Learning goals
@@ -16,7 +15,6 @@ Learning goals
 After this week you will be able to:
        
         - Use listcomprehensions.
-        - Create your own modules.
         - Use Python's built-in modules.
         - Find and use 3rd party modules.
         - Use the requests module to fetch website data.
