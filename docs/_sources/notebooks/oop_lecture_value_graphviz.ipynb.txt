@@ -5,7 +5,21 @@
    "metadata": {},
    "source": [
     "# Value Class & Graph with nodes and edges exaple\n",
-    "**Problem to be solved:** We need a datastructure that can be used for creating a graph like the one below. An int holds the number value, but we need to know the variable name connected to the object, the parrent objects used to create the new object, and the operands also used to create the object. So all this historical data can not be stored in an **int**. Therefore we need to create a new more complex object. \n",
+    "**Problem to be solved:** We need a datastructure that can be used for creating a graph like this one."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "![](../_static/output.svg.svg)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "An int holds the number value, but we need to know the variable name connected to the object, the parrent objects used to create the new object, and the operands also used to create the object. So all this historical data can not be stored in an **int**. Therefore we need to create a new more complex object. \n",
     "\n",
     "The following is a OOP example of how to create a class and an object using the pythonic approch of doing so.     \n",
     "The Value class is basically an **int** or a **float class**, but since we in this case need more attributes, we need to create our own class with the aditional attributes. Still this object should be able to perform the same actions. in this case we fokus on: +,*,-,/    \n",
@@ -616,7 +630,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.11.4"
+   "version": "3.11.5"
   },
   "orig_nbformat": 4
  },
