@@ -93,22 +93,9 @@
              
   <section id="Value-Class-&amp;-Graph-with-nodes-and-edges-exaple">
 <h1>Value Class &amp; Graph with nodes and edges exaple<a class="headerlink" href="#Value-Class-&-Graph-with-nodes-and-edges-exaple" title="Permalink to this heading"></a></h1>
-<p><strong>Problem to be solved:</strong> We need a datastructure that can be used for creating a graph like this one.</p>
+<p><strong>Problem to be solved:</strong> We have to make a new kind of tool (a data structure) that can help us build a chart like this:</p>
 <p><img alt="image0" src="../_images/output.svg.svg" /></p>
-<p>An int holds the number value, but we need to know the variable name connected to the object, the parrent objects used to create the new object, and the operands also used to create the object. So all this historical data can not be stored in an <strong>int</strong>. Therefore we need to create a new more complex object.</p>
-<div class="line-block">
-<div class="line">The following is a OOP example of how to create a class and an object using the pythonic approch of doing so.</div>
-<div class="line">The Value class is basically an <strong>int</strong> or a <strong>float class</strong>, but since we in this case need more attributes, we need to create our own class with the aditional attributes. Still this object should be able to perform the same actions. in this case we fokus on: +,*,-,/</div>
-</div>
-<ul class="simple">
-<li><p><strong>data</strong> holds the number. (This is like in an <em>int</em> class)</p></li>
-</ul>
-<p>The 3 following attributes is what differs from an int object, and this is what we need in order to create the graph diagram at the bottom.</p>
-<ul class="simple">
-<li><p>**_prev** is a set with the Values parrents. A reference to the 2 or more object that where added, multiplied, substracted or divided</p></li>
-<li><p>**_op** is the operator used when creating the object from the 2 or more parrents. (+,*,-,/)</p></li>
-<li><p><strong>label</strong> is the variable name given when creating the object.</p></li>
-</ul>
+<p>The usual number storing tool (‘int’) can’t keep all the information we need. Besides just holding a number, we want this new tool to remember the original name of the object, what other objects helped make it, and what math actions (like adding or multiplying) were used to create it. So, we need to build a new, smarter tool that can remember all these things.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
@@ -135,7 +122,7 @@ Note: you may need to restart the kernel to use updated packages.
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Value:
@@ -165,54 +152,28 @@ Note: you may need to restart the kernel to use updated packages.
 </pre></div>
 </div>
 </div>
+<section id="Draw-Dot-Code">
+<h2>Draw Dot Code<a class="headerlink" href="#Draw-Dot-Code" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line">The following import of a functions are not super important for you to look at right now.</div>
+<div class="line">The function ‘draw_dot’ takes care of drawing the diagram, and expects a Value object as parameter input.</div>
+</div>
+<p><strong>The focus in this demo should be on the Value class.</strong></p>
+<div class="line-block">
+<div class="line">If you later look through the code step by step, you should by now (after 6 weeks with python) be able to understand what it does.</div>
+<div class="line">If you do not understand the code, it is a good exercise to go through the code and understand it.</div>
+</div>
+<p>The <a class="reference external" href="https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses7/graphcode.py">graphcode.py</a> can be found in the code from today session.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># These 2 functions are not super important for you to look at right now. The fokus should be on the Value class.
-# But basicly what the 2 functions do are to produce the graph below with its nodes and edges.
-# If you later look through the code step by step, you should by now be able to understand what it does.
-# If not it is a good exercise to do so.
-
-def trace(root):
-    # builds a set of all nodes and edges in a graph
-    nodes, edges = set(), set()
-
-    def build(v):
-        if v not in nodes:
-            nodes.add(v)
-            for child in v._prev:
-                edges.add((child, v))
-                build(child)
-
-    build(root)
-
-    return nodes, edges
-
-def draw_dot(root):
-    dot = Digraph(format=&#39;svg&#39;, graph_attr={&#39;rankdir&#39;: &#39;LR&#39;}) # LR = left to right
-
-    nodes, edges = trace(root)
-    for n in nodes:
-        uid = str(id(n))
-        # for any value in the graph, create a rectangular (&#39;record&#39;) node for it
-        dot.node(name=uid, label=f&quot;{{ {n.label} | data {n.data:.1f} }}&quot;, shape=&#39;record&#39;)
-        if n._op:
-            # if this value is a result of some operation, create an op node for it
-            dot.node(name=uid + n._op, label=n._op)
-            # and connect this node to it
-            dot.edge(uid + n._op, uid)
-
-    for n1, n2 in edges:
-        # connect n1 to the op node of n2
-        dot.edge(str(id(n1)), str(id(n2)) + n2._op)
-
-    return dot
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from testfiles.graphcode import draw_dot
 </pre></div>
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = Value(2, label=&#39;a&#39;)
@@ -227,12 +188,13 @@ draw_dot(f)
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/notebooks_oop_lecture_value_graphviz_6_0.svg" src="../_images/notebooks_oop_lecture_value_graphviz_6_0.svg" /></div>
+<img alt="../_images/notebooks_oop_lecture_value_graphviz_7_0.svg" src="../_images/notebooks_oop_lecture_value_graphviz_7_0.svg" /></div>
 </div>
+</section>
 <section id="Methods-in-an-int-class">
 <h2>Methods in an int class<a class="headerlink" href="#Methods-in-an-int-class" title="Permalink to this heading"></a></h2>
 <div class="nbinput docutils container">
