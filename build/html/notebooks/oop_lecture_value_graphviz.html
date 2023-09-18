@@ -93,9 +93,13 @@
              
   <section id="Value-Class-&amp;-Graph-with-nodes-and-edges-exaple">
 <h1>Value Class &amp; Graph with nodes and edges exaple<a class="headerlink" href="#Value-Class-&-Graph-with-nodes-and-edges-exaple" title="Permalink to this heading"></a></h1>
-<p><strong>Problem to be solved:</strong> We have to make a new kind of tool (a data structure) that can help us build a chart like this:</p>
+<p><strong>Problem to be solved:</strong> We have to make a new kind of tool that can help us build a chart like this:</p>
 <p><img alt="image0" src="../_images/output.svg.svg" /></p>
-<p>The usual number storing tool (‘int’) can’t keep all the information we need. Besides just holding a number, we want this new tool to remember the original name of the object, what other objects helped make it, and what math actions (like adding or multiplying) were used to create it. So, we need to build a new, smarter tool that can remember all these things.</p>
+<p>The actual drawing (the graphics) is done by a a tool called ‘graphviz’, and a few <a class="reference external" href="testfiles/graphcode.py">functions</a> making use og this tool imported into this notebook.</p>
+<div class="line-block">
+<div class="line">This “tool” needs some information, which in this case basically is a number (a=2.0, b=-3.0).</div>
+<div class="line">The usual number storing object (‘int’) can’t keep all the information we need. Besides just holding a number, we want this new tool to remember the original name of the object (a, b), what other objects helped make it (in c´s case it is a, b), and what math actions (like + or *) were used to create it. So, we need to build a new, and more complex object (or datastructure) that can remember all these things.</div>
+</div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
@@ -122,7 +126,7 @@ Note: you may need to restart the kernel to use updated packages.
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Value:
@@ -165,7 +169,7 @@ Note: you may need to restart the kernel to use updated packages.
 </div>
 <p>The <a class="reference external" href="https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses7/graphcode.py">graphcode.py</a> can be found in the code from today session.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from testfiles.graphcode import draw_dot
@@ -173,7 +177,7 @@ Note: you may need to restart the kernel to use updated packages.
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = Value(2, label=&#39;a&#39;)
@@ -183,12 +187,14 @@ d = a * c; d.label = &#39;d&#39;
 e = a - d; e.label = &#39;e&#39;
 f = d / e; f.label = &#39;f&#39;
 
+
+
 draw_dot(f)
 </pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -478,6 +484,26 @@ class int(object)
  |      the real part of a complex number
 
 </pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = Value(&#39;Anders&#39;, label=&#39;anders&#39;)
+b = Value(&#39;Bo&#39;, label=&#39;bo&#39;)
+c = a + b; c.label=&#39;claus&#39;
+#d = a - c; d.label = &#39;david&#39;
+
+draw_dot(c)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/notebooks_oop_lecture_value_graphviz_10_0.svg" src="../_images/notebooks_oop_lecture_value_graphviz_10_0.svg" /></div>
 </div>
 </section>
 </section>
