@@ -1,10 +1,7 @@
 Session 5 - Utilities and Modules
 =================================
 
-Today, we will continue working with modules, focusing specifically on the third-party module BeautifulSoup for web scraping. Additionally, you will learn how to persistently save your installed modules (done using pip install) and save your requirements for version control of your projects packages.
-
-In an earlier version of this session document docker was a big part of it. If you already started looking at this and would like to cary on you can find it `here <_ses5.rst>`_
-
+Today, we will continue working with modules, focusing specifically on the third-party module BeautifulSoup for web scraping. Additionally, you will learn how to persistently save your installed modules (done using pip install) within your Docker containers.
 
 Learning goals
 --------------
