@@ -74,4 +74,4 @@ Ex 5: Build a Web Scraper With Python
 Ex 6: Simple scraber with requests (and BS)
 *******************************************
 
-Do the `Ex 7: Simple scraber with requests <week37.rst#ex-7-simple-scraber-with-requests>`_ exercise from last week but now also by using the BeautifullSoup module.
+Do the `Ex 7: Simple scraber with requests <ses3.rst#ex-6-simple-scraber-with-requests>`_ exercise from last week but now also by using the BeautifullSoup module.
