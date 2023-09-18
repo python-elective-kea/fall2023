@@ -20,8 +20,8 @@ Dockerfile
 /docs/exercises/solution/03_set_dict/*
 
 #03
-/sphinx/build/html/exercises/solution/03_os_sub_req/*
-/docs/exercises/solution/03_os_sub_req/*
+#/sphinx/build/html/exercises/solution/03_os_sub_req/*
+#/docs/exercises/solution/03_os_sub_req/*
 
 #03 (mandatory)
 #/sphinx/build/html/exercises/solution/03_mandatory_set_dicts/*
