@@ -58,6 +58,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#learning-goals">Learning goals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#materials">Materials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">requirements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#python">Python</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#ex-5-build-a-web-scraper-with-python">Ex 5: Build a Web Scraper With Python</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ex-6-simple-scraber-with-requests-and-bs">Ex 6: Simple scraber with requests (and BS)</a></li>
@@ -125,14 +126,58 @@
 <section id="materials">
 <h2>Materials<a class="headerlink" href="#materials" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="notebooks/notes_docker_requirements_webscrabing.html"><span class="doc">Notebook from teachings</span></a></p></li>
-<li><p><a class="reference internal" href="notebooks/best_practice_docker_github.html"><span class="doc">Best pratice - working in teams with docker, github</span></a></p></li>
+<li><p><a class="reference internal" href="notebooks/notes_requirements_webscrabing.html"><span class="doc">Notebook from teachings</span></a></p></li>
 <li><p><a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Beautiful Soup Documentation</a></p></li>
 <li><p><a class="reference external" href="https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses5">Code examples from today</a></p></li>
 </ul>
 </section>
 <section id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading"></a></h2>
+<section id="requirements">
+<h3>requirements<a class="headerlink" href="#requirements" title="Permalink to this heading"></a></h3>
+<p>Ex 1: Clone and run</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Clone this repository:</dt><dd><ul>
+<li><p>git clone <a class="reference external" href="https://github.com/python-elective-kea/Flask-Web-App-Tutorial">https://github.com/python-elective-kea/Flask-Web-App-Tutorial</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Read the readme file and follow the instructions</p></li>
+<li><p>When your webapp is running you have done the job correct.</p></li>
+</ul>
+<p>Ex 2: Working together in teams with python</p>
+<p><strong>This exercise should be done in groups.</strong></p>
+<ul class="simple">
+<li><p>You should create a project that makes use of the <code class="docutils literal notranslate"><span class="pre">`requests`</span></code> module.</p></li>
+<li><dl class="simple">
+<dt>You should push this project to a github account and all in the group should either</dt><dd><ul>
+<li><p>have push rights to this repository or</p></li>
+<li><p>other group members should create a <code class="docutils literal notranslate"><span class="pre">`fork`</span></code> of this repository.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>The project should contain a requirements.txt in it, and a .gitignore that leaves out the none essential files and folders from the commits.</p></li>
+<li><dl class="simple">
+<dt>All group members should now clone the repository, or create a fork.</dt><dd><ul>
+<li><p>install the requirements</p></li>
+<li><p>and succesfully run the application</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>When this setup is up and running each group member should:</p>
+<ul class="simple">
+<li><p>install a new 3rd. party module. (look at pypi.org)</p></li>
+<li><p>Create some simple (maybe even stupid) code that makes use of this module</p></li>
+<li><p>do a pip freeze &gt; requirements.txt</p></li>
+<li><p>Push the changes to github</p></li>
+<li><p>Other group members pull changes and do a <code class="docutils literal notranslate"><span class="pre">`pip</span> <span class="pre">install</span> <span class="pre">&gt;</span> <span class="pre">requirements`</span></code></p></li>
+</ul>
+</section>
 <section id="python">
 <h3>Python<a class="headerlink" href="#python" title="Permalink to this heading"></a></h3>
 <section id="ex-5-build-a-web-scraper-with-python">
