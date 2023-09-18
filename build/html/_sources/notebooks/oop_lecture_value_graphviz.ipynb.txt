@@ -19,7 +19,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The actual drawing (the graphics) is done by a a tool called 'graphviz', and a few [functions](testfiles/graphcode.py) making use og this tool imported into this notebook. \n",
+    "The actual drawing (the graphics) is done by a a tool called 'graphviz', and a few [functions](testfiles/graphcode.py), making use of graphviz, and then imported into this notebook. \n",
     "\n",
     "This \"tool\" needs some information, which in this case basically is a number (a=2.0, b=-3.0).    \n",
     "The usual number storing object ('int') can't keep all the information we need. Besides just holding a number, we want this new tool to remember the original name of the object (a, b), what other objects helped make it (in c´s case it is a, b), and what math actions (like + or *) were used to create it. So, we need to build a new, and more complex object (or datastructure) that can remember all these things."
