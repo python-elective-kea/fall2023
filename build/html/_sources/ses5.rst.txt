@@ -30,6 +30,7 @@ requirements
 ------------
 
 Ex 1: Clone and run
+*******************
 
 * Clone this repository:   
     * git clone https://github.com/python-elective-kea/Flask-Web-App-Tutorial
@@ -37,6 +38,7 @@ Ex 1: Clone and run
 * When your webapp is running you have done the job correct.
 
 Ex 2: Working together in teams with python
+*******************************************
 
 **This exercise should be done in groups.**
 
