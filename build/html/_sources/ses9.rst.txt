@@ -27,10 +27,10 @@ Materials
 * `What Does It Take To Be An Expert At Python? <https://www.youtube.com/watch?v=7lmCu8wz8ro>`_
    * This is a talk about expert python programming and this is what we will cover the rest of this semester. (Todays topic is from the beginning to 18:43) 
 * `The Python Data Model <_static/The_Python_Data_Model.pdf>`_
-* `Overloading arithmetic operators with dunder methods <https://mathspp.com/blog/pydonts/overloading-arithmetic-operators-with-dunder-methods>`_
 * `A Guide to Python's Magic Methods <https://rszalski.github.io/magicmethods/>`_
 * `Expert Python Tutorial #2 - Dunder/Magic Methods & The Python Data Model <https://www.youtube.com/watch?v=z11P9sojHuM>`_
 * `Build in functions to Datamodel methods ralation table <notebooks/build_to_dunder.rst>`_
+* `Notebook demo Value class in teachings <notebooks/oop_lecture_value_graphviz.ipynb>`_
 * `Notebook on Datamodel <notebooks/OOP_Encapsulation_Propeties.ipynb#Datamodel>`_
 * `Code examples from teachings <https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses9>`_
 

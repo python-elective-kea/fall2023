@@ -14,17 +14,14 @@ Learning goals
 --------------
 After having worked with these topics you will be able to:
       
-   - create Classes, Objects, instance and class variables, methods and initializer methods. 
-   - make use of single and multiple inheritance.   
-   - explain when and why to use classes and objects instead of procedural style. 
-   - relate the pythonic OOP style to other languages  (Java e.g) 
+   - create Classes, Objects, instance and class variables, methods and initializer methods.   
+   - explain when and why to use classes and objects instead of procedural style.  
 
 Materials
 ---------
 * `Object-Oriented Programming (OOP) in Python 3 <https://realpython.com/python3-object-oriented-programming/>`_
 * `Python args and kwargs: Demystified <https://realpython.com/python-kwargs-and-args/>`_
 * `Notebook on classes <notebooks/class_notes.ipynb>`_
-* `Notebook demo Value class in teachings <notebooks/oop_lecture_value_graphviz.ipynb>`_
 * `Code examples from teachings <https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses7>`_
 
 
