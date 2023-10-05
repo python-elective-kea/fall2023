@@ -79,7 +79,11 @@ The recursing evaluation will work best with GPT4 (the paid version) but it is a
         2. Feedback on the code i wrote
         3. Where i should focus to improve
  
-        Lets start with the first question   
+        Lets start with the first question 
+
+.. note::
+   Remember your skills in Pythonic OOP might not be like an "expert" yet. But in a few weeks you can try it again and should get a better result.
+
 
 ----------------
 Ex 2: Angry Bird
