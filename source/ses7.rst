@@ -43,11 +43,12 @@ EX 1: Bank Exercise
 Create a Bank, an Account, and a Customer class.
 
 * All classes should be in a single file. 
-* The bank class should be able to hold many account.
+* The bank class should be able to hold many accounts.
 * You should be able to add new accounts.
 * The Account class should have relevant details.
 * The Customer class Should also have relevant details.
 
+Remeber to make your code "pythonic" it should be simple, easy to read, to the point, and no unnessesary code.
 Stick to the techniques we have covered so far.
 
 * Add the abillity for your __init__ method to handle different inputs (parameters).
@@ -67,7 +68,7 @@ The recursing evaluation will work best with GPT4 (the paid version) but it is a
 
 .. code::
 
-        I want to get a score of how well my python programming is. The score should be from 1 to 10.
+        I want to get a score of how well my python programming with the focus on pythonic OOP is. The score should be from 1 to 10.
  
         You should give me exercises one at a time. The exercise need to be solved with code. The exercises should match the level you think i am at.
  
