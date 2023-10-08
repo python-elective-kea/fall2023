@@ -44,6 +44,7 @@ Ex 1:  Car object
 Create a Car class. 
 When instanciated the object should be able to take 4 attributes (Make, Model, bhp, mph). 
 All 4 should be properties. 
+
 .. note::
     In python you would never write empty properties, so there should be a reason for Make, Model, bhp, mph prorties to exist!
 
