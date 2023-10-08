@@ -108,10 +108,12 @@
              
   <section id="session-8-encapsulation">
 <h1>Session 8 - Encapsulation<a class="headerlink" href="#session-8-encapsulation" title="Permalink to this heading"></a></h1>
-<p>In Python, it is generally considered best practice to make all attributes public unless there is a specific need to make them private. This is in contrast to languages like Java, where private attributes and accompanying getters and setters are the norm.</p>
-<p>When we need to encapsulate data (e.g if we need to validate the data) we can use different methods. We will look at one approaches: propertie.</p>
-<p>A property is a build in decorator function and is using the syntax <code class="code docutils literal notranslate"><span class="pre">&#64;property</span></code>. Just like you learned in the session about decorator functions. Descriptor classes is a class with the <code class="code docutils literal notranslate"><span class="pre">__get__(),</span> <span class="pre">__set__()</span> <span class="pre">and</span> <span class="pre">__deleter__()</span></code> methods implemened.</p>
-<p>This approach is considered best practice or ‘Pythonic’ and this is what we will look at in todays session.</p>
+<p>In Python, it is generally considered best practice to make all attributes public unless there is a specific need to make them private.
+This is in contrast to languages like Java, where private attributes and accompanying getters and setters are the norm.</p>
+<p>When we need to encapsulate data (e.g if we need to validate the data) we can use different methods.
+We will look at one approaches: property.</p>
+<p>A property is a build in decorator function and is using the syntax <code class="code docutils literal notranslate"><span class="pre">&#64;property</span></code>.
+Just like you learned in the session about decorator functions.</p>
 <section id="learning-goals">
 <h2>Learning goals<a class="headerlink" href="#learning-goals" title="Permalink to this heading"></a></h2>
 <p>After this week you will be able to:</p>
@@ -126,9 +128,7 @@
 <h2>Materials<a class="headerlink" href="#materials" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://igorsobreira.com/2010/09/16/difference-between-one-underline-and-two-underlines-in-python.html">Difference between _, __ and __xx__ in Python</a></p></li>
-<li><p><a class="reference external" href="https://realpython.com/python-descriptors/">Python Descriptors: An Introduction</a></p></li>
 <li><p><a class="reference external" href="https://realpython.com/python-property/">Python’s property(): Add Managed Attributes to Your Classes</a></p></li>
-<li><p><a class="reference external" href="https://realpython.com/python-descriptors/">Python Descriptors: An Introduction</a></p></li>
 <li><p><a class="reference internal" href="notebooks/OOP_Encapsulation_Propeties.html"><span class="doc">Notebook on properties</span></a></p></li>
 <li><p><a class="reference external" href="https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses8">Code examples from teachings</a></p></li>
 </ul>
@@ -141,7 +141,13 @@
 <section id="ex-1-car-object">
 <h4>Ex 1:  Car object<a class="headerlink" href="#ex-1-car-object" title="Permalink to this heading"></a></h4>
 <p><a class="reference internal" href="exercises/solution/05_encapsulation/solutions.html"><span class="doc">Solution</span></a></p>
-<p>Create a Car class. When instanciated the object should be able to take 4 attributes (Make, Model, bhp, mph). They all 4 should be properties. (Even though this is not nessary here, you should create properties in order just to try it out).</p>
+<p>Create a Car class.
+When instanciated the object should be able to take 4 attributes (Make, Model, bhp, mph).
+All 4 should be properties.
+.. note:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>In python you would never write empty properties, so there should be a reason for Make, Model, bhp, mph prorties to exist!
+</pre></div>
+</div>
 </section>
 <section id="ex-2-bank">
 <h4>Ex 2: Bank<a class="headerlink" href="#ex-2-bank" title="Permalink to this heading"></a></h4>

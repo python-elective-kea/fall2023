@@ -141,78 +141,48 @@ p._x
 </pre></div></div>
 </div>
 <p>In order to work with attributes the right way in python you need to understand that all attributes are public, and you need to accept and understand that this is actually a good thing, and it is NOT a limitation Forget all about the Java approach with private attributes and getters and setters. There is another logic behind that approach.</p>
-<section id="Private-members">
-<h2>Private members<a class="headerlink" href="#Private-members" title="Permalink to this heading"></a></h2>
-<p>Read about this: <a class="reference external" href="https://www.bogotobogo.com/python/python_private_attributes_methods.php">Private attributes and methods</a></p>
+</section>
+<section id="&#64;Property">
+<h1>&#64;Property<a class="headerlink" href="#@Property" title="Permalink to this heading"></a></h1>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class P:
-   def __init__(self, name, alias):
-      self.name = name       # public
-      self._alias = alias   # private
 
-   def who(self):
-      print(&#39;name  : &#39;, self.name)
-      print(&#39;alias : &#39;, self._alias)
+    def __init__(self):
+        pass
+
+    #@property
+    def x(self):
+        return self.z
+
+    def y(self, z):
+        self.z = z
+
+    x = property(x, y)
 </pre></div>
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>p = P(&#39;Claus&#39;, &#39;clbo&#39;)
-p.who()
-</pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>p = P()
+p.x = 15
+p.x
+<br/></pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-name  :  Claus
-alias :  clbo
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>p.name
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&#39;Claus&#39;
+15
 </pre></div></div>
 </div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>p._alias
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-&#39;clbo&#39;
-</pre></div></div>
-</div>
-<p>This is why you sometimes will hear that private does not realy exists in python.</p>
-</section>
 </section>
 <section id="&#64;Properties">
 <h1>&#64;Properties<a class="headerlink" href="#@Properties" title="Permalink to this heading"></a></h1>
@@ -262,8 +232,13 @@ p2 = P(1000)
 1003
 </pre></div></div>
 </div>
+<section id="What-about-encapsulation?">
+<h2>What about encapsulation?<a class="headerlink" href="#What-about-encapsulation?" title="Permalink to this heading"></a></h2>
 <p>Problem could be that data is not encapsulated</p>
 <p>Using the getter and setter and having encapsulated data looks like this</p>
+</section>
+<section id="The-Java-style-approach">
+<h2>The Java style approach<a class="headerlink" href="#The-Java-style-approach" title="Permalink to this heading"></a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
@@ -320,6 +295,9 @@ p2 = P(1000)
 1000
 </pre></div></div>
 </div>
+</section>
+<section id="But,-This-is-much-cleaner-and-more-pythonic">
+<h2>But, This is much cleaner and more pythonic<a class="headerlink" href="#But,-This-is-much-cleaner-and-more-pythonic" title="Permalink to this heading"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">p1</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">p2</span><span class="o">.</span><span class="n">x</span>
 </pre></div>
 </div>
@@ -328,7 +306,7 @@ p2 = P(1000)
 </pre></div>
 </div>
 <section id="&#64;properties-solves-the-problem">
-<h2>&#64;properties solves the problem<a class="headerlink" href="#@properties-solves-the-problem" title="Permalink to this heading"></a></h2>
+<h3>&#64;properties solves the problem<a class="headerlink" href="#@properties-solves-the-problem" title="Permalink to this heading"></a></h3>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
@@ -416,13 +394,12 @@ p1.x
 </div>
 </section>
 </section>
+</section>
 <section id="Datamodel">
 <h1>Datamodel<a class="headerlink" href="#Datamodel" title="Permalink to this heading"></a></h1>
 <p>Read about this: <a class="reference external" href="https://rszalski.github.io/magicmethods/">A Guide to Python’s Magic Methods</a></p>
 <p><strong>Protocol:</strong></p>
 <p>Top-level function or top-level syntax has a corosponding __method__()</p>
-<section id="__init__()">
-<h2>__init__()<a class="headerlink" href="#__init__()" title="Permalink to this heading"></a></h2>
 <p>When you initialize and object, there is a corosponding __init__() method that is called</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -436,9 +413,6 @@ s = S()
 </pre></div>
 </div>
 </div>
-</section>
-<section id="__repr__()">
-<h2>__repr__()<a class="headerlink" href="#__repr__()" title="Permalink to this heading"></a></h2>
 <p>If you want a string representation of the object (the objects state), you call the top-level function <em>repr()</em> which has a corosponding implementation of __repr__</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
@@ -464,9 +438,6 @@ repr(s)
 &#34;{&#39;name&#39;: &#39;Claus&#39;}&#34;
 </pre></div></div>
 </div>
-</section>
-<section id="__repr__()-vs-__str__()">
-<h2>__repr__() vs __str__()<a class="headerlink" href="#__repr__()-vs-__str__()" title="Permalink to this heading"></a></h2>
 <p>Read about this: <a class="reference external" href="https://www.geeksforgeeks.org/str-vs-repr-in-python/">str() vs repr() in Python</a></p>
 <div class="line-block">
 <div class="line">Python has 2 options of printing a string representation. <strong>repr()</strong> and <strong>str()</strong>.</div>
@@ -549,9 +520,6 @@ Name: Anna
 {&#39;name&#39;: &#39;Anna&#39;}
 </pre></div></div>
 </div>
-</section>
-<section id="Arithmetic-operators">
-<h2>Arithmetic operators<a class="headerlink" href="#Arithmetic-operators" title="Permalink to this heading"></a></h2>
 <div class="line-block">
 <div class="line">+, -, *, /</div>
 <div class="line">Read about this: <a class="reference external" href="https://rszalski.github.io/magicmethods/#numeric">Normal arithmetic operators</a></div>
@@ -610,9 +578,6 @@ str(s + s2)
 &#39;Name: Claus Anna&#39;
 </pre></div></div>
 </div>
-</section>
-<section id="Indexed-objects">
-<h2>Indexed objects<a class="headerlink" href="#Indexed-objects" title="Permalink to this heading"></a></h2>
 <p>A list in python can be accessed like with this syntax:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
@@ -687,7 +652,6 @@ d[3]
 </pre></div>
 </div>
 </div>
-</section>
 </section>
 
 

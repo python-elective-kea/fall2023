@@ -1,13 +1,14 @@
 Session 8 - Encapsulation
 =========================
 
-In Python, it is generally considered best practice to make all attributes public unless there is a specific need to make them private. This is in contrast to languages like Java, where private attributes and accompanying getters and setters are the norm.
+In Python, it is generally considered best practice to make all attributes public unless there is a specific need to make them private. 
+This is in contrast to languages like Java, where private attributes and accompanying getters and setters are the norm.
 
-When we need to encapsulate data (e.g if we need to validate the data) we can use different methods. We will look at one approaches: propertie.
+When we need to encapsulate data (e.g if we need to validate the data) we can use different methods. 
+We will look at one approaches: property.
 
-A property is a build in decorator function and is using the syntax :code:`@property`. Just like you learned in the session about decorator functions. Descriptor classes is a class with the :code:`__get__(), __set__() and __deleter__()` methods implemened.
-
-This approach is considered best practice or 'Pythonic' and this is what we will look at in todays session.
+A property is a build in decorator function and is using the syntax :code:`@property`. 
+Just like you learned in the session about decorator functions. 
 
 Learning goals
 --------------
@@ -21,9 +22,7 @@ After this week you will be able to:
 Materials
 ---------
 * `Difference between _, __ and __xx__ in Python <https://igorsobreira.com/2010/09/16/difference-between-one-underline-and-two-underlines-in-python.html>`_
-* `Python Descriptors: An Introduction <https://realpython.com/python-descriptors/>`_
 * `Python's property(): Add Managed Attributes to Your Classes <https://realpython.com/python-property/>`_
-* `Python Descriptors: An Introduction <https://realpython.com/python-descriptors/>`_
 * `Notebook on properties <notebooks/OOP_Encapsulation_Propeties.rst>`_
 * `Code examples from teachings <https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses8>`_
 
@@ -42,8 +41,11 @@ Ex 1:  Car object
 
 `Solution <exercises/solution/05_encapsulation/solutions.rst>`_
 
-Create a Car class. When instanciated the object should be able to take 4 attributes (Make, Model, bhp, mph). They all 4 should be properties. (Even though this is not nessary here, you should create properties in order just to try it out).
-
+Create a Car class. 
+When instanciated the object should be able to take 4 attributes (Make, Model, bhp, mph). 
+All 4 should be properties. 
+.. note::
+    In python you would never write empty properties, so there should be a reason for Make, Model, bhp, mph prorties to exist!
 
 
 Ex 2: Bank

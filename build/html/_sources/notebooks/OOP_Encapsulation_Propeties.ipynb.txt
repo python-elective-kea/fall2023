@@ -87,102 +87,53 @@
    ]
   },
   {
-   "attachments": {},
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Private members"
+    "# @Property"
    ]
   },
   {
-   "attachments": {},
-   "cell_type": "markdown",
+   "cell_type": "code",
+   "execution_count": 2,
    "metadata": {},
+   "outputs": [],
    "source": [
-    "Read about this: [Private attributes and methods](https://www.bogotobogo.com/python/python_private_attributes_methods.php)"
+    "class P:\n",
+    "    \n",
+    "    def __init__(self):\n",
+    "        pass\n",
+    "    \n",
+    "    #@property\n",
+    "    def x(self):\n",
+    "        return self.z\n",
+    "    \n",
+    "    def y(self, z):\n",
+    "        self.z = z\n",
+    "    \n",
+    "    x = property(x, y)"
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 3,
    "metadata": {},
-   "outputs": [],
-   "source": [
-    "class P:\n",
-    "   def __init__(self, name, alias):\n",
-    "      self.name = name       # public\n",
-    "      self._alias = alias   # private\n",
-    "\n",
-    "   def who(self):\n",
-    "      print('name  : ', self.name)\n",
-    "      print('alias : ', self._alias)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 4,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "name  :  Claus\n",
-      "alias :  clbo\n"
-     ]
-    }
-   ],
-   "source": [
-    "p = P('Claus', 'clbo')\n",
-    "p.who()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 5,
-   "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "'Claus'"
+       "15"
       ]
      },
-     "execution_count": 5,
+     "execution_count": 3,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
-    "p.name"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 7,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "'clbo'"
-      ]
-     },
-     "execution_count": 7,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "p._alias"
-   ]
-  },
-  {
-   "attachments": {},
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "This is why you sometimes will hear that private does not realy exists in python."
+    "p = P()\n",
+    "p.x = 15\n",
+    "p.x\n"
    ]
   },
   {
@@ -866,7 +817,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.11.3"
+   "version": "3.11.5"
   },
   "toc": {
    "base_numbering": 1,
