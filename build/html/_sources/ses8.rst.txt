@@ -42,11 +42,12 @@ Ex 1:  Car object
 `Solution <exercises/solution/05_encapsulation/solutions.rst>`_
 
 Create a Car class. 
+
 When instanciated the object should be able to take 4 attributes (Make, Model, bhp, mph). 
 All 4 should be properties. 
 
 .. note::
-    In python you would never write empty properties, so there should be a reason for Make, Model, bhp, mph prorties to exist!
+    Remember! In python you would never write empty properties, so there should be a reason for Make, Model, bhp, mph prorties to exist!
 
 
 Ex 2: Bank
