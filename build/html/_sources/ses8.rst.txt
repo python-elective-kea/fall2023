@@ -98,8 +98,10 @@ What is wrong with this code?
 
             @x.setter
             def x(self, value):
-                if type(value) not in (int, ):
+                if value < 100 and value > 0:
                     self._x = value
+                else:
+                    raise ValueError('value should be between 0 and 100')
 
 
 
