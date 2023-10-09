@@ -176,7 +176,7 @@ All 4 should be properties.</p>
 </section>
 <section id="ex-2a-debugging">
 <h4>Ex 2a: Debugging<a class="headerlink" href="#ex-2a-debugging" title="Permalink to this heading"></a></h4>
-<p>What is wrong with this code?</p>
+<p>In the code below there is one mistake. What is wrong with this code?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>     <span class="k">class</span> <span class="nc">C</span><span class="p">:</span>
 <span class="linenos"> 2</span>         <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <span class="linenos"> 3</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_x</span> <span class="o">=</span> <span class="n">value</span>
@@ -187,7 +187,7 @@ All 4 should be properties.</p>
 <span class="linenos"> 8</span>
 <span class="linenos"> 9</span>         <span class="nd">@x</span><span class="o">.</span><span class="n">setter</span>
 <span class="linenos">10</span>         <span class="k">def</span> <span class="nf">x</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-<span class="linenos">11</span>             <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">100</span> <span class="ow">and</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="linenos">11</span>             <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;=</span> <span class="mi">100</span> <span class="ow">and</span> <span class="n">value</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
 <span class="linenos">12</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_x</span> <span class="o">=</span> <span class="n">value</span>
 <span class="linenos">13</span>             <span class="k">else</span><span class="p">:</span>
 <span class="linenos">14</span>                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;value should be between 0 and 100&#39;</span><span class="p">)</span>

@@ -83,7 +83,7 @@ In the exercise from last monday with the bank, account and customer, change the
 Ex 2a: Debugging
 ****************
 
-What is wrong with this code?
+In the code below there is one mistake. What is wrong with this code?
 
 .. code:: python
    :linenos:
@@ -98,7 +98,7 @@ What is wrong with this code?
 
             @x.setter
             def x(self, value):
-                if value < 100 and value > 0:
+                if value <= 100 and value >= 0:
                     self._x = value
                 else:
                     raise ValueError('value should be between 0 and 100')
