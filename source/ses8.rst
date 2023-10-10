@@ -132,7 +132,7 @@ Your code should include:
 * Appropriate error handling for non-positive width and height values
 
 
-#Ex 5: Color converter
+Ex 5: Color converter
 **********************
 
 `Solution <exercises/solution/05_encapsulation/solutions.rst>`_
