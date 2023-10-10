@@ -33,8 +33,8 @@ Exercises
 Encaptiolation & Propeties exercises
 ------------------------------------
 
-All following exercises should be done by using **Properties** when needed (Ex 1 should have also properties every where even though its not needed). The focus should be on encapsulation. 
-
+All following exercises should be done by using **Properties** when needed.    
+The focus should be on encapsulation. 
 
 Ex 1:  Car object
 *****************
@@ -47,7 +47,8 @@ When instanciated the object should be able to take 4 attributes (Make, Model, b
 All 4 should be properties. 
 
 .. note::
-    Remember! In python you would never write empty properties, so there should be a reason for Make, Model, bhp, mph prorties to exist!
+    | Remember! In python you would never write empty properties, 
+    | so there should be a reason for Make, Model, bhp, mph properties to exist!
 
 
 Ex 2: Bank
