@@ -21,8 +21,8 @@ After this week you will be able to:
 
 Materials
 ---------
-* `Difference between _, __ and __xx__ in Python <https://igorsobreira.com/2010/09/16/difference-between-one-underline-and-two-underlines-in-python.html>`_
 * `Python's property(): Add Managed Attributes to Your Classes <https://realpython.com/python-property/>`_
+* `Difference between _, __ and __xx__ in Python <https://igorsobreira.com/2010/09/16/difference-between-one-underline-and-two-underlines-in-python.html>`_
 * `Notebook on properties <notebooks/OOP_Encapsulation_Propeties.rst>`_
 * `Code examples from teachings <https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses8>`_
 
