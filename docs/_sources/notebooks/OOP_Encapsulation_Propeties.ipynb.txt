@@ -46,15 +46,20 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "You will sometimes see an attribute with a single or a double underscore prior to the name ```eg. self._x = x```. \n",
+    "You will sometimes see an attribute with a single or a double underscore prior to the name     \n",
+    "\n",
+    "\n",
+    "```\n",
+    "    self._x = x\n",
+    "```\n",
     "When you read about this it will be described as a private \"like\" variable, and then a long explanation about that there is not realy anything private in python and so on. \n",
     "\n",
-    "In reality it is all just public attributes and some of them with a funny looking syntax."
+    "> In reality it is all just public attributes and some of them with a funny looking syntax."
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 7,
+   "execution_count": 9,
    "metadata": {},
    "outputs": [
     {
@@ -63,7 +68,7 @@
        "10"
       ]
      },
-     "execution_count": 7,
+     "execution_count": 9,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -90,118 +95,57 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# @Property"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 2,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "class P:\n",
-    "    \n",
-    "    def __init__(self):\n",
-    "        pass\n",
-    "    \n",
-    "    #@property\n",
-    "    def x(self):\n",
-    "        return self.z\n",
-    "    \n",
-    "    def y(self, z):\n",
-    "        self.z = z\n",
-    "    \n",
-    "    x = property(x, y)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 3,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "15"
-      ]
-     },
-     "execution_count": 3,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "p = P()\n",
-    "p.x = 15\n",
-    "p.x\n"
-   ]
-  },
-  {
-   "attachments": {},
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "# @Properties\n",
+    "# @Property\n",
     "Read about : [Properties vs. Getters and Setters](https://www.python-course.eu/python3_properties.php)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 16,
+   "execution_count": 4,
    "metadata": {},
    "outputs": [],
    "source": [
-    "class P:\n",
-    "    def __init__(self, x):\n",
-    "        self.x = x"
+    "class Number:\n",
+    "\n",
+    "    def __init__(self, value):\n",
+    "            self.x = value\n"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 20,
+   "execution_count": 5,
    "metadata": {},
    "outputs": [],
    "source": [
-    "p1 = P(3)\n",
-    "p2 = P(1000)"
-   ]
-  },
-  {
-   "attachments": {},
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "We like this **clean**, **intuitive** and **easy** approach"
+    "num = Number(12)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 21,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "p1.x = p1.x + p2.x "
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 22,
+   "execution_count": 7,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "1003"
+       "12"
       ]
      },
-     "execution_count": 22,
+     "execution_count": 7,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
-    "p1.x"
+    "num.x "
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   },
   {
    "attachments": {},

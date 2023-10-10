@@ -151,7 +151,7 @@ If you get it right, you should be able to use the class Colour like so:
 
 .. code:: python
 
-   >>> c = Colour(146, 255, 0)
+   >>> c = Color(146, 255, 0)
    >>> c.hex
    '#92ff00'
 
