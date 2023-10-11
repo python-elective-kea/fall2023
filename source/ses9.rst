@@ -54,7 +54,7 @@ Continue with the deck example and implement the
 
 We look at this together in a short while.
 
-When you a done, take a look at the 2 exercises below and ask your questions.
+When you a done, take a look at the exercise below and ask your questions.
 
 
 .. raw:: html
@@ -62,4 +62,5 @@ When you a done, take a look at the 2 exercises below and ask your questions.
    <hr>
 
 * `Linked List <exercises/protocol_linked_list.rst>`_  
-* `Jelly Beans <exercises/JellyBeans.rst>`_ 
+.. 
+   * `Jelly Beans <exercises/JellyBeans.rst>`_ 
