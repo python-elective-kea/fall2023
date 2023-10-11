@@ -21,6 +21,7 @@ After this week you will be able to:
 
 Materials
 ---------
+* Skriv dette ind i din notebook og tænk over hvordan det relatere sig til det vi har været igennem : ```import this``` 
 * `Python's property(): Add Managed Attributes to Your Classes <https://realpython.com/python-property/>`_
 * `Difference between _, __ and __xx__ in Python <https://igorsobreira.com/2010/09/16/difference-between-one-underline-and-two-underlines-in-python.html>`_
 * `Notebook on properties <notebooks/OOP_Encapsulation_Propeties.rst>`_
