@@ -20,25 +20,25 @@ class Machine:
 class Printer(Machine):
     def __init__(self):
         Machine.__init__(self)
-        self.__pt = Papertray()
+        self._pt = Papertray()
 
     def print(self, text):
-        if self.__pt.paper == 0:
+        if self._pt.paper == 0:
             print('Papertray is empty')
         else:
             if self._is_on:
                 print(text)
-                self.__pt.paper = self.__pt.paper - 1
+                self._pt.paper = self._pt.paper - 1
             else:
                 print('Printer is off')
 
     @property
     def load(self):
-        return self.__pt.paper
+        return self._pt.paper
 
     @load.setter
     def load(self, no):
-        self.__pt.paper = no
+        self._pt.paper = no
 
 class Papertray:
     def __init__(self):
@@ -46,11 +46,11 @@ class Papertray:
 
     @property
     def paper(self):
-        return self.__paper
+        return self._paper
 
     @paper.setter
     def paper(self, paper):
-        self.__paper = paper
+        self._paper = paper
 
 
 

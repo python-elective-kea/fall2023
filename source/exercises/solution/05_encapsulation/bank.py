@@ -9,27 +9,30 @@ The Customer class should make sure that the customer is over 18 year of age.
 
 class Bank:    
     def __init__(self):
-        self.__accounts = []  # When bank is initialized it has  the abillity to hold many accounts
+        self._accounts = []  # When bank is initialized it has  the abillity to hold many accounts
     
     @property
     def accounts(self):
-        return self.__accounts
+        return self._accounts
 
     @accounts.setter
     def accounts(self, acc):
         if type(acc) in [list, tuple, set]:
             for i in acc:
-                self.__has_account(i)
-                self.__accounts.append(i)
+                self._has_account(i)
+                self._accounts.append(i)
         else:
-            self.__has_account(acc)
-            self.__accounts.append(acc)
+            self._has_account(acc)
+            self._accounts.append(acc)
 
-    def __has_account(self, acc):
-        for i in self.__accounts:
+    def _has_account(self, acc):
+        for i in self._accounts:
             if acc.cust.name == i.cust.name:
                 raise ValueError('Customer aleready has an account!')
         return False
+    
+    def __repr__(self):
+        return str(self.__dict__)
 
 class Account:
     def __init__(self, no, cust):
@@ -47,13 +50,14 @@ class Customer:
 
     @property
     def age(self):
-        return self.__age
+        return self._age
 
     @age.setter
     def age(self, age):
         if age < 18:
             raise ValueError('You must be 18 or above to create an account')
-        self.__age = age
+        
+        self._age = age     # create a variable with the name _age
 
     def __repr__(self):
         return str(self.__dict__)

@@ -94,60 +94,76 @@
 <h2>Ex 1: Car object<a class="headerlink" href="#ex-1-car-object" title="Permalink to this heading"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># car.py (solution)</span>
 <span class="linenos"> 2</span>
-<span class="linenos"> 3</span><span class="mf">1.</span> <span class="n">Car</span> <span class="nb">object</span>
-<span class="linenos"> 4</span><span class="n">Create</span> <span class="n">a</span> <span class="n">Car</span> <span class="n">class</span><span class="o">.</span> 
-<span class="linenos"> 5</span><span class="n">When</span> <span class="n">instanciated</span> <span class="n">the</span> <span class="nb">object</span> <span class="n">should</span> <span class="n">be</span> <span class="n">able</span> <span class="n">to</span> <span class="n">take</span> <span class="mi">4</span> <span class="n">attributes</span> <span class="p">(</span><span class="n">Make</span><span class="p">,</span> <span class="n">Model</span><span class="p">,</span> <span class="n">bhp</span><span class="p">,</span> <span class="n">mph</span><span class="p">)</span><span class="o">.</span>
-<span class="linenos"> 6</span><span class="n">They</span> <span class="nb">all</span> <span class="mi">4</span> <span class="n">should</span> <span class="n">be</span> <span class="n">properties</span><span class="o">.</span>
+<span class="linenos"> 3</span><span class="c1"># 1. Car object</span>
+<span class="linenos"> 4</span><span class="c1"># Create a Car class. </span>
+<span class="linenos"> 5</span><span class="c1"># When instanciated the object should be able to take 4 attributes (Make, Model, bhp, mph).</span>
+<span class="linenos"> 6</span><span class="c1"># They all 4 should be properties.</span>
 <span class="linenos"> 7</span>
-<span class="linenos"> 8</span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
-<span class="linenos"> 9</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
-<span class="linenos">10</span>        <span class="bp">self</span><span class="o">.</span><span class="n">make</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="linenos">11</span>        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="linenos">12</span>        <span class="bp">self</span><span class="o">.</span><span class="n">bhp</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-<span class="linenos">13</span>        <span class="bp">self</span><span class="o">.</span><span class="n">mph</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
-<span class="linenos">14</span>
-<span class="linenos">15</span>    <span class="c1"># make</span>
-<span class="linenos">16</span>    <span class="nd">@property</span> 
-<span class="linenos">17</span>    <span class="k">def</span> <span class="nf">make</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos">18</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__make</span>
-<span class="linenos">19</span>    
-<span class="linenos">20</span>    <span class="nd">@make</span><span class="o">.</span><span class="n">setter</span>
-<span class="linenos">21</span>    <span class="k">def</span> <span class="nf">make</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">make</span><span class="p">):</span>
-<span class="linenos">22</span>        <span class="bp">self</span><span class="o">.</span><span class="n">__make</span> <span class="o">=</span> <span class="n">make</span>
-<span class="linenos">23</span>
-<span class="linenos">24</span>
-<span class="linenos">25</span>
-<span class="linenos">26</span>    <span class="c1"># model</span>
-<span class="linenos">27</span>    <span class="nd">@property</span> 
-<span class="linenos">28</span>    <span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos">29</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__model</span>
-<span class="linenos">30</span>    
-<span class="linenos">31</span>    <span class="nd">@model</span><span class="o">.</span><span class="n">setter</span>
-<span class="linenos">32</span>    <span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
-<span class="linenos">33</span>        <span class="bp">self</span><span class="o">.</span><span class="n">__model</span> <span class="o">=</span> <span class="n">model</span>
-<span class="linenos">34</span>
-<span class="linenos">35</span>
-<span class="linenos">36</span>    
-<span class="linenos">37</span>    <span class="c1"># bhp</span>
-<span class="linenos">38</span>    <span class="nd">@property</span> 
-<span class="linenos">39</span>    <span class="k">def</span> <span class="nf">bhp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos">40</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__bhp</span>
-<span class="linenos">41</span>    
-<span class="linenos">42</span>    <span class="nd">@bhp</span><span class="o">.</span><span class="n">setter</span>
-<span class="linenos">43</span>    <span class="k">def</span> <span class="nf">bhp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bhp</span><span class="p">):</span>
-<span class="linenos">44</span>        <span class="bp">self</span><span class="o">.</span><span class="n">__bhp</span> <span class="o">=</span> <span class="n">bhp</span>
-<span class="linenos">45</span>
-<span class="linenos">46</span>
-<span class="linenos">47</span>
-<span class="linenos">48</span>    <span class="c1"># mph</span>
-<span class="linenos">49</span>    <span class="nd">@property</span> 
-<span class="linenos">50</span>    <span class="k">def</span> <span class="nf">mph</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos">51</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__mph</span>
-<span class="linenos">52</span>    
-<span class="linenos">53</span>    <span class="nd">@mph</span><span class="o">.</span><span class="n">setter</span>
-<span class="linenos">54</span>    <span class="k">def</span> <span class="nf">mph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mph</span><span class="p">):</span>
-<span class="linenos">55</span>        <span class="bp">self</span><span class="o">.</span><span class="n">__mph</span> <span class="o">=</span> <span class="n">mph</span>
-<span class="linenos">56</span>
+<span class="linenos"> 8</span><span class="n">db</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos"> 9</span>    <span class="s2">&quot;Audi&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;A3&quot;</span><span class="p">,</span> <span class="s2">&quot;A4&quot;</span><span class="p">,</span> <span class="s2">&quot;A6&quot;</span><span class="p">,</span> <span class="s2">&quot;Q5&quot;</span><span class="p">,</span> <span class="s2">&quot;Q7&quot;</span><span class="p">},</span>
+<span class="linenos">10</span>    <span class="s2">&quot;BMW&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;3 Series&quot;</span><span class="p">,</span> <span class="s2">&quot;5 Series&quot;</span><span class="p">,</span> <span class="s2">&quot;7 Series&quot;</span><span class="p">,</span> <span class="s2">&quot;X3&quot;</span><span class="p">,</span> <span class="s2">&quot;X5&quot;</span><span class="p">},</span>
+<span class="linenos">11</span>    <span class="s2">&quot;Mercedes-Benz&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;C-Class&quot;</span><span class="p">,</span> <span class="s2">&quot;E-Class&quot;</span><span class="p">,</span> <span class="s2">&quot;S-Class&quot;</span><span class="p">,</span> <span class="s2">&quot;GLC&quot;</span><span class="p">,</span> <span class="s2">&quot;GLE&quot;</span><span class="p">},</span>
+<span class="linenos">12</span>    <span class="s2">&quot;Volkswagen&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Golf&quot;</span><span class="p">,</span> <span class="s2">&quot;Passat&quot;</span><span class="p">,</span> <span class="s2">&quot;Polo&quot;</span><span class="p">,</span> <span class="s2">&quot;Tiguan&quot;</span><span class="p">,</span> <span class="s2">&quot;Arteon&quot;</span><span class="p">},</span>
+<span class="linenos">13</span>    <span class="s2">&quot;Volvo&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;S60&quot;</span><span class="p">,</span> <span class="s2">&quot;S90&quot;</span><span class="p">,</span> <span class="s2">&quot;V60&quot;</span><span class="p">,</span> <span class="s2">&quot;XC60&quot;</span><span class="p">,</span> <span class="s2">&quot;XC90&quot;</span><span class="p">},</span>
+<span class="linenos">14</span>    <span class="s2">&quot;Toyota&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Corolla&quot;</span><span class="p">,</span> <span class="s2">&quot;Camry&quot;</span><span class="p">,</span> <span class="s2">&quot;RAV4&quot;</span><span class="p">,</span> <span class="s2">&quot;Prius&quot;</span><span class="p">,</span> <span class="s2">&quot;Hilux&quot;</span><span class="p">},</span>
+<span class="linenos">15</span>    <span class="s2">&quot;Honda&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Civic&quot;</span><span class="p">,</span> <span class="s2">&quot;Accord&quot;</span><span class="p">,</span> <span class="s2">&quot;CR-V&quot;</span><span class="p">,</span> <span class="s2">&quot;Fit&quot;</span><span class="p">,</span> <span class="s2">&quot;HR-V&quot;</span><span class="p">},</span>
+<span class="linenos">16</span>    <span class="s2">&quot;Ford&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Focus&quot;</span><span class="p">,</span> <span class="s2">&quot;Fiesta&quot;</span><span class="p">,</span> <span class="s2">&quot;Mustang&quot;</span><span class="p">,</span> <span class="s2">&quot;Escape&quot;</span><span class="p">,</span> <span class="s2">&quot;Explorer&quot;</span><span class="p">},</span>
+<span class="linenos">17</span>    <span class="s2">&quot;Nissan&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Altima&quot;</span><span class="p">,</span> <span class="s2">&quot;Rogue&quot;</span><span class="p">,</span> <span class="s2">&quot;Sentra&quot;</span><span class="p">,</span> <span class="s2">&quot;Maxima&quot;</span><span class="p">,</span> <span class="s2">&quot;Murano&quot;</span><span class="p">},</span>
+<span class="linenos">18</span>    <span class="s2">&quot;Mazda&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Mazda3&quot;</span><span class="p">,</span> <span class="s2">&quot;Mazda6&quot;</span><span class="p">,</span> <span class="s2">&quot;CX-5&quot;</span><span class="p">,</span> <span class="s2">&quot;CX-9&quot;</span><span class="p">,</span> <span class="s2">&quot;MX-5&quot;</span><span class="p">}</span>
+<span class="linenos">19</span><span class="p">}</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+<span class="linenos">23</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">bhp</span><span class="p">,</span> <span class="n">mph</span><span class="p">):</span>
+<span class="linenos">24</span>        <span class="bp">self</span><span class="o">.</span><span class="n">make</span> <span class="o">=</span> <span class="n">make</span>
+<span class="linenos">25</span>        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
+<span class="linenos">26</span>        <span class="bp">self</span><span class="o">.</span><span class="n">bhp</span> <span class="o">=</span> <span class="n">bhp</span>
+<span class="linenos">27</span>        <span class="bp">self</span><span class="o">.</span><span class="n">mph</span> <span class="o">=</span> <span class="n">mph</span>
+<span class="linenos">28</span>
+<span class="linenos">29</span>    <span class="c1"># make</span>
+<span class="linenos">30</span>    <span class="nd">@property</span> 
+<span class="linenos">31</span>    <span class="k">def</span> <span class="nf">make</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">32</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make</span>
+<span class="linenos">33</span>    
+<span class="linenos">34</span>    <span class="nd">@make</span><span class="o">.</span><span class="n">setter</span>
+<span class="linenos">35</span>    <span class="k">def</span> <span class="nf">make</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">make</span><span class="p">):</span>
+<span class="linenos">36</span>        <span class="k">if</span> <span class="n">make</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">db</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+<span class="linenos">37</span>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Make is not in valid list&#39;</span><span class="p">)</span>
+<span class="linenos">38</span>        <span class="bp">self</span><span class="o">.</span><span class="n">_make</span> <span class="o">=</span> <span class="n">make</span>
+<span class="linenos">39</span>
+<span class="linenos">40</span>    <span class="c1"># model</span>
+<span class="linenos">41</span>    <span class="nd">@property</span> 
+<span class="linenos">42</span>    <span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">43</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span>
+<span class="linenos">44</span>    
+<span class="linenos">45</span>    <span class="nd">@model</span><span class="o">.</span><span class="n">setter</span>
+<span class="linenos">46</span>    <span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+<span class="linenos">47</span>        <span class="k">if</span> <span class="n">model</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">db</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">make</span><span class="p">]:</span> 
+<span class="linenos">48</span>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;No model named </span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s1"> belongs to </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">make</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="linenos">49</span>        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+<span class="linenos">50</span>    
+<span class="linenos">51</span>    <span class="c1"># bhp</span>
+<span class="linenos">52</span>    <span class="nd">@property</span> 
+<span class="linenos">53</span>    <span class="k">def</span> <span class="nf">bhp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">54</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bhp</span>
+<span class="linenos">55</span>    
+<span class="linenos">56</span>    <span class="nd">@bhp</span><span class="o">.</span><span class="n">setter</span>
+<span class="linenos">57</span>    <span class="k">def</span> <span class="nf">bhp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bhp</span><span class="p">):</span>
+<span class="linenos">58</span>        <span class="k">if</span> <span class="n">bhp</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="linenos">59</span>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;bhp can not be negative&#39;</span><span class="p">)</span>
+<span class="linenos">60</span>        <span class="bp">self</span><span class="o">.</span><span class="n">_bhp</span> <span class="o">=</span> <span class="n">bhp</span>
+<span class="linenos">61</span>
+<span class="linenos">62</span>    <span class="c1"># mph</span>
+<span class="linenos">63</span>    <span class="nd">@property</span> 
+<span class="linenos">64</span>    <span class="k">def</span> <span class="nf">mph</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">65</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mph</span>
+<span class="linenos">66</span>    
+<span class="linenos">67</span>    <span class="nd">@mph</span><span class="o">.</span><span class="n">setter</span>
+<span class="linenos">68</span>    <span class="k">def</span> <span class="nf">mph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mph</span><span class="p">):</span>
+<span class="linenos">69</span>        <span class="k">if</span> <span class="n">mph</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="linenos">70</span>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;mph can not be negative&#39;</span><span class="p">)</span>
+<span class="linenos">71</span>        <span class="bp">self</span><span class="o">.</span><span class="n">_mph</span> <span class="o">=</span> <span class="n">mph</span>
+<span class="linenos">72</span>
 </pre></div>
 </div>
 </section>
@@ -164,54 +180,58 @@
 <span class="linenos"> 9</span>
 <span class="linenos">10</span><span class="k">class</span> <span class="nc">Bank</span><span class="p">:</span>    
 <span class="linenos">11</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos">12</span>        <span class="bp">self</span><span class="o">.</span><span class="n">__accounts</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># When bank is initialized it has  the abillity to hold many accounts</span>
+<span class="linenos">12</span>        <span class="bp">self</span><span class="o">.</span><span class="n">_accounts</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># When bank is initialized it has  the abillity to hold many accounts</span>
 <span class="linenos">13</span>    
 <span class="linenos">14</span>    <span class="nd">@property</span>
 <span class="linenos">15</span>    <span class="k">def</span> <span class="nf">accounts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos">16</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__accounts</span>
+<span class="linenos">16</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_accounts</span>
 <span class="linenos">17</span>
 <span class="linenos">18</span>    <span class="nd">@accounts</span><span class="o">.</span><span class="n">setter</span>
 <span class="linenos">19</span>    <span class="k">def</span> <span class="nf">accounts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">acc</span><span class="p">):</span>
 <span class="linenos">20</span>        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">acc</span><span class="p">)</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">,</span> <span class="nb">set</span><span class="p">]:</span>
 <span class="linenos">21</span>            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">acc</span><span class="p">:</span>
-<span class="linenos">22</span>                <span class="bp">self</span><span class="o">.</span><span class="n">__has_account</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="linenos">23</span>                <span class="bp">self</span><span class="o">.</span><span class="n">__accounts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="linenos">22</span>                <span class="bp">self</span><span class="o">.</span><span class="n">_has_account</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="linenos">23</span>                <span class="bp">self</span><span class="o">.</span><span class="n">_accounts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 <span class="linenos">24</span>        <span class="k">else</span><span class="p">:</span>
-<span class="linenos">25</span>            <span class="bp">self</span><span class="o">.</span><span class="n">__has_account</span><span class="p">(</span><span class="n">acc</span><span class="p">)</span>
-<span class="linenos">26</span>            <span class="bp">self</span><span class="o">.</span><span class="n">__accounts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">acc</span><span class="p">)</span>
+<span class="linenos">25</span>            <span class="bp">self</span><span class="o">.</span><span class="n">_has_account</span><span class="p">(</span><span class="n">acc</span><span class="p">)</span>
+<span class="linenos">26</span>            <span class="bp">self</span><span class="o">.</span><span class="n">_accounts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">acc</span><span class="p">)</span>
 <span class="linenos">27</span>
-<span class="linenos">28</span>    <span class="k">def</span> <span class="nf">__has_account</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">acc</span><span class="p">):</span>
-<span class="linenos">29</span>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__accounts</span><span class="p">:</span>
+<span class="linenos">28</span>    <span class="k">def</span> <span class="nf">_has_account</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">acc</span><span class="p">):</span>
+<span class="linenos">29</span>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_accounts</span><span class="p">:</span>
 <span class="linenos">30</span>            <span class="k">if</span> <span class="n">acc</span><span class="o">.</span><span class="n">cust</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">i</span><span class="o">.</span><span class="n">cust</span><span class="o">.</span><span class="n">name</span><span class="p">:</span>
 <span class="linenos">31</span>                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Customer aleready has an account!&#39;</span><span class="p">)</span>
 <span class="linenos">32</span>        <span class="k">return</span> <span class="kc">False</span>
-<span class="linenos">33</span>
-<span class="linenos">34</span><span class="k">class</span> <span class="nc">Account</span><span class="p">:</span>
-<span class="linenos">35</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">no</span><span class="p">,</span> <span class="n">cust</span><span class="p">):</span>
-<span class="linenos">36</span>        <span class="bp">self</span><span class="o">.</span><span class="n">no</span> <span class="o">=</span> <span class="n">no</span>
-<span class="linenos">37</span>        <span class="bp">self</span><span class="o">.</span><span class="n">cust</span> <span class="o">=</span> <span class="n">cust</span>
-<span class="linenos">38</span>
-<span class="linenos">39</span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos">40</span>        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+<span class="linenos">33</span>    
+<span class="linenos">34</span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">35</span>        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+<span class="linenos">36</span>
+<span class="linenos">37</span><span class="k">class</span> <span class="nc">Account</span><span class="p">:</span>
+<span class="linenos">38</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">no</span><span class="p">,</span> <span class="n">cust</span><span class="p">):</span>
+<span class="linenos">39</span>        <span class="bp">self</span><span class="o">.</span><span class="n">no</span> <span class="o">=</span> <span class="n">no</span>
+<span class="linenos">40</span>        <span class="bp">self</span><span class="o">.</span><span class="n">cust</span> <span class="o">=</span> <span class="n">cust</span>
 <span class="linenos">41</span>
-<span class="linenos">42</span>
-<span class="linenos">43</span><span class="k">class</span> <span class="nc">Customer</span><span class="p">:</span>
-<span class="linenos">44</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
-<span class="linenos">45</span>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-<span class="linenos">46</span>        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
-<span class="linenos">47</span>
-<span class="linenos">48</span>    <span class="nd">@property</span>
-<span class="linenos">49</span>    <span class="k">def</span> <span class="nf">age</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos">50</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__age</span>
-<span class="linenos">51</span>
-<span class="linenos">52</span>    <span class="nd">@age</span><span class="o">.</span><span class="n">setter</span>
-<span class="linenos">53</span>    <span class="k">def</span> <span class="nf">age</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
-<span class="linenos">54</span>        <span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
-<span class="linenos">55</span>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;You must be 18 or above to create an account&#39;</span><span class="p">)</span>
-<span class="linenos">56</span>        <span class="bp">self</span><span class="o">.</span><span class="n">__age</span> <span class="o">=</span> <span class="n">age</span>
-<span class="linenos">57</span>
-<span class="linenos">58</span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos">59</span>        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+<span class="linenos">42</span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">43</span>        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+<span class="linenos">44</span>
+<span class="linenos">45</span>
+<span class="linenos">46</span><span class="k">class</span> <span class="nc">Customer</span><span class="p">:</span>
+<span class="linenos">47</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+<span class="linenos">48</span>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+<span class="linenos">49</span>        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+<span class="linenos">50</span>
+<span class="linenos">51</span>    <span class="nd">@property</span>
+<span class="linenos">52</span>    <span class="k">def</span> <span class="nf">age</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">53</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_age</span>
+<span class="linenos">54</span>
+<span class="linenos">55</span>    <span class="nd">@age</span><span class="o">.</span><span class="n">setter</span>
+<span class="linenos">56</span>    <span class="k">def</span> <span class="nf">age</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+<span class="linenos">57</span>        <span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
+<span class="linenos">58</span>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;You must be 18 or above to create an account&#39;</span><span class="p">)</span>
+<span class="linenos">59</span>        
+<span class="linenos">60</span>        <span class="bp">self</span><span class="o">.</span><span class="n">_age</span> <span class="o">=</span> <span class="n">age</span>     <span class="c1"># create a variable with the name _age</span>
+<span class="linenos">61</span>
+<span class="linenos">62</span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">63</span>        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -239,25 +259,25 @@
 <span class="linenos">20</span><span class="k">class</span> <span class="nc">Printer</span><span class="p">(</span><span class="n">Machine</span><span class="p">):</span>
 <span class="linenos">21</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">22</span>        <span class="n">Machine</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="linenos">23</span>        <span class="bp">self</span><span class="o">.</span><span class="n">__pt</span> <span class="o">=</span> <span class="n">Papertray</span><span class="p">()</span>
+<span class="linenos">23</span>        <span class="bp">self</span><span class="o">.</span><span class="n">_pt</span> <span class="o">=</span> <span class="n">Papertray</span><span class="p">()</span>
 <span class="linenos">24</span>
 <span class="linenos">25</span>    <span class="k">def</span> <span class="nf">print</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
-<span class="linenos">26</span>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__pt</span><span class="o">.</span><span class="n">paper</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="linenos">26</span>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pt</span><span class="o">.</span><span class="n">paper</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
 <span class="linenos">27</span>            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Papertray is empty&#39;</span><span class="p">)</span>
 <span class="linenos">28</span>        <span class="k">else</span><span class="p">:</span>
 <span class="linenos">29</span>            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_on</span><span class="p">:</span>
 <span class="linenos">30</span>                <span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-<span class="linenos">31</span>                <span class="bp">self</span><span class="o">.</span><span class="n">__pt</span><span class="o">.</span><span class="n">paper</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__pt</span><span class="o">.</span><span class="n">paper</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="linenos">31</span>                <span class="bp">self</span><span class="o">.</span><span class="n">_pt</span><span class="o">.</span><span class="n">paper</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pt</span><span class="o">.</span><span class="n">paper</span> <span class="o">-</span> <span class="mi">1</span>
 <span class="linenos">32</span>            <span class="k">else</span><span class="p">:</span>
 <span class="linenos">33</span>                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Printer is off&#39;</span><span class="p">)</span>
 <span class="linenos">34</span>
 <span class="linenos">35</span>    <span class="nd">@property</span>
 <span class="linenos">36</span>    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos">37</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__pt</span><span class="o">.</span><span class="n">paper</span>
+<span class="linenos">37</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pt</span><span class="o">.</span><span class="n">paper</span>
 <span class="linenos">38</span>
 <span class="linenos">39</span>    <span class="nd">@load</span><span class="o">.</span><span class="n">setter</span>
 <span class="linenos">40</span>    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">no</span><span class="p">):</span>
-<span class="linenos">41</span>        <span class="bp">self</span><span class="o">.</span><span class="n">__pt</span><span class="o">.</span><span class="n">paper</span> <span class="o">=</span> <span class="n">no</span>
+<span class="linenos">41</span>        <span class="bp">self</span><span class="o">.</span><span class="n">_pt</span><span class="o">.</span><span class="n">paper</span> <span class="o">=</span> <span class="n">no</span>
 <span class="linenos">42</span>
 <span class="linenos">43</span><span class="k">class</span> <span class="nc">Papertray</span><span class="p">:</span>
 <span class="linenos">44</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -265,11 +285,11 @@
 <span class="linenos">46</span>
 <span class="linenos">47</span>    <span class="nd">@property</span>
 <span class="linenos">48</span>    <span class="k">def</span> <span class="nf">paper</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos">49</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__paper</span>
+<span class="linenos">49</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_paper</span>
 <span class="linenos">50</span>
 <span class="linenos">51</span>    <span class="nd">@paper</span><span class="o">.</span><span class="n">setter</span>
 <span class="linenos">52</span>    <span class="k">def</span> <span class="nf">paper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">paper</span><span class="p">):</span>
-<span class="linenos">53</span>        <span class="bp">self</span><span class="o">.</span><span class="n">__paper</span> <span class="o">=</span> <span class="n">paper</span>
+<span class="linenos">53</span>        <span class="bp">self</span><span class="o">.</span><span class="n">_paper</span> <span class="o">=</span> <span class="n">paper</span>
 <span class="linenos">54</span>
 <span class="linenos">55</span>
 <span class="linenos">56</span>
@@ -279,6 +299,60 @@
 <span class="linenos">60</span>
 <span class="linenos">61</span>
 <span class="linenos">62</span>
+</pre></div>
+</div>
+</section>
+<section id="ex-4-rectangle">
+<h2>Ex 4: Rectangle<a class="headerlink" href="#ex-4-rectangle" title="Permalink to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Your code should include:</span>
+<span class="linenos"> 2</span><span class="c1"># A class called Rectangle</span>
+<span class="linenos"> 3</span><span class="c1"># width and height attributes with property decorators</span>
+<span class="linenos"> 4</span><span class="c1"># A get_area method that calculates the area of the rectangle</span>
+<span class="linenos"> 5</span><span class="c1"># Appropriate error handling for non-positive width and height values</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
+<span class="linenos"> 8</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+<span class="linenos"> 9</span>        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
+<span class="linenos">10</span>        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span>    <span class="nd">@property</span>
+<span class="linenos">13</span>    <span class="k">def</span> <span class="nf">width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">14</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_width</span>
+<span class="linenos">15</span>    
+<span class="linenos">16</span>    <span class="nd">@width</span><span class="o">.</span><span class="n">setter</span>
+<span class="linenos">17</span>    <span class="k">def</span> <span class="nf">width</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+<span class="linenos">18</span>        <span class="k">if</span> <span class="n">width</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="linenos">19</span>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Witdh can not be negative&#39;</span><span class="p">)</span>
+<span class="linenos">20</span>        <span class="bp">self</span><span class="o">.</span><span class="n">_width</span> <span class="o">=</span> <span class="n">width</span>
+<span class="linenos">21</span>    
+<span class="linenos">22</span>    <span class="nd">@property</span>
+<span class="linenos">23</span>    <span class="k">def</span> <span class="nf">height</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">24</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_height</span>
+<span class="linenos">25</span>    
+<span class="linenos">26</span>    <span class="nd">@height</span><span class="o">.</span><span class="n">setter</span>
+<span class="linenos">27</span>    <span class="k">def</span> <span class="nf">height</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+<span class="linenos">28</span>        <span class="k">if</span> <span class="n">height</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="linenos">29</span>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Height can not be negative&#39;</span><span class="p">)</span>
+<span class="linenos">30</span>        <span class="bp">self</span><span class="o">.</span><span class="n">_height</span> <span class="o">=</span> <span class="n">height</span>
+<span class="linenos">31</span>
+<span class="linenos">32</span>    <span class="nd">@property</span>
+<span class="linenos">33</span>    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">34</span>        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+</div>
+</section>
+<section id="ex-5-color-converter">
+<h2>Ex 5: Color converter<a class="headerlink" href="#ex-5-color-converter" title="Permalink to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span> <span class="nc">Color</span><span class="p">:</span>
+<span class="linenos"> 2</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="linenos"> 3</span>            <span class="bp">self</span><span class="o">.</span><span class="n">r</span> <span class="o">=</span> <span class="n">r</span>
+<span class="linenos"> 4</span>            <span class="bp">self</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="n">g</span>
+<span class="linenos"> 5</span>            <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="nd">@property</span>
+<span class="linenos"> 8</span>    <span class="k">def</span> <span class="nf">hex</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 9</span>        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;#</span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">r</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span><span class="si">}{</span><span class="nb">hex</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">g</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span><span class="si">}{</span><span class="nb">hex</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">b</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="linenos">10</span>    
 </pre></div>
 </div>
 </section>

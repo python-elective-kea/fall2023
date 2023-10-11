@@ -128,7 +128,7 @@ Your code should include:
 
 * A class called Rectangle
 * width and height attributes with property decorators
-* A get_area method that calculates the area of the rectangle
+* An area property that calculates the area of the rectangle
 * Appropriate error handling for non-positive width and height values
 
 
