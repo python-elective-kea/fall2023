@@ -28,12 +28,12 @@ Dockerfile
 #/docs/exercises/solution/03_mandatory_set_dicts/*
 
 #04 Modules
-/sphinx/build/html/exercises/solution/04_modules/*
-/docs/exercises/solution/04_modules/*
+#/sphinx/build/html/exercises/solution/04_modules/*
+#/docs/exercises/solution/04_modules/*
 
 #04 OOP
-/sphinx/build/html/exercises/solution/04_oop/*
-/docs/exercises/solution/04_oop/*
+#/sphinx/build/html/exercises/solution/04_oop/*
+#/docs/exercises/solution/04_oop/*
 
 #05 encapsulation
 /sphinx/build/html/exercises/solution/05_encapsulation/*
@@ -48,8 +48,8 @@ Dockerfile
 /docs/exercises/solution/07_set_dict/*
 
 #08 decorators
-/sphinx/build/html/exercises/solution/08_decorators/*
-/docs/exercises/solution/08_decorators/*
+#/sphinx/build/html/exercises/solution/08_decorators/*
+#/docs/exercises/solution/08_decorators/*
 
 #09 generators
 /sphinx/build/html/exercises/solution/09_generators/*
