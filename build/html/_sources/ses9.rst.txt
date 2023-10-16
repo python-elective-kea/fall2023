@@ -30,7 +30,6 @@ Materials
 * `A Guide to Python's Magic Methods <https://rszalski.github.io/magicmethods/>`_
 * `Expert Python Tutorial #2 - Dunder/Magic Methods & The Python Data Model <https://www.youtube.com/watch?v=z11P9sojHuM>`_
 * `Build in functions to Datamodel methods ralation table <notebooks/build_to_dunder.rst>`_
-* `Notebook demo Value class in teachings <notebooks/oop_lecture_value_graphviz.ipynb>`_
 * `Notebook on Datamodel <notebooks/OOP_Encapsulation_Propeties.ipynb#Datamodel>`_
 * `Code examples from teachings <https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses9>`_
 
@@ -55,6 +54,24 @@ Continue with the deck example and implement the
 We look at this together in a short while.
 
 When you a done, take a look at the exercise below and ask your questions.
+
+
+-----------------
+Ex2: Number Class
+-----------------
+
+:code:
+        class Number:
+                def __init__(self, num, obj_name):
+                        self.num = num
+                        self.obj = obj_name
+        a = Number(5, 'a')
+        b = Number(-4, 'b')
+
+Based on this class create a Number that behaves like an int class, but with the extra parameter of putting in a variable name. 
+The class should at least be able to be added, substracted, multiplied and divided. 
+
+
 
 
 .. raw:: html

@@ -6,28 +6,28 @@ class range:
 
     def __init__(self, *args):
         if len(args) == 1:
-            self.start = 0
-            self.end = args[0]
-            self.step = 1
+            self._start = 0
+            self._end = args[0]
+            self._step = 1
         elif len(args) == 2:
-            self.start = args[0]
-            self.end = args[1]
-            self.step = 1
+            self._start = args[0]
+            self._end = args[1]
+            self._step = 1
         elif len(args) == 3:
-            self.start = args[0]
-            self.end = args[1]
-            self.step = args[2]
+            self._start = args[0]
+            self._end = args[1]
+            self._step = args[2]
 
     def __iter__(self):
-        self.i = self.start
+        self._i = self._start
         return self
 
     def __next__(self):
         try:
-            if self.end > self.i:
-                self.tmp = self.i
-                self.i += self.step
-                return self.tmp
+            if self._end > self._i:
+                self._tmp = self._i
+                self._i += self._step
+                return self._tmp
             else:
                 raise StopIteration
         except AttributeError:

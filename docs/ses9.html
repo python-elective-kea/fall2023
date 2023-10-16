@@ -63,6 +63,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#materials">Materials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#ex1-deck-of-cards">Ex1: Deck of cards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ex2-number-class">Ex2: Number Class</a></li>
 </ul>
 </li>
 </ul>
@@ -129,7 +130,6 @@
 <li><p><a class="reference external" href="https://rszalski.github.io/magicmethods/">A Guide to Python’s Magic Methods</a></p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=z11P9sojHuM">Expert Python Tutorial #2 - Dunder/Magic Methods &amp; The Python Data Model</a></p></li>
 <li><p><a class="reference internal" href="notebooks/build_to_dunder.html"><span class="doc">Build in functions to Datamodel methods ralation table</span></a></p></li>
-<li><p><a class="reference internal" href="notebooks/oop_lecture_value_graphviz.html"><span class="doc">Notebook demo Value class in teachings</span></a></p></li>
 <li><p><a class="reference internal" href="notebooks/OOP_Encapsulation_Propeties.html#Datamodel"><span class="std std-ref">Notebook on Datamodel</span></a></p></li>
 <li><p><a class="reference external" href="https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses9">Code examples from teachings</a></p></li>
 </ul>
@@ -150,6 +150,25 @@
 </ul>
 <p>We look at this together in a short while.</p>
 <p>When you a done, take a look at the exercise below and ask your questions.</p>
+</section>
+<section id="ex2-number-class">
+<h3>Ex2: Number Class<a class="headerlink" href="#ex2-number-class" title="Permalink to this heading"></a></h3>
+<dl class="field-list">
+<dt class="field-odd">code<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>class Number:</dt><dd><dl class="simple">
+<dt>def __init__(self, num, obj_name):</dt><dd><p>self.num = num
+self.obj = obj_name</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>a = Number(5, ‘a’)
+b = Number(-4, ‘b’)</p>
+</dd>
+</dl>
+<p>Based on this class create a Number that behaves like an int class, but with the extra parameter of putting in a variable name.
+The class should at least be able to be added, substracted, multiplied and divided.</p>
 <hr><ul class="simple">
 <li><p><a class="reference internal" href="exercises/protocol_linked_list.html"><span class="doc">Linked List</span></a></p></li>
 </ul>

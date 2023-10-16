@@ -1,3 +1,7 @@
+---
+marp: true
+---
+
 # Installations
 
 This document will describe what you should install in order to follow this elective.   
