@@ -153,20 +153,14 @@
 </section>
 <section id="ex2-number-class">
 <h3>Ex2: Number Class<a class="headerlink" href="#ex2-number-class" title="Permalink to this heading"></a></h3>
-<dl class="field-list">
-<dt class="field-odd">code<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
-<dt>class Number:</dt><dd><dl class="simple">
-<dt>def __init__(self, num, obj_name):</dt><dd><p>self.num = num
-self.obj = obj_name</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p>a = Number(5, ‘a’)
-b = Number(-4, ‘b’)</p>
-</dd>
-</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>     <span class="k">class</span> <span class="nc">Number</span><span class="p">:</span>
+<span class="linenos">2</span>             <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">obj_name</span><span class="p">):</span>
+<span class="linenos">3</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">num</span> <span class="o">=</span> <span class="n">num</span>
+<span class="linenos">4</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">obj</span> <span class="o">=</span> <span class="n">obj_name</span>
+<span class="linenos">5</span>     <span class="n">a</span> <span class="o">=</span> <span class="n">Number</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="linenos">6</span>     <span class="n">b</span> <span class="o">=</span> <span class="n">Number</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Based on this class create a Number that behaves like an int class, but with the extra parameter of putting in a variable name.
 The class should at least be able to be added, substracted, multiplied and divided.</p>
 <hr><ul class="simple">

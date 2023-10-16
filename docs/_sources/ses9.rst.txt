@@ -60,7 +60,9 @@ When you a done, take a look at the exercise below and ask your questions.
 Ex2: Number Class
 -----------------
 
-:code:
+.. code:: python
+   :linenos:
+
         class Number:
                 def __init__(self, num, obj_name):
                         self.num = num
