@@ -30,6 +30,7 @@ Materials
 * `A Guide to Python's Magic Methods <https://rszalski.github.io/magicmethods/>`_
 * `Expert Python Tutorial #2 - Dunder/Magic Methods & The Python Data Model <https://www.youtube.com/watch?v=z11P9sojHuM>`_
 * `Build in functions to Datamodel methods ralation table <notebooks/build_to_dunder.rst>`_
+* `Notebook demo Value class in teachings <notebooks/oop_lecture_value_graphviz.ipynb>`_
 * `Notebook on Datamodel <notebooks/OOP_Encapsulation_Propeties.ipynb#Datamodel>`_
 * `Code examples from teachings <https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses9>`_
 
