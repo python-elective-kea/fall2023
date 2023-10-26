@@ -4,7 +4,7 @@
 
 ## Definition
 
-A [programming paradigm]{.dfn} is a style, or "way," of programming.
+A programming paradigmi is a style, or "way," of programming.
 
 Some languages make it easy to write in some paradigms but not others.
 
@@ -21,18 +21,18 @@ Some languages make it easy to write in some paradigms but not others.
 
 You should know these:
 
--   [Imperative]{.dfn}: Programming with an explicit sequence of
+-   **Imperative**: Programming with an explicit sequence of
     commands that update state.
--   [Declarative]{.dfn}: Programming by specifying the result you want,
+-   **Declarative**: Programming by specifying the result you want,
     not how to get it.
--   [Structured]{.dfn}: Programming with clean, goto-free, nested
+-   **Structured**: Programming with clean, goto-free, nested
     control structures.
--   [Procedural]{.dfn}: Imperative programming with procedure calls.
--   [Functional]{.dfn} (Applicative): Programming with function calls
+-   **Procedural**: Imperative programming with procedure calls.
+-   **Functional** (Applicative): Programming with function calls
     that avoid any global state.
--   [Function-Level]{.dfn} (Combinator): Programming with no variables
+-   **Function-Level** (Combinator): Programming with no variables
     at all.
--   [Object-Oriented]{.dfn}: Programming by defining objects that send
+-   **Object-Oriented**: Programming by defining objects that send
     messages to each other. Objects have their own internal
     (encapsulated) state and public interfaces. Object orientation can
     be:
@@ -40,19 +40,19 @@ You should know these:
         membership in a class.
     -   **Prototype-based**: Objects get behavior from a prototype
         object.
--   [Event-Driven]{.dfn}: Programming with emitters and listeners of
+-   **Event-Driven**: Programming with emitters and listeners of
     asynchronous actions.
--   [Flow-Driven]{.dfn}: Programming processes communicating with each
+-   **Flow-Driven**: Programming processes communicating with each
     other over predefined channels.
--   [Logic]{.dfn} (Rule-based): Programming by specifying a set of facts
+-   **Logic** (Rule-based): Programming by specifying a set of facts
     and rules. An engine infers the answers to questions.
--   [Constraint]{.dfn}: Programming by specifying a set of constraints.
+-   **Constraint**: Programming by specifying a set of constraints.
     An engine finds the values that meet the constraints.
--   [Aspect-Oriented]{.dfn}: Programming cross-cutting concerns applied
+-   **Aspect-Oriented**: Programming cross-cutting concerns applied
     transparently.
--   [Reflective]{.dfn}: Programming by manipulating the program elements
+-   **Reflective**: Programming by manipulating the program elements
     themselves.
--   [Array]{.dfn}: Programming with powerful array operators that
+-   **Array**: Programming with powerful array operators that
     usually make loops unnecessary.
 
 Paradigms are **not meant to be mutually exclusive**; a single program
@@ -65,7 +65,7 @@ Paradigms](http://en.wikipedia.org/wiki/Programming_paradigm).
 
 ### Imperative Programming
 
-Control flow in [imperative programming]{.dfn} is *explicit*: commands
+Control flow in [imperative programming** is *explicit*: commands
 show *how* the computation takes place, step by step. Each step affects
 the global **state** of the computation.
 
@@ -89,7 +89,7 @@ finished:
 
 ### Structured Programming
 
-[Structured programming]{.dfn} is a kind of imperative programming where
+[Structured programming** is a kind of imperative programming where
 control flow is defined by nested loops, conditionals, and subroutines,
 rather than via gotos. Variables are generally local to blocks (have
 lexical scope).
@@ -113,9 +113,9 @@ Harmful](http://david.tribble.com/text/goto.html).
 
 ### Object Oriented Programming
 
-OOP is based on the sending of [messages]{.dfn} to objects. Objects
+OOP is based on the sending of [messages** to objects. Objects
 respond to messages by performing operations, generally called
-[methods]{.dfn}. Messages can have arguments. A society of objects, each
+[methods**. Messages can have arguments. A society of objects, each
 with their own local memory and own set of operations has a different
 feel than the monolithic processor and single shared memory feel of non
 object oriented languages.
@@ -163,7 +163,7 @@ Eiffel, Modula-3, Ada 95, Java, C#, Ruby.
 
 ### Declarative Programming
 
-Control flow in [declarative programming]{.dfn} is *implicit*: the
+Control flow in [declarative programming** is *implicit*: the
 programmer states only *what* the result should look like, **not** how
 to obtain it.
 
@@ -181,7 +181,7 @@ declarative as well.)
 
 ### Functional Programming
 
-In [functional programming]{.dfn}, control flow is expressed by
+In [functional programming**, control flow is expressed by
 combining function calls, rather than by assigning values to variables:
 
 ``` {.prettyprint .lang-ml}
@@ -258,8 +258,8 @@ Some people like to say:
     assignment statements: one just applies functions to arguments.
     Examples: Scheme, Haskell, Miranda, ML.
 -   *Function-level programming* does away with the variables; one
-    combines functions with [functionals]{.dfn}, a.k.a.
-    [combinators]{.dfn}. Examples: FP, FL, J.
+    combines functions with [functionals**, a.k.a.
+    [combinators**. Examples: FP, FL, J.
 
 ::: exercise
 **Exercise**: Write the above example in Miranda, ML, and J.
@@ -271,7 +271,7 @@ they are similar and how they are different from each other: (a)
 Stack-based, (b) Concatenative, (c) Point-free, (d) Tacit.
 :::
 
-Many languages have a neat little thing called [comprehensions]{.dfn}
+Many languages have a neat little thing called [comprehensions**
 that combine map and filter.
 
 ``` {.prettyprint .lang-py}
@@ -280,10 +280,10 @@ sorted(p.name.upper() for p in people if len(p.name) > 5)
 
 ### Logic and Constraint Programming
 
-[Logic programming]{.dfn} and [constraint programming]{.dfn} are two
+[Logic programming** and [constraint programming]{.dfn} are two
 paradigms in which programs are built by setting up relations that
-specify [facts]{.dfn} and inference [rules]{.dfn}, and asking whether or
-not something is true (i.e. specifying a [goal]{.dfn}.) Unification and
+specify [facts** and inference [rules]{.dfn}, and asking whether or
+not something is true (i.e. specifying a [goal**.) Unification and
 backtracking to find solutions (i.e.. satisfy goals) takes place
 automatically.
 
@@ -307,7 +307,7 @@ constructs.
 There are two very important observations here:
 
 -   Very few languages implement a paradigm 100%. When they do, they are
-    [pure]{.dfn}. It is incredibly rare to have a "pure OOP" language or
+    [pure**. It is incredibly rare to have a "pure OOP" language or
     a "pure functional" language. A lot of languages have a few escapes;
     for example in OCaml, you will program with functions 90% or more of
     the time, but if you need state, you can get it. Another example:
@@ -317,5 +317,7 @@ There are two very important observations here:
     paradigms. In Scala you can do imperative, object-oriented, and
     functional programming quite easily. If a language is *purposely*
     designed to allow programming in many paradigms is called a
-    [multi-paradigm language]{.dfn}. If a language only *accidentally*
+    [multi-paradigm language**. If a language only *accidentally*
     supports multiple paradigms, we don't have a special word for that.
+
+(&copy) https://cs.lmu.edu/~ray/notes/paradigms/

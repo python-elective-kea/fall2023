@@ -95,7 +95,7 @@
 </div>
 <section id="definition">
 <h2>Definition<a class="headerlink" href="#definition" title="Permalink to this heading"></a></h2>
-<p>A [programming paradigm]{.dfn} is a style, or “way,” of programming.</p>
+<p>A programming paradigmi is a style, or “way,” of programming.</p>
 <p>Some languages make it easy to write in some paradigms but not others.</p>
 <blockquote>
 <div><p>Never use the phrase “programming <strong>language</strong> paradigm.”</p>
@@ -111,18 +111,18 @@ such thing as a “functional language paradigm”.</p>
 <h2>Some Common Paradigms<a class="headerlink" href="#some-common-paradigms" title="Permalink to this heading"></a></h2>
 <p>You should know these:</p>
 <ul class="simple">
-<li><p>[Imperative]{.dfn}: Programming with an explicit sequence of
+<li><p><strong>Imperative</strong>: Programming with an explicit sequence of
 commands that update state.</p></li>
-<li><p>[Declarative]{.dfn}: Programming by specifying the result you want,
+<li><p><strong>Declarative</strong>: Programming by specifying the result you want,
 not how to get it.</p></li>
-<li><p>[Structured]{.dfn}: Programming with clean, goto-free, nested
+<li><p><strong>Structured</strong>: Programming with clean, goto-free, nested
 control structures.</p></li>
-<li><p>[Procedural]{.dfn}: Imperative programming with procedure calls.</p></li>
-<li><p>[Functional]{.dfn} (Applicative): Programming with function calls
+<li><p><strong>Procedural</strong>: Imperative programming with procedure calls.</p></li>
+<li><p><strong>Functional</strong> (Applicative): Programming with function calls
 that avoid any global state.</p></li>
-<li><p>[Function-Level]{.dfn} (Combinator): Programming with no variables
+<li><p><strong>Function-Level</strong> (Combinator): Programming with no variables
 at all.</p></li>
-<li><p>[Object-Oriented]{.dfn}: Programming by defining objects that send
+<li><p><strong>Object-Oriented</strong>: Programming by defining objects that send
 messages to each other. Objects have their own internal
 (encapsulated) state and public interfaces. Object orientation can
 be:</p>
@@ -133,19 +133,19 @@ membership in a class.</p></li>
 object.</p></li>
 </ul>
 </li>
-<li><p>[Event-Driven]{.dfn}: Programming with emitters and listeners of
+<li><p><strong>Event-Driven</strong>: Programming with emitters and listeners of
 asynchronous actions.</p></li>
-<li><p>[Flow-Driven]{.dfn}: Programming processes communicating with each
+<li><p><strong>Flow-Driven</strong>: Programming processes communicating with each
 other over predefined channels.</p></li>
-<li><p>[Logic]{.dfn} (Rule-based): Programming by specifying a set of facts
+<li><p><strong>Logic</strong> (Rule-based): Programming by specifying a set of facts
 and rules. An engine infers the answers to questions.</p></li>
-<li><p>[Constraint]{.dfn}: Programming by specifying a set of constraints.
+<li><p><strong>Constraint</strong>: Programming by specifying a set of constraints.
 An engine finds the values that meet the constraints.</p></li>
-<li><p>[Aspect-Oriented]{.dfn}: Programming cross-cutting concerns applied
+<li><p><strong>Aspect-Oriented</strong>: Programming cross-cutting concerns applied
 transparently.</p></li>
-<li><p>[Reflective]{.dfn}: Programming by manipulating the program elements
+<li><p><strong>Reflective</strong>: Programming by manipulating the program elements
 themselves.</p></li>
-<li><p>[Array]{.dfn}: Programming with powerful array operators that
+<li><p><strong>Array</strong>: Programming with powerful array operators that
 usually make loops unnecessary.</p></li>
 </ul>
 <p>Paradigms are <strong>not meant to be mutually exclusive</strong>; a single program
@@ -157,7 +157,7 @@ Paradigms</a>.</p>
 <h2>A Look At Some Major Paradigms<a class="headerlink" href="#a-look-at-some-major-paradigms" title="Permalink to this heading"></a></h2>
 <section id="imperative-programming">
 <h3>Imperative Programming<a class="headerlink" href="#imperative-programming" title="Permalink to this heading"></a></h3>
-<p>Control flow in [imperative programming]{.dfn} is <em>explicit</em>: commands
+<p>Control flow in [imperative programming** is <em>explicit</em>: commands
 show <em>how</em> the computation takes place, step by step. Each step affects
 the global <strong>state</strong> of the computation.</p>
 <div class="highlight-prettyprint notranslate"><div class="highlight"><pre><span></span>    result = []
@@ -180,7 +180,7 @@ finished:
 </section>
 <section id="structured-programming">
 <h3>Structured Programming<a class="headerlink" href="#structured-programming" title="Permalink to this heading"></a></h3>
-<p>[Structured programming]{.dfn} is a kind of imperative programming where
+<p>[Structured programming** is a kind of imperative programming where
 control flow is defined by nested loops, conditionals, and subroutines,
 rather than via gotos. Variables are generally local to blocks (have
 lexical scope).</p>
@@ -202,9 +202,9 @@ Harmful</a>.</p>
 </section>
 <section id="object-oriented-programming">
 <h3>Object Oriented Programming<a class="headerlink" href="#object-oriented-programming" title="Permalink to this heading"></a></h3>
-<p>OOP is based on the sending of [messages]{.dfn} to objects. Objects
+<p>OOP is based on the sending of [messages** to objects. Objects
 respond to messages by performing operations, generally called
-[methods]{.dfn}. Messages can have arguments. A society of objects, each
+[methods**. Messages can have arguments. A society of objects, each
 with their own local memory and own set of operations has a different
 feel than the monolithic processor and single shared memory feel of non
 object oriented languages.</p>
@@ -245,7 +245,7 @@ Eiffel, Modula-3, Ada 95, Java, C#, Ruby.</p>
 </section>
 <section id="declarative-programming">
 <h3>Declarative Programming<a class="headerlink" href="#declarative-programming" title="Permalink to this heading"></a></h3>
-<p>Control flow in [declarative programming]{.dfn} is <em>implicit</em>: the
+<p>Control flow in [declarative programming** is <em>implicit</em>: the
 programmer states only <em>what</em> the result should look like, <strong>not</strong> how
 to obtain it.</p>
 <div class="highlight-{.prettyprint .lang-sql} notranslate"><div class="highlight"><pre><span></span>select upper(name)
@@ -261,7 +261,7 @@ declarative as well.)</p>
 </section>
 <section id="functional-programming">
 <h3>Functional Programming<a class="headerlink" href="#functional-programming" title="Permalink to this heading"></a></h3>
-<p>In [functional programming]{.dfn}, control flow is expressed by
+<p>In [functional programming**, control flow is expressed by
 combining function calls, rather than by assigning values to variables:</p>
 <div class="highlight-{.prettyprint .lang-ml} notranslate"><div class="highlight"><pre><span></span>sort(
   fix(λf. λp.
@@ -328,8 +328,8 @@ faster code</p></li>
 assignment statements: one just applies functions to arguments.
 Examples: Scheme, Haskell, Miranda, ML.</p></li>
 <li><p><em>Function-level programming</em> does away with the variables; one
-combines functions with [functionals]{.dfn}, a.k.a.
-[combinators]{.dfn}. Examples: FP, FL, J.</p></li>
+combines functions with [functionals**, a.k.a.
+[combinators**. Examples: FP, FL, J.</p></li>
 </ul>
 <p>::: exercise
 <strong>Exercise</strong>: Write the above example in Miranda, ML, and J.
@@ -339,7 +339,7 @@ combines functions with [functionals]{.dfn}, a.k.a.
 they are similar and how they are different from each other: (a)
 Stack-based, (b) Concatenative, (c) Point-free, (d) Tacit.
 :::</p>
-<p>Many languages have a neat little thing called [comprehensions]{.dfn}
+<p>Many languages have a neat little thing called [comprehensions**
 that combine map and filter.</p>
 <div class="highlight-{.prettyprint .lang-py} notranslate"><div class="highlight"><pre><span></span>sorted(p.name.upper() for p in people if len(p.name) &gt; 5)
 </pre></div>
@@ -347,10 +347,10 @@ that combine map and filter.</p>
 </section>
 <section id="logic-and-constraint-programming">
 <h3>Logic and Constraint Programming<a class="headerlink" href="#logic-and-constraint-programming" title="Permalink to this heading"></a></h3>
-<p>[Logic programming]{.dfn} and [constraint programming]{.dfn} are two
+<p>[Logic programming** and [constraint programming]{.dfn} are two
 paradigms in which programs are built by setting up relations that
-specify [facts]{.dfn} and inference [rules]{.dfn}, and asking whether or
-not something is true (i.e. specifying a [goal]{.dfn}.) Unification and
+specify [facts** and inference [rules]{.dfn}, and asking whether or
+not something is true (i.e. specifying a [goal**.) Unification and
 backtracking to find solutions (i.e.. satisfy goals) takes place
 automatically.</p>
 <p>Languages that emphasize this paradigm: Prolog, GHC, Parlog, Vulcan,
@@ -372,7 +372,7 @@ constructs.</p>
 <p>There are two very important observations here:</p>
 <ul class="simple">
 <li><p>Very few languages implement a paradigm 100%. When they do, they are
-[pure]{.dfn}. It is incredibly rare to have a “pure OOP” language or
+[pure**. It is incredibly rare to have a “pure OOP” language or
 a “pure functional” language. A lot of languages have a few escapes;
 for example in OCaml, you will program with functions 90% or more of
 the time, but if you need state, you can get it. Another example:
@@ -382,9 +382,10 @@ it</a>.</p></li>
 paradigms. In Scala you can do imperative, object-oriented, and
 functional programming quite easily. If a language is <em>purposely</em>
 designed to allow programming in many paradigms is called a
-[multi-paradigm language]{.dfn}. If a language only <em>accidentally</em>
+[multi-paradigm language**. If a language only <em>accidentally</em>
 supports multiple paradigms, we don’t have a special word for that.</p></li>
 </ul>
+<p>(&amp;copy) https://cs.lmu.edu/~ray/notes/paradigms/</p>
 </section>
 </section>
 
