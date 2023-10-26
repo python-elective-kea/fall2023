@@ -1,13 +1,6 @@
 # Programming Paradigms
 
-::: abstract
-Do you solve problems by just jumping in, willing to ignore the
-experience and wisdom of those that may have programmed solutions to
-problems very similar to yours? We learn from the past. Our ancestors
-discovered and invented ways of programming that we know call paradigms.
-We benefit from the knowledge they left us, even as we strive to create
-new paradigms ourselves.
-:::
+    Do you solve problems by just jumping in, willing to ignore the experience and wisdom of those that may have programmed solutions to problems very similar to yours? We learn from the past. Our ancestors discovered and invented ways of programming that we know call paradigms. We benefit from the knowledge they left us, even as we strive to create new paradigms ourselves.
 
 ## Definition
 
