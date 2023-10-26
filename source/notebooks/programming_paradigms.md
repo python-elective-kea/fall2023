@@ -303,4 +303,4 @@ There are two very important observations here:
     [multi-paradigm language**. If a language only *accidentally*
     supports multiple paradigms, we don't have a special word for that.
 
-(&COPY;) https://cs.lmu.edu/~ray/notes/paradigms/
+&COPY; https://cs.lmu.edu/~ray/notes/paradigms/ (examples changed into python by clbo)
