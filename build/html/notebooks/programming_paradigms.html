@@ -90,285 +90,140 @@
              
   <section id="programming-paradigms">
 <h1>Programming Paradigms<a class="headerlink" href="#programming-paradigms" title="Permalink to this heading"></a></h1>
-<blockquote>
-<div><p>Do you solve problems by just jumping in, willing to ignore the experience and wisdom of those that may have programmed solutions to problems very similar to yours? We learn from the past. Our ancestors discovered and invented ways of programming that we know call paradigms. We benefit from the knowledge they left us, even as we strive to create new paradigms ourselves.</p>
-</div></blockquote>
+<p>There are a few ways we can make a taxonomy of programming languages:</p>
+<ul class="simple">
+<li><p>declarative vs. imperative</p></li>
+<li><p>structured vs. object oriented vs. protocol oriented vs. functional vs. function level (no variables!) vs. logic etc.</p></li>
+</ul>
+<p>Some modern programming languages like Python, Ruby, and Swift is a mix of several of these paradigms. You will often see that pragmatic languages like Python take this approach, whereas more “puritan” languages like Java stick with one paradigm.</p>
 <section id="definition">
 <h2>Definition<a class="headerlink" href="#definition" title="Permalink to this heading"></a></h2>
-<p>A programming paradigmi is a style, or “way,” of programming.</p>
+<p>A programming <strong>paradigm</strong> is a style, or “way,” of programming.</p>
 <p>Some languages make it easy to write in some paradigms but not others.</p>
-<blockquote>
-<div><p>Never use the phrase “programming <strong>language</strong> paradigm.”</p>
-<p>A paradigm is a way of <strong>doing</strong> something (like programming), not a
-concrete thing (like a language). Now, it’s true that if a programming
-language L happens to make a particular programming paradigm P easy to
-express, then we often say “L is a P language” (e.g. “Haskell is a
-functional programming language”) but that does not mean there is any
-such thing as a “functional language paradigm”.</p>
-</div></blockquote>
 </section>
 <section id="some-common-paradigms">
 <h2>Some Common Paradigms<a class="headerlink" href="#some-common-paradigms" title="Permalink to this heading"></a></h2>
 <p>You should know these:</p>
 <ul class="simple">
-<li><p><strong>Imperative</strong>: Programming with an explicit sequence of
-commands that update state.</p></li>
-<li><p><strong>Declarative</strong>: Programming by specifying the result you want,
-not how to get it.</p></li>
-<li><p><strong>Structured</strong>: Programming with clean, goto-free, nested
-control structures.</p></li>
-<li><p><strong>Procedural</strong>: Imperative programming with procedure calls.</p></li>
-<li><p><strong>Functional</strong> (Applicative): Programming with function calls
-that avoid any global state.</p></li>
-<li><p><strong>Function-Level</strong> (Combinator): Programming with no variables
-at all.</p></li>
-<li><p><strong>Object-Oriented</strong>: Programming by defining objects that send
-messages to each other. Objects have their own internal
-(encapsulated) state and public interfaces. Object orientation can
-be:</p>
+<li><p>Imperative: Programming with an explicit sequence of commands that update state.</p></li>
+<li><p>Declarative: Programming by specifying the result you want, not how to get it.</p></li>
+<li><p>Structured: Programming with clean, goto-free, nested control structures.</p></li>
+<li><p>Procedural: Imperative programming with procedure calls.</p></li>
+<li><p>Functional (Applicative): Programming with function calls that avoid any global state.</p></li>
+<li><p>Object-Oriented: Programming by defining objects that send messages to each other. Objects have their own internal (encapsulated) state and public interfaces. Object orientation can be:</p>
 <ul>
-<li><p><strong>Class-based</strong>: Objects get state and behavior based on
-membership in a class.</p></li>
-<li><p><strong>Prototype-based</strong>: Objects get behavior from a prototype
-object.</p></li>
+<li><p>Class-based: Objects get state and behavior based on membership in a class.</p></li>
+<li><p>Prototype-based: Objects get behavior from a prototype object.</p></li>
 </ul>
 </li>
-<li><p><strong>Event-Driven</strong>: Programming with emitters and listeners of
-asynchronous actions.</p></li>
-<li><p><strong>Flow-Driven</strong>: Programming processes communicating with each
-other over predefined channels.</p></li>
-<li><p><strong>Logic</strong> (Rule-based): Programming by specifying a set of facts
-and rules. An engine infers the answers to questions.</p></li>
-<li><p><strong>Constraint</strong>: Programming by specifying a set of constraints.
-An engine finds the values that meet the constraints.</p></li>
-<li><p><strong>Aspect-Oriented</strong>: Programming cross-cutting concerns applied
-transparently.</p></li>
-<li><p><strong>Reflective</strong>: Programming by manipulating the program elements
-themselves.</p></li>
-<li><p><strong>Array</strong>: Programming with powerful array operators that
-usually make loops unnecessary.</p></li>
+<li><p>Event-Driven: Programming with emitters and listeners of asynchronous actions.</p></li>
 </ul>
-<p>Paradigms are <strong>not meant to be mutually exclusive</strong>; a single program
-can feature multiple paradigms!</p>
-<p>Make sure to check out <a class="reference external" href="http://en.wikipedia.org/wiki/Programming_paradigm">Wikipedia’s entry on Programming
-Paradigms</a>.</p>
 </section>
 <section id="a-look-at-some-major-paradigms">
 <h2>A Look At Some Major Paradigms<a class="headerlink" href="#a-look-at-some-major-paradigms" title="Permalink to this heading"></a></h2>
-<section id="imperative-programming">
-<h3>Imperative Programming<a class="headerlink" href="#imperative-programming" title="Permalink to this heading"></a></h3>
-<p>Control flow in [imperative programming** is <em>explicit</em>: commands
-show <em>how</em> the computation takes place, step by step. Each step affects
-the global <strong>state</strong> of the computation.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">5</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">3</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  
+<section id="imperative">
+<h3>Imperative<a class="headerlink" href="#imperative" title="Permalink to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  
 </pre></div>
 </div>
 <p>This code explicitly dictates the steps the program should follow, updating the state of x sequentially.</p>
 </section>
-<section id="structured-programming">
-<h3>Structured Programming<a class="headerlink" href="#structured-programming" title="Permalink to this heading"></a></h3>
-<p><strong>Structured programming</strong> is a kind of imperative programming where
-control flow is defined by nested loops, conditionals, and subroutines,
-rather than via gotos. Variables are generally local to blocks (have
-lexical scope).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    
+<section id="declarative-sql-example">
+<h3>Declarative (SQL example)<a class="headerlink" href="#declarative-sql-example" title="Permalink to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SELECT</span> <span class="n">name</span> <span class="n">FROM</span> <span class="n">students</span> <span class="n">WHERE</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>Early languages emphasizing structured programming: Algol 60, PL/I,
-Algol 68, Pascal, C, Ada 83, Modula, Modula-2. Structured programming as
-a discipline is sometimes though to have been started by a famous letter
-by Edsger Dijkstra entitled <a class="reference external" href="http://david.tribble.com/text/goto.html">Go to Statement Considered
-Harmful</a>.</p>
+<p>Here, we’re specifying what we want (names of students older than 20) but not detailing how to obtain it.</p>
 </section>
-<section id="object-oriented-programming">
-<h3>Object Oriented Programming<a class="headerlink" href="#object-oriented-programming" title="Permalink to this heading"></a></h3>
-<p>OOP is based on the sending of [messages** to objects. Objects
-respond to messages by performing operations, generally called
-[methods**. Messages can have arguments. A society of objects, each
-with their own local memory and own set of operations has a different
-feel than the monolithic processor and single shared memory feel of non
-object oriented languages.</p>
-<p>One of the more visible aspects of the more pure-ish OO languages is
-that conditionals and loops become messages themselves, whose arguments
-are often blocks of executable code. In a Smalltalk-like syntax:</p>
-<div class="highlight-prettyprint notranslate"><div class="highlight"><pre><span></span>result := List new.
-people each: [:p |
-  p name length greaterThan: 5 ifTrue: [result add (p name upper)]
-]
-result sort.
-^result
+<section id="structured">
+<h3>Structured:<a class="headerlink" href="#structured" title="Permalink to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> is even&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> is odd&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>This can be shortened to:</p>
-<div class="highlight-prettyprint notranslate"><div class="highlight"><pre><span></span>^people filter: [:p | p name length greaterThan: 5] map: [:p | p name upper] sort
-</pre></div>
-</div>
-<p>Many popular languages that call themselves OO languages (e.g., Java,
-C++), really just take some elements of OOP and mix them in to
-imperative-looking code. In the following, we can see that <code class="docutils literal notranslate"><span class="pre">length</span></code> and
-<code class="docutils literal notranslate"><span class="pre">toUpper</span></code> are methods rather than top-level functions, but the <code class="docutils literal notranslate"><span class="pre">for</span></code> and
-<code class="docutils literal notranslate"><span class="pre">if</span></code> are back to being control structures:</p>
-<div class="highlight-prettyprint notranslate"><div class="highlight"><pre><span></span>result = []
-for p in people {
-    if p.name.length &gt; 5 {
-        result.add(p.name.toUpper);
-    }
-}
-return result.sort;
-</pre></div>
-</div>
-<p>The first object oriented language was Simula-67; Smalltalk followed
-soon after as the first “pure” object-oriented language. Many languages
-designed from the 1980s to the present have labeled themselves
-object-oriented, notably C++, CLOS (object system of Common Lisp),
-Eiffel, Modula-3, Ada 95, Java, C#, Ruby.</p>
+<p>The code uses structured control structures (for and if-else) without any jumps or goto statements.</p>
 </section>
-<section id="declarative-programming">
-<h3>Declarative Programming<a class="headerlink" href="#declarative-programming" title="Permalink to this heading"></a></h3>
-<p>Control flow in [declarative programming** is <em>implicit</em>: the
-programmer states only <em>what</em> the result should look like, <strong>not</strong> how
-to obtain it.</p>
-<div class="highlight-{.prettyprint .lang-sql} notranslate"><div class="highlight"><pre><span></span>select upper(name)
-from people
-where length(name) &gt; 5
-order by name
+<section id="procedural">
+<h3>Procedural<a class="headerlink" href="#procedural" title="Permalink to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Outputs 8</span>
 </pre></div>
 </div>
-<p>No loops, no assignments, etc. Whatever engine that interprets this code
-is just supposed go get the desired information, and can use whatever
-approach it wants. (The logic and constraint paradigms are generally
-declarative as well.)</p>
+<p>We’re breaking down the task into a procedure (add function) and calling that procedure to get our result.</p>
 </section>
-<section id="functional-programming">
-<h3>Functional Programming<a class="headerlink" href="#functional-programming" title="Permalink to this heading"></a></h3>
-<p>In [functional programming**, control flow is expressed by
-combining function calls, rather than by assigning values to variables:</p>
-<div class="highlight-{.prettyprint .lang-ml} notranslate"><div class="highlight"><pre><span></span>sort(
-  fix(λf. λp.
-    if(equals(p, emptylist),
-      emptylist,
-      if(greater(length(name(head(p))), 5),
-        append(to_upper(name(head(p))), f(tail(p))),
-        f(tail(people)))))(people))
+<section id="functional-applicative">
+<h3>Functional (Applicative)<a class="headerlink" href="#functional-applicative" title="Permalink to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Outputs 15</span>
 </pre></div>
 </div>
-<p>Yikes! We’ll describe that later. For now, be thankful there’s usually
-syntactic sugar:</p>
-<div class="highlight-{.prettyprint .lang-ml} notranslate"><div class="highlight"><pre><span></span>let
-    fun uppercasedLongNames [] = []
-      | uppercasedLongNames (p :: ps) =
-          if length(name p) &gt; 5 then (to_upper(name p))::(uppercasedLongNames ps)
-          else (uppercasedLongNames ps)
-in
-    sort(uppercasedLongNames(people))
-</pre></div>
-</div>
-<p>Huh? That still isn’t very pretty. Why do people like this stuff? Well
-the real power of this paradigm comes from passing functions to
-functions (and returning functions from functions).</p>
-<div class="highlight-prettyprint notranslate"><div class="highlight"><pre><span></span>sort(
-    filter(λs. length s &gt; 5,
-        map(λp. to_upper(name p),
-            people)))
-</pre></div>
-</div>
-<p>We can do better by using the cool <code class="docutils literal notranslate"><span class="pre">|&gt;</span></code> operator. Here <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">|&gt;</span> <span class="pre">f</span></code> just
-means <code class="docutils literal notranslate"><span class="pre">f(x)</span></code>. The operator has very low precedence so you can read
-things left-to-right:</p>
-<div class="highlight-prettyprint notranslate"><div class="highlight"><pre><span></span>people |&gt; map (λp. to_upper (name p)) |&gt; filter (λs. length s &gt; 5) |&gt; sort
-</pre></div>
-</div>
-<p>Let’s keep going! Notice that you wouldn’t write <code class="docutils literal notranslate"><span class="pre">map(λx.</span> <span class="pre">square(x))</span></code>,
-right? You would write <code class="docutils literal notranslate"><span class="pre">map(square)</span></code>. We can do something similar above,
-but we have to use function composition, you know, <code class="docutils literal notranslate"><span class="pre">(f</span> <span class="pre">o</span> <span class="pre">g)x</span></code> is
-<code class="docutils literal notranslate"><span class="pre">f(g(x))</span></code>, so:</p>
-<div class="highlight-prettyprint notranslate"><div class="highlight"><pre><span></span>people |&gt; map (to_upper o name) |&gt; filter (λs. length s &gt; 5) |&gt; sort
-</pre></div>
-</div>
-<p>Here are three things to read to get the gist of functional programming:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="http://blog.jenkster.com/2015/12/what-is-functional-programming.html">Kris Jenkins’
-article</a></p></li>
-<li><p><a class="reference external" href="https://www.fpcomplete.com/blog/2017/04/pure-functional-programming">Chris Done’s two-part
-article</a></p></li>
-<li><p><a class="reference external" href="http://www.joelonsoftware.com/items/2006/08/01.html">Joel Spolsky’s article on map and
-reduce</a></p></li>
-</ul>
-<p>With functional programming:</p>
-<ul class="simple">
-<li><p>There are no commands, only side-effect free expressions</p></li>
-<li><p>Code is much shorter, less error-prone, and much easier to prove
-correct</p></li>
-<li><p>There is more inherent parallelism, so good compilers can produce
-faster code</p></li>
-</ul>
-<p>Some people like to say:</p>
-<ul class="simple">
-<li><p><em>Functional, or Applicative, programming</em> is programming without
-assignment statements: one just applies functions to arguments.
-Examples: Scheme, Haskell, Miranda, ML.</p></li>
-<li><p><em>Function-level programming</em> does away with the variables; one
-combines functions with [functionals**, a.k.a.
-[combinators**. Examples: FP, FL, J.</p></li>
-</ul>
-<p>::: exercise
-<strong>Exercise</strong>: Write the above example in Miranda, ML, and J.
-:::</p>
-<p>::: exercise
-<strong>Exercise</strong>: Research the following programming styles and state how
-they are similar and how they are different from each other: (a)
-Stack-based, (b) Concatenative, (c) Point-free, (d) Tacit.
-:::</p>
-<p>Many languages have a neat little thing called [comprehensions**
-that combine map and filter.</p>
-<div class="highlight-{.prettyprint .lang-py} notranslate"><div class="highlight"><pre><span></span>sorted(p.name.upper() for p in people if len(p.name) &gt; 5)
-</pre></div>
-</div>
+<p>This approach uses pure functions, without any external state, to derive the result.</p>
 </section>
-<section id="logic-and-constraint-programming">
-<h3>Logic and Constraint Programming<a class="headerlink" href="#logic-and-constraint-programming" title="Permalink to this heading"></a></h3>
-<p>[Logic programming** and [constraint programming]{.dfn} are two
-paradigms in which programs are built by setting up relations that
-specify [facts** and inference [rules]{.dfn}, and asking whether or
-not something is true (i.e. specifying a [goal**.) Unification and
-backtracking to find solutions (i.e.. satisfy goals) takes place
-automatically.</p>
-<p>Languages that emphasize this paradigm: Prolog, GHC, Parlog, Vulcan,
-Polka, Mercury, Fnil.</p>
-<p>::: exercise
-<strong>Exercise</strong>: Write the running example in Prolog.
-:::</p>
+<section id="object-oriented">
+<h3>Object-Oriented<a class="headerlink" href="#object-oriented" title="Permalink to this heading"></a></h3>
 </section>
+<section id="class-based">
+<h3>* Class-based<a class="headerlink" href="#class-based" title="Permalink to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Dog</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">bark</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> barks!&quot;</span>
+
+<span class="n">dog</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s2">&quot;Buddy&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dog</span><span class="o">.</span><span class="n">bark</span><span class="p">())</span>  
+</pre></div>
+</div>
+<p>We define a class Dog that encapsulates state (name) and behavior (bark). Objects derive state and behavior from this class.</p>
 </section>
-<section id="languages-and-paradigms">
-<h2>Languages and Paradigms<a class="headerlink" href="#languages-and-paradigms" title="Permalink to this heading"></a></h2>
-<p>One of the characteristics of a language is its support for particular
-programming paradigms. For example, Smalltalk has direct support for
-programming in the object-oriented way, so it might be called an
-object-oriented language. OCaml, Lisp, Scheme, and JavaScript programs
-tend to make heavy use of passing functions around so they are called
-“functional languages” despite having variables and many imperative
-constructs.</p>
-<p>There are two very important observations here:</p>
-<ul class="simple">
-<li><p>Very few languages implement a paradigm 100%. When they do, they are
-[pure**. It is incredibly rare to have a “pure OOP” language or
-a “pure functional” language. A lot of languages have a few escapes;
-for example in OCaml, you will program with functions 90% or more of
-the time, but if you need state, you can get it. Another example:
-very few languages implement <a class="reference external" href="http://wiki.c2.com/?AlanKaysDefinitionOfObjectOriented">OOP the way Alan Kay envisioned
-it</a>.</p></li>
-<li><p>A lot of languages will facilitate programming in one or more
-paradigms. In Scala you can do imperative, object-oriented, and
-functional programming quite easily. If a language is <em>purposely</em>
-designed to allow programming in many paradigms is called a
-[multi-paradigm language**. If a language only <em>accidentally</em>
-supports multiple paradigms, we don’t have a special word for that.</p></li>
-</ul>
-<p>© https://cs.lmu.edu/~ray/notes/paradigms/ (examples changed into python by clbo)</p>
+<section id="prototype-based-javascript-example">
+<h3>* Prototype-based (Javascript example)<a class="headerlink" href="#prototype-based-javascript-example" title="Permalink to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">dog</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">bark</span><span class="p">:</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s2">&quot;Woof!&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="n">var</span> <span class="n">bulldog</span> <span class="o">=</span> <span class="n">Object</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">dog</span><span class="p">);</span>
+<span class="n">bulldog</span><span class="o">.</span><span class="n">bark</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">&quot;Loud Woof!&quot;</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">bulldog</span><span class="o">.</span><span class="n">bark</span><span class="p">());</span>  
+</pre></div>
+</div>
+<p>In JavaScript, objects can inherit directly from other objects using Object.create(). The bulldog object inherits from the dog object (its prototype) and then overrides the bark method.</p>
+</section>
+<section id="event-driven">
+<h3>Event-Driven<a class="headerlink" href="#event-driven" title="Permalink to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+
+<span class="k">def</span> <span class="nf">on_button_click</span><span class="p">():</span>
+    <span class="n">label</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Button was clicked!&quot;</span><span class="p">)</span>
+
+<span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+<span class="n">button</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Click me&quot;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">on_button_click</span><span class="p">)</span>
+<span class="n">button</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+<span class="n">label</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">label</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+<span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This code sets up an event-driven GUI where the program waits for events (like button clicks) to happen and then responds accordingly.</p>
+</section>
 </section>
 </section>
 
