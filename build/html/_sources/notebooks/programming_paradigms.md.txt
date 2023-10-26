@@ -79,7 +79,7 @@ print(result)  # Outputs 15
 This approach uses pure functions, without any external state, to derive the result.
 
 ### Object-Oriented 
-###   * Class-based 
+### Class-based 
 
 ```
 class Dog:
@@ -94,7 +94,7 @@ print(dog.bark())
 ```
 We define a class Dog that encapsulates state (name) and behavior (bark). Objects derive state and behavior from this class.
 
-###   * Prototype-based (Javascript example) 
+### Prototype-based (Javascript example) 
 
 ```
 var dog = {
