@@ -160,38 +160,21 @@ Paradigms</a>.</p>
 <p>Control flow in [imperative programming** is <em>explicit</em>: commands
 show <em>how</em> the computation takes place, step by step. Each step affects
 the global <strong>state</strong> of the computation.</p>
-<div class="highlight-prettyprint notranslate"><div class="highlight"><pre><span></span>    result = []
-    i = 0
-start:
-    numPeople = length(people)
-    if i &gt;= numPeople goto finished
-    p = people[i]
-    nameLength = length(p.name)
-    if nameLength &lt;= 5 goto nextOne
-    upperName = toUpper(p.name)
-    addToList(result, upperName)
-nextOne:
-    i = i + 1
-    goto start
-finished:
-    return sort(result)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">5</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  
 </pre></div>
 </div>
+<p>This code explicitly dictates the steps the program should follow, updating the state of x sequentially.</p>
 </section>
 <section id="structured-programming">
 <h3>Structured Programming<a class="headerlink" href="#structured-programming" title="Permalink to this heading"></a></h3>
-<p>[Structured programming** is a kind of imperative programming where
+<p><strong>Structured programming</strong> is a kind of imperative programming where
 control flow is defined by nested loops, conditionals, and subroutines,
 rather than via gotos. Variables are generally local to blocks (have
 lexical scope).</p>
-<div class="highlight-prettyprint notranslate"><div class="highlight"><pre><span></span>result = [];
-for i = 0; i &lt; length(people); i++ {
-    p = people[i];
-    if length(p.name)) &gt; 5 {
-        addToList(result, toUpper(p.name));
-    }
-}
-return sort(result);
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    
 </pre></div>
 </div>
 <p>Early languages emphasizing structured programming: Algol 60, PL/I,
@@ -385,7 +368,7 @@ designed to allow programming in many paradigms is called a
 [multi-paradigm language**. If a language only <em>accidentally</em>
 supports multiple paradigms, we don’t have a special word for that.</p></li>
 </ul>
-<p>(&amp;copy) https://cs.lmu.edu/~ray/notes/paradigms/</p>
+<p>(©) https://cs.lmu.edu/~ray/notes/paradigms/</p>
 </section>
 </section>
 

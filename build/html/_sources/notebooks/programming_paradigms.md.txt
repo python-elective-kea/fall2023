@@ -69,40 +69,23 @@ Control flow in [imperative programming** is *explicit*: commands
 show *how* the computation takes place, step by step. Each step affects
 the global **state** of the computation.
 
-``` prettyprint
-    result = []
-    i = 0
-start:
-    numPeople = length(people)
-    if i >= numPeople goto finished
-    p = people[i]
-    nameLength = length(p.name)
-    if nameLength <= 5 goto nextOne
-    upperName = toUpper(p.name)
-    addToList(result, upperName)
-nextOne:
-    i = i + 1
-    goto start
-finished:
-    return sort(result)
 ```
+    x = 0
+    x = x + 5
+    x = x * 3
+    print(x)  
+```
+This code explicitly dictates the steps the program should follow, updating the state of x sequentially.
 
 ### Structured Programming
 
-[Structured programming** is a kind of imperative programming where
+**Structured programming** is a kind of imperative programming where
 control flow is defined by nested loops, conditionals, and subroutines,
 rather than via gotos. Variables are generally local to blocks (have
 lexical scope).
 
-``` prettyprint
-result = [];
-for i = 0; i < length(people); i++ {
-    p = people[i];
-    if length(p.name)) > 5 {
-        addToList(result, toUpper(p.name));
-    }
-}
-return sort(result);
+``` 
+    
 ```
 
 Early languages emphasizing structured programming: Algol 60, PL/I,
@@ -320,4 +303,4 @@ There are two very important observations here:
     [multi-paradigm language**. If a language only *accidentally*
     supports multiple paradigms, we don't have a special word for that.
 
-(&copy) https://cs.lmu.edu/~ray/notes/paradigms/
+(&COPY;) https://cs.lmu.edu/~ray/notes/paradigms/
