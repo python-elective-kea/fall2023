@@ -94,7 +94,6 @@ Information will come later
    ses8
    ses9
    ses10
-   ses11
    ses12
    ses14-15
    ses14-15
