@@ -41,7 +41,7 @@ You can assign Nodes to the list like:
 
    llist = LinkedList()
    llist.head = Node('Data of first Node')        # head is a pointer to a Node with data off 'Data of First Node'
-   llinst.head.next = Node('Data of second Node') # next belongs to 'Data of First Node' Node and points to 'Data of second Node' Node.
+   llist.head.next = Node('Data of second Node') # next belongs to 'Data of First Node' Node and points to 'Data of second Node' Node.
 
 
 Task

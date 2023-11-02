@@ -99,30 +99,18 @@
 <div class="line">This “tool” needs some information, which in this case basically is a number (a=2.0, b=-3.0).</div>
 <div class="line">The usual number storing object (‘int’) can’t keep all the information we need. Besides just holding a number, we want this new tool to remember the original name of the object (a, b), what other objects helped make it (in c´s case it is a, b), and what math actions (like + or *) were used to create it. So, we need to build a new, and more complex object (or datastructure) that can remember all these things.</div>
 </div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Install graphviz on you computer: https://graphviz.org/download/
 # install requirement packages in this project
-%pip install graphviz
+#%pip install graphviz
 
 #import into this project
 from graphviz import Digraph
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Requirement already satisfied: graphviz in /Users/clbo/Tresors/KEA/python/repos/fall2023/.venv/lib/python3.11/site-packages (0.20.1)
-
-<span class="ansi-bold">[</span><span class="ansi-blue-fg">notice</span><span class="ansi-bold">]</span> A new release of pip is available: <span class="ansi-red-fg">23.1.2</span> -&gt; <span class="ansi-green-fg">23.2.1</span>
-<span class="ansi-bold">[</span><span class="ansi-blue-fg">notice</span><span class="ansi-bold">]</span> To update, run: <span class="ansi-green-fg">pip install --upgrade pip</span>
-Note: you may need to restart the kernel to use updated packages.
-</pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
@@ -168,15 +156,61 @@ Note: you may need to restart the kernel to use updated packages.
 </div>
 <p>The <a class="reference external" href="https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses7/graphcode.py">graphcode.py</a> can be found in the code from today session.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from testfiles.graphcode import draw_dot
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># These 2 functions are not super important for you to look at right now. The fokus should be on the Value class.
+# But basicly what the 2 functions do are to produce the graph below with its nodes and edges.
+# If you later look through the code step by step, you should by now be able to understand what it does.
+# If not it is a good exercise to do so.
+
+# In order for this to work you have to install graphviz on your laptop.
+# Install graphviz on you computer: https://graphviz.org/download/
+
+# Then install graphviz in the environment &#39;pip install graphviz&#39;
+
+from graphviz import Digraph
+
+
+def trace(root):
+    # builds a set of all nodes and edges in a graph
+    nodes, edges = set(), set()
+
+    def build(v):
+        if v not in nodes:
+            nodes.add(v)
+            for child in v._prev:
+                edges.add((child, v))
+                build(child)
+
+    build(root)
+
+    return nodes, edges
+
+def draw_dot(root):
+    dot = Digraph(format=&#39;svg&#39;, graph_attr={&#39;rankdir&#39;: &#39;LR&#39;}) # LR = left to right
+
+    nodes, edges = trace(root)
+    for n in nodes:
+        uid = str(id(n))
+        # for any value in the graph, create a rectangular (&#39;record&#39;) node for it
+        dot.node(name=uid, label=f&quot;{{ {n.label} | data {n.data:.1f} }}&quot;, shape=&#39;record&#39;)
+        if n._op:
+            # if this value is a result of some operation, create an op node for it
+            dot.node(name=uid + n._op, label=n._op)
+            # and connect this node to it
+            dot.edge(uid + n._op, uid)
+
+    for n1, n2 in edges:
+        # connect n1 to the op node of n2
+        dot.edge(str(id(n1)), str(id(n2)) + n2._op)
+
+    return dot
 </pre></div>
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = Value(2, label=&#39;a&#39;)
@@ -193,316 +227,11 @@ draw_dot(f)
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <img alt="../_images/notebooks_oop_lecture_value_graphviz_7_0.svg" src="../_images/notebooks_oop_lecture_value_graphviz_7_0.svg" /></div>
-</div>
-</section>
-<section id="Methods-in-an-int-class">
-<h2>Methods in an int class<a class="headerlink" href="#Methods-in-an-int-class" title="Permalink to this heading"></a></h2>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>help(int)
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Help on class int in module builtins:
-
-class int(object)
- |  int([x]) -&gt; integer
- |  int(x, base=10) -&gt; integer
- |
- |  Convert a number or string to an integer, or return 0 if no arguments
- |  are given.  If x is a number, return x.__int__().  For floating point
- |  numbers, this truncates towards zero.
- |
- |  If x is not a number or if base is given, then x must be a string,
- |  bytes, or bytearray instance representing an integer literal in the
- |  given base.  The literal can be preceded by &#39;+&#39; or &#39;-&#39; and be surrounded
- |  by whitespace.  The base defaults to 10.  Valid bases are 0 and 2-36.
- |  Base 0 means to interpret the base from the string as an integer literal.
- |  &gt;&gt;&gt; int(&#39;0b100&#39;, base=0)
- |  4
- |
- |  Built-in subclasses:
- |      bool
- |
- |  Methods defined here:
- |
- |  __abs__(self, /)
- |      abs(self)
- |
- |  __add__(self, value, /)
- |      Return self+value.
- |
- |  __and__(self, value, /)
- |      Return self&amp;value.
- |
- |  __bool__(self, /)
- |      True if self else False
- |
- |  __ceil__(...)
- |      Ceiling of an Integral returns itself.
- |
- |  __divmod__(self, value, /)
- |      Return divmod(self, value).
- |
- |  __eq__(self, value, /)
- |      Return self==value.
- |
- |  __float__(self, /)
- |      float(self)
- |
- |  __floor__(...)
- |      Flooring an Integral returns itself.
- |
- |  __floordiv__(self, value, /)
- |      Return self//value.
- |
- |  __format__(self, format_spec, /)
- |      Default object formatter.
- |
- |  __ge__(self, value, /)
- |      Return self&gt;=value.
- |
- |  __getattribute__(self, name, /)
- |      Return getattr(self, name).
- |
- |  __getnewargs__(self, /)
- |
- |  __gt__(self, value, /)
- |      Return self&gt;value.
- |
- |  __hash__(self, /)
- |      Return hash(self).
- |
- |  __index__(self, /)
- |      Return self converted to an integer, if self is suitable for use as an index into a list.
- |
- |  __int__(self, /)
- |      int(self)
- |
- |  __invert__(self, /)
- |      ~self
- |
- |  __le__(self, value, /)
- |      Return self&lt;=value.
- |
- |  __lshift__(self, value, /)
- |      Return self&lt;&lt;value.
- |
- |  __lt__(self, value, /)
- |      Return self&lt;value.
- |
- |  __mod__(self, value, /)
- |      Return self%value.
- |
- |  __mul__(self, value, /)
- |      Return self*value.
- |
- |  __ne__(self, value, /)
- |      Return self!=value.
- |
- |  __neg__(self, /)
- |      -self
- |
- |  __or__(self, value, /)
- |      Return self|value.
- |
- |  __pos__(self, /)
- |      +self
- |
- |  __pow__(self, value, mod=None, /)
- |      Return pow(self, value, mod).
- |
- |  __radd__(self, value, /)
- |      Return value+self.
- |
- |  __rand__(self, value, /)
- |      Return value&amp;self.
- |
- |  __rdivmod__(self, value, /)
- |      Return divmod(value, self).
- |
- |  __repr__(self, /)
- |      Return repr(self).
- |
- |  __rfloordiv__(self, value, /)
- |      Return value//self.
- |
- |  __rlshift__(self, value, /)
- |      Return value&lt;&lt;self.
- |
- |  __rmod__(self, value, /)
- |      Return value%self.
- |
- |  __rmul__(self, value, /)
- |      Return value*self.
- |
- |  __ror__(self, value, /)
- |      Return value|self.
- |
- |  __round__(...)
- |      Rounding an Integral returns itself.
- |
- |      Rounding with an ndigits argument also returns an integer.
- |
- |  __rpow__(self, value, mod=None, /)
- |      Return pow(value, self, mod).
- |
- |  __rrshift__(self, value, /)
- |      Return value&gt;&gt;self.
- |
- |  __rshift__(self, value, /)
- |      Return self&gt;&gt;value.
- |
- |  __rsub__(self, value, /)
- |      Return value-self.
- |
- |  __rtruediv__(self, value, /)
- |      Return value/self.
- |
- |  __rxor__(self, value, /)
- |      Return value^self.
- |
- |  __sizeof__(self, /)
- |      Returns size in memory, in bytes.
- |
- |  __sub__(self, value, /)
- |      Return self-value.
- |
- |  __truediv__(self, value, /)
- |      Return self/value.
- |
- |  __trunc__(...)
- |      Truncating an Integral returns itself.
- |
- |  __xor__(self, value, /)
- |      Return self^value.
- |
- |  as_integer_ratio(self, /)
- |      Return integer ratio.
- |
- |      Return a pair of integers, whose ratio is exactly equal to the original int
- |      and with a positive denominator.
- |
- |      &gt;&gt;&gt; (10).as_integer_ratio()
- |      (10, 1)
- |      &gt;&gt;&gt; (-10).as_integer_ratio()
- |      (-10, 1)
- |      &gt;&gt;&gt; (0).as_integer_ratio()
- |      (0, 1)
- |
- |  bit_count(self, /)
- |      Number of ones in the binary representation of the absolute value of self.
- |
- |      Also known as the population count.
- |
- |      &gt;&gt;&gt; bin(13)
- |      &#39;0b1101&#39;
- |      &gt;&gt;&gt; (13).bit_count()
- |      3
- |
- |  bit_length(self, /)
- |      Number of bits necessary to represent self in binary.
- |
- |      &gt;&gt;&gt; bin(37)
- |      &#39;0b100101&#39;
- |      &gt;&gt;&gt; (37).bit_length()
- |      6
- |
- |  conjugate(...)
- |      Returns self, the complex conjugate of any int.
- |
- |  to_bytes(self, /, length=1, byteorder=&#39;big&#39;, *, signed=False)
- |      Return an array of bytes representing an integer.
- |
- |      length
- |        Length of bytes object to use.  An OverflowError is raised if the
- |        integer is not representable with the given number of bytes.  Default
- |        is length 1.
- |      byteorder
- |        The byte order used to represent the integer.  If byteorder is &#39;big&#39;,
- |        the most significant byte is at the beginning of the byte array.  If
- |        byteorder is &#39;little&#39;, the most significant byte is at the end of the
- |        byte array.  To request the native byte order of the host system, use
- |        `sys.byteorder&#39; as the byte order value.  Default is to use &#39;big&#39;.
- |      signed
- |        Determines whether two&#39;s complement is used to represent the integer.
- |        If signed is False and a negative integer is given, an OverflowError
- |        is raised.
- |
- |  ----------------------------------------------------------------------
- |  Class methods defined here:
- |
- |  from_bytes(bytes, byteorder=&#39;big&#39;, *, signed=False) from builtins.type
- |      Return the integer represented by the given array of bytes.
- |
- |      bytes
- |        Holds the array of bytes to convert.  The argument must either
- |        support the buffer protocol or be an iterable object producing bytes.
- |        Bytes and bytearray are examples of built-in objects that support the
- |        buffer protocol.
- |      byteorder
- |        The byte order used to represent the integer.  If byteorder is &#39;big&#39;,
- |        the most significant byte is at the beginning of the byte array.  If
- |        byteorder is &#39;little&#39;, the most significant byte is at the end of the
- |        byte array.  To request the native byte order of the host system, use
- |        `sys.byteorder&#39; as the byte order value.  Default is to use &#39;big&#39;.
- |      signed
- |        Indicates whether two&#39;s complement is used to represent the integer.
- |
- |  ----------------------------------------------------------------------
- |  Static methods defined here:
- |
- |  __new__(*args, **kwargs) from builtins.type
- |      Create and return a new object.  See help(type) for accurate signature.
- |
- |  ----------------------------------------------------------------------
- |  Data descriptors defined here:
- |
- |  denominator
- |      the denominator of a rational number in lowest terms
- |
- |  imag
- |      the imaginary part of a complex number
- |
- |  numerator
- |      the numerator of a rational number in lowest terms
- |
- |  real
- |      the real part of a complex number
-
-</pre></div></div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = Value(&#39;Anders&#39;, label=&#39;anders&#39;)
-b = Value(&#39;Bo&#39;, label=&#39;bo&#39;)
-c = a + b; c.label=&#39;claus&#39;
-#d = a - c; d.label = &#39;david&#39;
-
-draw_dot(c)
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<img alt="../_images/notebooks_oop_lecture_value_graphviz_10_0.svg" src="../_images/notebooks_oop_lecture_value_graphviz_10_0.svg" /></div>
 </div>
 </section>
 </section>
