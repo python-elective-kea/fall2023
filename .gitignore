@@ -36,12 +36,12 @@ Dockerfile
 #/docs/exercises/solution/04_oop/*
 
 #05 encapsulation
-/sphinx/build/html/exercises/solution/05_encapsulation/*
-/docs/exercises/solution/05_encapsulation/*
+#/sphinx/build/html/exercises/solution/05_encapsulation/*
+#/docs/exercises/solution/05_encapsulation/*
 
 #06 datamodel
-/sphinx/build/html/exercises/solution/06_datamodel/*
-/docs/exercises/solution/06_datamodel/*
+#/sphinx/build/html/exercises/solution/06_datamodel/*
+#/docs/exercises/solution/06_datamodel/*
 
 # 07 set_dict
 /sphinx/build/html/exercises/solution/07_set_dict/*
