@@ -52,8 +52,8 @@ Dockerfile
 #/docs/exercises/solution/08_decorators/*
 
 #09 generators
-/sphinx/build/html/exercises/solution/09_generators/*
-/docs/exercises/solution/09_generators/*
+#/sphinx/build/html/exercises/solution/09_generators/*
+#/docs/exercises/solution/09_generators/*
 
 #10 context_managers
 sphinx/build/html/exercises/solution/10_context_managers/*
