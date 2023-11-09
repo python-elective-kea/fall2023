@@ -1,3 +1,4 @@
+
 # Installations
 There are several IDE´s you can use when programming in python.
 In this elective we will use a combination of VS Code and a [Jupyter Notebook](https://jupyter.org/). 
@@ -94,5 +95,4 @@ Mac
 If you want to try out the new Copilot+ extension for VS Code, you can follow the instructions here: https://copilot.github.com/
 
 and have a look at this video: https://www.youtube.com/watch?v=gDJzr9DBKTI
-
 
