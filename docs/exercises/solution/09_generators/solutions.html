@@ -96,46 +96,53 @@
 <span class="linenos"> 3</span><span class="k">class</span> <span class="nc">PythonStudents</span><span class="p">:</span>
 <span class="linenos"> 4</span>    
 <span class="linenos"> 5</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos"> 6</span>        <span class="bp">self</span><span class="o">.</span><span class="n">students</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="linenos"> 7</span>
-<span class="linenos"> 8</span>    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">student</span><span class="p">):</span>
-<span class="linenos"> 9</span>        <span class="bp">self</span><span class="o">.</span><span class="n">students</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>
-<span class="linenos">10</span>
-<span class="linenos">11</span>    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos">12</span>        <span class="bp">self</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="linenos">13</span>        <span class="k">return</span> <span class="bp">self</span>
-<span class="linenos">14</span>
-<span class="linenos">15</span>    <span class="k">def</span> <span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos">16</span>        <span class="n">ri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span>
-<span class="linenos">17</span>        <span class="bp">self</span><span class="o">.</span><span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="linenos">18</span>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">students</span><span class="p">):</span>
-<span class="linenos">19</span>            <span class="k">raise</span> <span class="ne">StopIteration</span><span class="p">()</span>
-<span class="linenos">20</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">students</span><span class="p">[</span><span class="n">ri</span><span class="p">]</span>
-<span class="linenos">21</span>
-<span class="linenos">22</span>
+<span class="linenos"> 6</span>        <span class="bp">self</span><span class="o">.</span><span class="n">_students</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos"> 7</span>        <span class="bp">self</span><span class="o">.</span><span class="n">_populate_students</span><span class="p">()</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">10</span>        <span class="bp">self</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos">11</span>        <span class="k">return</span> <span class="bp">self</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>    <span class="k">def</span> <span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">14</span>        <span class="n">ri</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span>
+<span class="linenos">15</span>        <span class="bp">self</span><span class="o">.</span><span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="linenos">16</span>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">index</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_students</span><span class="p">):</span>
+<span class="linenos">17</span>            <span class="k">raise</span> <span class="ne">StopIteration</span><span class="p">()</span>
+<span class="linenos">18</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_students</span><span class="p">[</span><span class="n">ri</span><span class="p">]</span>
+<span class="linenos">19</span>    
+<span class="linenos">20</span>    <span class="k">def</span> <span class="nf">_populate_students</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">21</span>        <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Claus&quot;</span><span class="p">,</span> <span class="s2">&quot;Anna&quot;</span><span class="p">,</span> <span class="s2">&quot;Ben&quot;</span><span class="p">,</span> <span class="s2">&quot;Diana&quot;</span><span class="p">,</span> <span class="s2">&quot;Erik&quot;</span><span class="p">,</span> <span class="s2">&quot;Fiona&quot;</span><span class="p">,</span> <span class="s2">&quot;George&quot;</span><span class="p">,</span> <span class="s2">&quot;Hannah&quot;</span><span class="p">,</span> <span class="s2">&quot;Ivan&quot;</span><span class="p">,</span> <span class="s2">&quot;Julia&quot;</span><span class="p">]</span>
+<span class="linenos">22</span>        <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1234</span><span class="p">,</span> <span class="mi">5678</span><span class="p">,</span> <span class="mi">9101</span><span class="p">,</span> <span class="mi">1121</span><span class="p">,</span> <span class="mi">3141</span><span class="p">,</span> <span class="mi">5161</span><span class="p">,</span> <span class="mi">7181</span><span class="p">,</span> <span class="mi">9202</span><span class="p">,</span> <span class="mi">1222</span><span class="p">,</span> <span class="mi">3242</span><span class="p">]</span>
 <span class="linenos">23</span>
-<span class="linenos">24</span><span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
-<span class="linenos">25</span>
-<span class="linenos">26</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cpr</span><span class="p">):</span>
-<span class="linenos">27</span>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-<span class="linenos">28</span>        <span class="bp">self</span><span class="o">.</span><span class="n">cpr</span> <span class="o">=</span> <span class="n">cpr</span>
+<span class="linenos">24</span>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+<span class="linenos">25</span>            <span class="bp">self</span><span class="o">.</span><span class="n">_students</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Student</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span>
 <span class="linenos">29</span>
-<span class="linenos">30</span>    <span class="nd">@property</span>
-<span class="linenos">31</span>    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos">32</span>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__name</span>
-<span class="linenos">33</span>
-<span class="linenos">34</span>    <span class="nd">@name</span><span class="o">.</span><span class="n">setter</span>
-<span class="linenos">35</span>    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-<span class="linenos">36</span>            <span class="bp">self</span><span class="o">.</span><span class="n">__name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
-<span class="linenos">37</span>
-<span class="linenos">38</span>    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">student</span><span class="p">):</span>
-<span class="linenos">39</span>            <span class="k">return</span> <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;Anna the daugther&#39;</span><span class="p">,</span> <span class="mi">1234</span><span class="p">)</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
+<span class="linenos">32</span>
+<span class="linenos">33</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cpr</span><span class="p">):</span>
+<span class="linenos">34</span>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+<span class="linenos">35</span>        <span class="bp">self</span><span class="o">.</span><span class="n">cpr</span> <span class="o">=</span> <span class="n">cpr</span>
+<span class="linenos">36</span>
+<span class="linenos">37</span>    <span class="nd">@property</span>
+<span class="linenos">38</span>    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">39</span>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__name</span>
 <span class="linenos">40</span>
-<span class="linenos">41</span>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos">42</span>            <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">cpr</span><span class="si">}</span><span class="s1">&#39;</span>
-<span class="linenos">43</span>
-<span class="linenos">44</span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos">45</span>            <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="linenos">41</span>    <span class="nd">@name</span><span class="o">.</span><span class="n">setter</span>
+<span class="linenos">42</span>    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="linenos">43</span>            <span class="bp">self</span><span class="o">.</span><span class="n">__name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+<span class="linenos">44</span>
+<span class="linenos">45</span>    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">student</span><span class="p">):</span>
+<span class="linenos">46</span>            <span class="k">return</span> <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;Anna the daugther&#39;</span><span class="p">,</span> <span class="mi">1234</span><span class="p">)</span>
+<span class="linenos">47</span>
+<span class="linenos">48</span>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">49</span>            <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">cpr</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="linenos">50</span>
+<span class="linenos">51</span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">52</span>            <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="si">}</span><span class="s1">&#39;</span>
 </pre></div>
 </div>
 </section>

@@ -3,10 +3,8 @@
 class PythonStudents:
     
     def __init__(self):
-        self.students = []
-
-    def __add__(self, student):
-        self.students.append(student)
+        self._students = []
+        self._populate_students()
 
     def __iter__(self):
         self.index = 0
@@ -15,9 +13,18 @@ class PythonStudents:
     def __next__(self):
         ri = self.index
         self.index += 1
-        if self.index > len(self.students):
+        if self.index > len(self._students):
             raise StopIteration()
-        return self.students[ri]
+        return self._students[ri]
+    
+    def _populate_students(self):
+        names = ["Claus", "Anna", "Ben", "Diana", "Erik", "Fiona", "George", "Hannah", "Ivan", "Julia"]
+        numbers = [1234, 5678, 9101, 1121, 3141, 5161, 7181, 9202, 1222, 3242]
+
+        for i in range(10):
+            self._students.append(Student(names[i], numbers[i]))
+
+
 
 
 
